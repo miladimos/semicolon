@@ -15,7 +15,8 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        $permissions = Permission::all();
+        return view('admin.permission.all', compact('permissions'));
     }
 
     /**
@@ -25,7 +26,8 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.permission.create');
+
     }
 
     /**
@@ -36,7 +38,16 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+        if ($validatedData->fails()) {
+            return back()->withInput()->withErrors($validatedData->errors())->with('error', 'some inputs value are wrong');
+        }
+
+        $permission = Permission::create($validatedData->validated());
+        return redirect()->route('permission.index')->with('Permission Created Successfully');
     }
 
     /**
@@ -70,7 +81,9 @@ class PermissionController extends Controller
      */
     public function update(Request $request, Permission $permission)
     {
-        //
+        $permission->update($request->all());
+
+        return redirect()->route('permission.index');
     }
 
     /**
@@ -81,6 +94,7 @@ class PermissionController extends Controller
      */
     public function destroy(Permission $permission)
     {
-        //
+        $permission->delete();
+        return redirect()->route('permission.index')->with('success','Permission Deleted Successfully');
     }
 }

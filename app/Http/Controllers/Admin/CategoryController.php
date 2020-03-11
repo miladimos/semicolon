@@ -15,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::paginate(10);
+        return view('admin.category.all', compact('categories'));
     }
 
     /**
@@ -25,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.category.create');
     }
 
     /**
@@ -36,7 +37,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = Validator::make($request->all(), [
+            'name'=>'required'
+        ]);
+
+        if ( $validatedData->fails())
+            return back()->withErrors()->withInput()->with('error', 'wrong data');
+
+        $category = Category::create($validatedData->validated());
+        return redirect()->route('category.index')->with('success','Category Created Successfully');
     }
 
     /**
@@ -81,6 +90,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        if($category->delete())
+            return redirect()->route('category.index')->with('success','Category Deleted Successfully');
     }
 }

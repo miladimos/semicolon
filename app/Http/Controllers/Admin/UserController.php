@@ -15,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users =User::latest()->paginate(20);
+        return view('admin.user.index', compact('users'));
     }
 
     /**
@@ -25,9 +26,34 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::latest()->get();
+        return view('admin.user.create', compact('roles'));
     }
 
+    public function role()
+    {
+        $roles = Role::latest()->get();
+        $users = User::where('level', 'admin')->get();
+        return view('admin.user.userrole', compact('roles', 'users'));
+    }
+
+    public function storerole(Request $request)
+    {
+//        $this->validate($request, [
+//            'user_id'
+//        ]);
+
+        $user =  User::findOrFail($request->user_id);
+        $user->roles()->sync($request->role_id);
+
+        return back();
+    }
+
+    public function admins()
+    {
+        $admins = User::where('level', 'admin')->get();
+        return view('admin.user.admins', compact('admins'));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +62,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+        $user->roles()->attach($request->role_id);
+        return back()->with('success', 'New User Created');
     }
 
     /**

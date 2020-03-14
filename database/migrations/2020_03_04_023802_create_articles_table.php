@@ -28,6 +28,10 @@ class CreateArticlesTable extends Migration
             $table->string('tags');
             $table->string('image_url');
             $table->unsignedInteger('viewCount')->default(0);
+            $table->boolean('isDraft')->default(0);
+            $table->boolean('isDisable')->default(0);
+            $table->boolean('isVip')->default(0);
+            $table->timestamp('published_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

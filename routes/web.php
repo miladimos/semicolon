@@ -18,17 +18,24 @@
 //    }
 //    return "no";
 //});
-Route::redirect("/", '/en');
+//Route::redirect("/", '/en');
 
-Route::group(['prefix'=>'{language}'], function() {
-    Auth::routes();
-    Route::group(['namespace'=>'Home'], function(){
-        Route::get('/', 'HomeController@index')->name('home');
-        Route::get('/tredis', 'HomeController@tredis');
-        Route::get('/article/{article}', 'HomeController@articleSingle')->name('article.single');
-    });
-});
+Route::get('/', 'Home\HomeController@index')->name('home');
+Auth::routes();
+Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');
+//Route::group(['prefix'=>'{language}'], function() {
+//    Route::group(['namespace'=>'Home'], function(){
+//        Route::get('/', 'HomeController@index')->name('home');
+//        Route::get('/tredis', 'HomeController@tredis');
+//        Route::get('/article/{article}', 'HomeController@articleSingle')->name('article.single');
+//    });
+//});
+//
+//
 
+//Route::get('/@{user}', 'User\UserController@profile');
+//Route::get('/@{user}/edit', 'User\UserController@edit');
+//Route::get('/article/new', 'User\ArticleController@create');
 
 
 Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard', 'middleware'=>'is.admin'], function(){

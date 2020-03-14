@@ -10,8 +10,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $articles = Article::latest()->paginate(20);
-        return view('home', compact('articles'));
+//        $articles = Article::latest()->paginate(20);
+//        return view('site.home', compact('articles'));
+        return view('site.home');
     }
 
     public function articleSingle(Article $article)

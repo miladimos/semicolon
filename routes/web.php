@@ -20,6 +20,7 @@
 //});
 //Route::redirect("/", '/en');
 
+
 Route::get('/', 'Home\HomeController@index')->name('home');
 Auth::routes();
 Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');
@@ -38,22 +39,22 @@ Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('art
 //Route::get('/article/new', 'User\ArticleController@create');
 
 
-Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard', 'middleware'=>'is.admin'], function(){
+Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
     Route::get('/', 'AdminController@index')->name('dashboard.index');
 
-    Route::get('/article/trashed', 'ArticleController@trashed')->name('article.trashed');
-    Route::delete('/article/trashed/{id}', 'ArticleController@restore')->name('article.restore');
-    Route::delete('/article/trashed/{id}/fdelete', 'ArticleController@fdestroy')->name('article.fdestroy');
-    Route::resource('article', 'ArticleController');
-
-    Route::resource('category', 'CategoryController');
-    Route::resource('tag', 'TagController');
-
-    Route::get('/user/role', 'UserController@role')->name('user.role');
-    Route::post('/user/role', 'UserController@storerole')->name('user.role.store');
-    Route::get('/user/admins', 'UserController@admins')->name('user.admins');
-    Route::resource('user', 'UserController');
-
-    Route::resource('permission', 'PermissionController');
-    Route::resource('role', 'RoleController');
+//    Route::get('/article/trashed', 'ArticleController@trashed')->name('article.trashed');
+//    Route::delete('/article/trashed/{id}', 'ArticleController@restore')->name('article.restore');
+//    Route::delete('/article/trashed/{id}/fdelete', 'ArticleController@fdestroy')->name('article.fdestroy');
+//    Route::resource('article', 'ArticleController');
+//
+//    Route::resource('category', 'CategoryController');
+//    Route::resource('tag', 'TagController');
+//
+//    Route::get('/user/role', 'UserController@role')->name('user.role');
+//    Route::post('/user/role', 'UserController@storerole')->name('user.role.store');
+//    Route::get('/user/admins', 'UserController@admins')->name('user.admins');
+//    Route::resource('user', 'UserController');
+//
+//    Route::resource('permission', 'PermissionController');
+//    Route::resource('role', 'RoleController');
 });

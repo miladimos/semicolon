@@ -17,7 +17,7 @@ class CreatePermissionRoleTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('role_id');
             $table->unsignedBigInteger('permission_id');
-            $table->primary(['role_id', 'permission_id']);
+//            $table->primary(['role_id', 'permission_id']);
             $table->timestamps();
         });
     }

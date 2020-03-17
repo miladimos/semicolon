@@ -9,10 +9,10 @@ class Tag extends Model
     protected $fillable = ['name', 'slug'];
 
 
-    public function articles()
-    {
-        return $this->belongsToMany(Article::class);
-    }
+//    public function articles()
+//    {
+//        return $this->belongsToMany(Article::class);
+//    }
 
     /**
      * Return the sluggable configuration array for this model.

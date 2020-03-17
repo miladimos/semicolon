@@ -20,13 +20,13 @@ class CreateArticlesTable extends Migration
                 ->on('users')
                 ->references('id')
                 ->onDelete('cascade');
-            $table->string('title');
-            $table->string('slug');
+            $table->string('title')->unique();
+            $table->string('slug')->unique();
             $table->string('description');
             $table->text('bode');
             $table->string('category_id');
             $table->string('tags');
-            $table->string('image_url');
+            $table->string('images');
             $table->unsignedInteger('viewCount')->default(0);
             $table->boolean('isDraft')->default(0);
             $table->boolean('isDisable')->default(0);

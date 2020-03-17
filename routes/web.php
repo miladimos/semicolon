@@ -23,7 +23,7 @@
 
 Route::get('/', 'Home\HomeController@index')->name('home');
 Auth::routes();
-Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');
+//Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');
 //Route::group(['prefix'=>'{language}'], function() {
 //    Route::group(['namespace'=>'Home'], function(){
 //        Route::get('/', 'HomeController@index')->name('home');
@@ -34,10 +34,15 @@ Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('art
 //
 //
 
-//Route::get('/@{user}', 'User\UserController@profile');
 //Route::get('/@{user}/edit', 'User\UserController@edit');
-//Route::get('/article/new', 'User\ArticleController@create');
 
+Route::group(['namespace'=>'User'], function() {
+    Route::get('/@{username}', 'UserController@profile')->name('user.profile.index');
+
+    Route::get('/article/new', 'ArticleController@create')->name('article.new');
+    Route::get('/article/drafts', 'ArticleController@drafts')->name('article.drafts');
+
+});
 
 Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
     Route::get('/', 'AdminController@index')->name('dashboard.index');

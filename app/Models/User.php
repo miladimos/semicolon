@@ -14,10 +14,24 @@ class User extends Authenticatable
         'username', 'email', 'password',
     ];
 
-//
-//    public function articles()
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
+    public function path()
+    {
+        return "@$this->username";
+    }
+
+//    public function getFullNameAttributes()
 //    {
-//        return $this->hasMany(Article::class);
+//        return $this->profile->first_name . $this->profile()->last_name;
 //    }
 //
 //    public function roles()

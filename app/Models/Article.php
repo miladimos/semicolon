@@ -2,25 +2,29 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Article extends Model
 {
-//    public function user()
-//    {
-//        return $this->belongsTo(User::class);
-//    }
-//    use Sluggable, SoftDeletes, Viewable;
-//
-//    protected $fillable = ['title','slug','description','body','viewCount', 'tags', 'category_id', 'image_url'];
-//
-//    protected $casts = [
-//        'tags' => 'array'
-//    ];
-//
-//    protected $dates = [
-//        'deleted_at'
-//    ];
+    use Sluggable, SoftDeletes;
+
+    protected $fillable = ['title','slug','description','body','viewCount', 'tags', 'category_id', 'image_url'];
+
+    protected $casts = [
+        'tags' => 'array'
+    ];
+
+    protected $dates = [
+        'deleted_at'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 //
 //    public function path()
 //    {

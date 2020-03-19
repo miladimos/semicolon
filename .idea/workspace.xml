@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.en.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README-fa.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/admin/libs/bootstrap-daterangepicker/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/libs/bootstrap-daterangepicker/package.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/admin/libs/bootstrap-daterangepicker/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/admin/libs/bootstrap-daterangepicker/package.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +182,7 @@
       <workItem from="1584292522700" duration="2943000" />
       <workItem from="1584414253406" duration="18792000" />
       <workItem from="1584537405485" duration="2564000" />
-      <workItem from="1584600525910" duration="4527000" />
+      <workItem from="1584600525910" duration="4753000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@ Package.describe({
   version: '3.0.5',
   summary: 'Date range picker component',
   git: 'https://github.com/dangrossman/daterangepicker',
-  documentation: 'README.md'
+  documentation: 'README.en.md'
 });
 
 Package.onUse(function(api) {

@@ -7,45 +7,33 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-- [فارسی](README-fa.md)
+- [English](README.en.md)
 
+# آزمایشی
+این متون به صورت آزمایشی نوشته شده است.
+# درباره پروژه 
+این پروژه یک بستر اشتراک گذاری محتوا می باشد که به صورت متن باز و با همکاری جامعه توسعه دهندگان توسعه می یابد و شما هم میتوانید در پیشرفت آن سهیم باشید.
 
-## About
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-
-
-## Technologies
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#تکنولوژی ها و فریم ورک های استفاده شده 
 
 - [Laravel 7.*](https://laravel.com).
 - [Vuejs 2.5.*](https://vuejs.org).
 - [Bootstrap 4.2.*](https://bootstrap.com).
 
-## Packages
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# پکیج ها و کتابخانه های استفاده شده 
 
 - [Laravel 7.*](https://laravel.com).
 
+#همکاری برای توسعه پروژه 
+به این صورت میتوانید همکاری کنید
+# همکاران 
+تمام عزیزانی که در توسعه این پروژه به هر نحوی تلاش کردند.
 
-## Sponsors
+#اسپانسر ها
+این دوستان اسپانسر شدند
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# لایسنس 
+لایسنس استفاده شده
 
-- **[Vehikl](https://vehikl.com/)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

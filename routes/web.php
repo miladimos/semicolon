@@ -22,6 +22,8 @@
 
 
 Route::get('/', 'Home\HomeController@index')->name('home');
+Route::get('/help', 'Home\HomeController@help')->name('help');
+
 Auth::routes();
 //Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');
 //Route::group(['prefix'=>'{language}'], function() {
@@ -41,6 +43,10 @@ Route::group(['namespace'=>'User'], function() {
 
     Route::get('/article/new', 'ArticleController@create')->name('article.new');
     Route::get('/article/drafts', 'ArticleController@drafts')->name('article.drafts');
+
+    Route::get('/me/settings', 'ArticleController@setting')->name('user.setting');
+    Route::get('/me/bookmarks', 'ArticleController@bookmarks')->name('article.bookmarks');
+    Route::get('/me/likes', 'ArticleController@likes')->name('article.likes');
 
 });
 

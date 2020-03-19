@@ -82,14 +82,14 @@
                                         </span>
                                     </a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{ route('article.new') }}"> New Article </a>
-                                    <a class="dropdown-item" href="{{ route('article.drafts') }}"> Drafts </a>
-                                    <a class="dropdown-item" href="#"> Bookmarks </a>
-                                    <a class="dropdown-item" href="#"> Likes </a>
+                                    <a class="dropdown-item @if(request()->is("article/new")) active @endif" href="{{ route('article.new') }}"> New Article </a>
+                                    <a class="dropdown-item @if(request()->is("article/drafts")) active @endif" href="{{ route('article.drafts') }}"> Drafts </a>
+                                    <a class="dropdown-item" href="{{ route('article.bookmarks') }}"> Bookmarks </a>
+                                    <a class="dropdown-item" href="{{ route('article.likes') }}"> Likes </a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="{{auth()->user()->path()}}"> Profile </a>
-                                    <a class="dropdown-item" href="#"> Setting </a>
-                                    <a class="dropdown-item" href="#"> Help </a>
+                                    <a class="dropdown-item @if(request()->is("@*")) active @endif" href="{{route('user.profile.index', ['username'=>auth()->user()->username])}}"> Profile </a>
+                                    <a class="dropdown-item" href="{{ route('user.setting') }}"> Setting </a>
+                                    <a class="dropdown-item" href="{{ route('help') }}"> Help </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

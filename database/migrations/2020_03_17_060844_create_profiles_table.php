@@ -17,12 +17,16 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();صث
+            $table->string('last_name')->nullable();
             $table->string('phone')->unique()->nullable();
             $table->string('telegram')->unique()->nullable();
             $table->string('twitter')->unique()->nullable();
             $table->string('facebook')->unique()->nullable();
             $table->string('linkedin')->unique()->nullable();
+            $table->string('github')->unique()->nullable();
+            $table->string('gitlab')->unique()->nullable();
+            $table->string('virgol')->unique()->nullable();
+            $table->string('medium')->unique()->nullable();
             $table->string('avatar')->unique()->nullable();
             $table->timestamps();
         });

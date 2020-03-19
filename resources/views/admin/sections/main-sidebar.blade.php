@@ -19,10 +19,10 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <div class="d-inline-block icons-sm mr-1"><i class="uim uim-box"></i></div>
-                        <span>Bootstrap UI</span>
+                        <span>Categories</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="ui-grid.html">Grid</a></li>
+                        <li><a href="{{ route('category.index') }}">All Categories</a></li>
                     </ul>
                 </li>
 

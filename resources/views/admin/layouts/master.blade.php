@@ -39,7 +39,7 @@
             </div>
             <!-- end page title end breadcrumb -->
             <div class="page-content-wrapper">
-                <div class="container-fluid">
+                <div id="adminvue" class="container-fluid">
                     @yield('content')
                     <!-- end row -->
                 </div> <!-- container-fluid -->

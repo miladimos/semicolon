@@ -63,6 +63,7 @@
                             </div>
                         </div>
                     </li>
+
                     <li class="list-group-item">
                         <div class="media my-2">
                             <div class="media-body">
@@ -271,7 +272,7 @@
                             </tbody>
                         </table>
                     </div>
-
+                    <admintest-component></admintest-component>
                     <div class="mt-4">
                         <ul class="pagination pagination-rounded justify-content-center mb-0">
                             <li class="page-item disabled">

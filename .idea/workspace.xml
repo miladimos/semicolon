@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_023829_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_023829_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/main-sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +25,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,21 +142,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/site/user/article" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\admin" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site\user\article" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\storage\app\public\avatars" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\fonts" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\js\admin" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -182,7 +198,8 @@
       <workItem from="1584292522700" duration="2943000" />
       <workItem from="1584414253406" duration="18792000" />
       <workItem from="1584537405485" duration="2564000" />
-      <workItem from="1584600525910" duration="4753000" />
+      <workItem from="1584600525910" duration="6256000" />
+      <workItem from="1584634309051" duration="3884000" />
     </task>
     <servers />
   </component>

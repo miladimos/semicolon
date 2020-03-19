@@ -52,13 +52,13 @@ Route::group(['namespace'=>'User'], function() {
 
 Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
     Route::get('/', 'AdminController@index')->name('dashboard.index');
+    Route::resource('category', 'CategoryController');
 
 //    Route::get('/article/trashed', 'ArticleController@trashed')->name('article.trashed');
 //    Route::delete('/article/trashed/{id}', 'ArticleController@restore')->name('article.restore');
 //    Route::delete('/article/trashed/{id}/fdelete', 'ArticleController@fdestroy')->name('article.fdestroy');
 //    Route::resource('article', 'ArticleController');
 //
-//    Route::resource('category', 'CategoryController');
 //    Route::resource('tag', 'TagController');
 //
 //    Route::get('/user/role', 'UserController@role')->name('user.role');

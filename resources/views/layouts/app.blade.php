@@ -20,7 +20,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-3">
+        <nav class="navbar navbar-expand-md navbar-light bg-white py-2">
             <div class="container">
                 <a class="navbar-brand font-weight-bold" style="font-size: 26px;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -108,6 +108,25 @@
                 </div>
             </div>
         </nav>
+
+        <div class="bg-white" id="category_nav">
+           <div class="container">
+               <ul class="nav justify-content-center">
+                   <li class="nav-item">
+                       <a class="nav-link text-reset" href="#">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-reset" href="#">Arts</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-reset" href="#">Programming</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link text-reset " href="#">Politic</a>
+                   </li>
+               </ul>
+           </div>
+        </div>
 
         <main class="py-4">
             @yield('content')

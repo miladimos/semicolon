@@ -27,6 +27,7 @@
 <script src="{{ asset("/js/admin/js/pages/dashboard.init.js") }}"></script>
 
 <script src="{{ asset("/js/admin/js/app.js") }}"></script>
+<script src="{{ asset("/js/admin/adminvue.js") }}"></script>
 
 @yield('scripts')
 

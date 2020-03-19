@@ -272,7 +272,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <admintest-component></admintest-component>
                     <div class="mt-4">
                         <ul class="pagination pagination-rounded justify-content-center mb-0">
                             <li class="page-item disabled">

@@ -6,15 +6,15 @@
             <div class="card">
                 <div class="card-body">
                     <div class="float-right ml-2">
-                        <a href="#">Create New Category</a>
+                        <a href="#">Create New Tag</a>
                     </div>
-                    <h5 class="header-title mb-4">Latest Categories</h5>
+                    <h5 class="header-title mb-4">Latest Tags</h5>
 
                     <div class="table-responsive">
                         <table class="table table-centered table-hover mb-0">
                             <thead>
                             <tr>
-                                <th scope="col">Category ID</th>
+                                <th scope="col">Tag ID</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Slug</th>
                                 <th scope="col">Date</th>

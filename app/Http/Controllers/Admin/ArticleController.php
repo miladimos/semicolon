@@ -16,9 +16,9 @@ class ArticleController extends Controller
     public function index()
     {
 //        $this->authorize('edit-article');
-        $articles = Article::latest()->paginate(10);
+//        $articles = Article::latest()->paginate(10);
 //        $articles = Article::withTrashed()->get();
-        return view('admin.article.all', compact('articles'));
+        return view('admin.article.index');
     }
 
     public function trashed()

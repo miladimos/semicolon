@@ -29,8 +29,19 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Laravel 7.*](https://laravel.com).
+- [composer require laravel/socialite](https://laravel.com/docs/7.x/socialite).
 
+### Solar System Exploration, 1950s – 1960s
+
+- [ ] Mercury
+- [x] Venus
+- [x] Earth (Orbit/Moon)
+- [x] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
 
 ## Sponsors
 

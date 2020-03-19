@@ -8,14 +8,24 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="index.html" class="waves-effect">
+                    <a href="#" class="waves-effect">
                         <div class="d-inline-block icons-sm mr-1"><i class="uim uim-airplay"></i></div><span class="badge badge-pill badge-success float-right">3</span>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li class="menu-title">Components</li>
-
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <div class="d-inline-block icons-sm mr-1"><i class="uim uim-box"></i></div>
+                        <span>Articles</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('article.index') }}">All Articles</a></li>
+                        <li><a href="{{ route('article.index') }}">Hide Articles</a></li>
+                        <li><a href="{{ route('article.index') }}">Trashed Articles</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <div class="d-inline-block icons-sm mr-1"><i class="uim uim-box"></i></div>
@@ -23,6 +33,15 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('category.index') }}">All Categories</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <div class="d-inline-block icons-sm mr-1"><i class="uim uim-box"></i></div>
+                        <span>Tags</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('tag.index') }}">All Tags</a></li>
                     </ul>
                 </li>
 

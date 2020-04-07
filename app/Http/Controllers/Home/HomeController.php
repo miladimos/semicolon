@@ -11,7 +11,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        return Helper::runiqe();
 //        $articles = Article::latest()->paginate(20);
 //        return view('site.home', compact('articles'));
         return view('site.home');

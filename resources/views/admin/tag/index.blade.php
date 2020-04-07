@@ -16,6 +16,9 @@
                             <label for="tag">Tag Name:</label>
                             <div class="d-flex">
                                 <div class="col-md-6"><input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="tag"></div>
+                                <div class="invalid-feedback">
+                                    Please enter a message in the textarea.
+                                </div>
                                 <div class="col-md-6"><button class="btn btn-success" type="submit">Submit</button></div>
                             </div>
                         </form>

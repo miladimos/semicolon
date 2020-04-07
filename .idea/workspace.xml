@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/helpers.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_04_023802_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_04_023802_create_articles_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/site/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/site/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/site/site.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/site/site.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/user/article/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/user/article/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +197,7 @@
       <workItem from="1586049984265" duration="1760000" />
       <workItem from="1586092296646" duration="2581000" />
       <workItem from="1586103406286" duration="621000" />
-      <workItem from="1586213955399" duration="10047000" />
+      <workItem from="1586213955399" duration="12910000" />
     </task>
     <servers />
   </component>

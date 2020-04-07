@@ -1,3 +1,28 @@
+#title{
+    font-size: 20px;
+}
+
 #title::placeholder{
-    color: red !important;
+    font-size: 20px;
+}
+#body{
+    font-size: 20px;
+}
+
+#body::placeholder{
+    font-size: 20px;
+}
+
+#btn-article-slug-edit {
+    width: 40px !important;
+    height: 20px !important;
+    background-color: pink !important;
+    font-size: 10px !important;
+    border-radius: 2px;
+    border: 1px #ccc solid;
+    font-family: Tahoma, sans-serif;
+}
+
+#btn-article-slug-edit:hover{
+    background-color: lightpink !important;
 }

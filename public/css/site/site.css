@@ -1,0 +1,16 @@
+#title::-webkit-input-placeholder {
+  color: red !important;
+}
+#title::-moz-placeholder {
+  color: red !important;
+}
+#title:-ms-input-placeholder {
+  color: red !important;
+}
+#title::-ms-input-placeholder {
+  color: red !important;
+}
+#title::placeholder {
+  color: red !important;
+}
+

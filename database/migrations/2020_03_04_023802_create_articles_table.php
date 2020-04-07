@@ -15,6 +15,7 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('code')->unique()->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->on('users')

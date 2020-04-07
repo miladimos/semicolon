@@ -23,6 +23,7 @@
 
 Route::get('/', 'Home\HomeController@index')->name('site.index');
 Route::get('/help', 'Home\HomeController@help')->name('help');
+Route::get('/categories', 'Home\HomeController@categories')->name('categories');
 
 Auth::routes();
 //Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');
@@ -72,7 +73,5 @@ Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
 //    Route::post('/user/role', 'UserController@storerole')->name('user.role.store');
 //    Route::get('/user/admins', 'UserController@admins')->name('user.admins');
 //    Route::resource('user', 'UserController');
-//
-//    Route::resource('permission', 'PermissionController');
-//    Route::resource('role', 'RoleController');
+
 });

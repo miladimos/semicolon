@@ -16,7 +16,7 @@ class RoleController extends Controller
     public function index()
     {
         $roles = Role::all();
-        return view('admin.role.all', compact('roles'));
+        return view('admin.role.index', compact('roles'));
     }
 
     /**
@@ -38,19 +38,10 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = Validator::make($request->all(), [
-            'name' => 'required',
-            'description' => 'required',
-            'permissions' => 'required',
-        ]);
-        if ($validatedData->fails()) {
-            return back()->withInput()->withErrors($validatedData->errors())->with('error', 'some inputs value are wrong');
-        }
-
-        $role = Role::create($validatedData->validated());
+        $validated = $request->validated();
+        $role = Role::create($validated);
         if ($request->permissions)
             $role->permissions()->sync($request->permissions);
-
         return redirect()->route('role.index')->with('Role Created Successfully');
     }
 

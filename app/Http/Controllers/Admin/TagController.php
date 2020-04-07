@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagRequest;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,8 @@ class TagController extends Controller
      */
     public function index()
     {
-//        $tags = Tag::paginate(20);
-        return view('admin.tag.index');
+        $tags = Tag::paginate(20);
+        return view('admin.tag.index', compact('tags'));
     }
 
     /**
@@ -36,16 +37,10 @@ class TagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TagRequest $request)
     {
-        $validatedData = Validator::make($request->all(), [
-            'name'=>'required'
-        ]);
-
-        if ( $validatedData->fails())
-            return back()->withErrors()->withInput()->with('error', 'wrong data');
-
-        $tag = Tag::create($validatedData->validated());
+        $validated = $request->validated();
+        $tag = Tag::create($validated);
         return redirect()->route('tag.index')->with('success','Tag Created Successfully');
     }
 

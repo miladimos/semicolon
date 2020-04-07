@@ -25,26 +25,22 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
-//
+
 //    public function path()
 //    {
-//        return "/article/$this->slug";
+//        return "/@$this->user->username/$this->slug";
 //    }
 //
 //    public function category()
 //    {
 //        return $this->belongsTo(Category::class);
 //    }
-//    public function topic()
-//    {
-//        return $this->belongsTo(Topic::class);
-//    }
 //
 //    public function tags()
 //    {
 //        return $this->belongsToMany(Tag::class);
 //    }
-//
+
 //    public function getRouteKeyName()
 //    {
 //        return 'slug';

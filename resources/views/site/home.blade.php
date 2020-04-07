@@ -17,7 +17,9 @@
 {{--                    You are logged in!--}}
 {{--                </div>--}}
 
-
+                <example-component></example-component>
+                <hr>
+                <testsite-component></testsite-component>
             </div>
         </div>
     </div>

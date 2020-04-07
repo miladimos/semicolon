@@ -16,13 +16,13 @@
 {{--<script src="{{ asset("/js/admin/libs/air-datepicker/js/i18n/datepicker.en.js") }}"></script>--}}
 
 <!-- apexcharts -->
-<script src="{{ asset("/js/admin/libs/apexcharts/apexcharts.min.js") }}"></script>
+{{--<script src="{{ asset("/js/admin/libs/apexcharts/apexcharts.min.js") }}"></script>--}}
 
 <script src="{{ asset("/js/admin/libs/jquery-knob/jquery.knob.min.js") }}"></script>
 
 <!-- Jq vector map -->
-<script src="{{ asset("/js/admin/libs/jqvmap/jquery.vmap.min.js") }}"></script>
-<script src="{{ asset("/js/admin/libs/jqvmap/maps/jquery.vmap.usa.js") }}"></script>
+{{--<script src="{{ asset("/js/admin/libs/jqvmap/jquery.vmap.min.js") }}"></script>--}}
+{{--<script src="{{ asset("/js/admin/libs/jqvmap/maps/jquery.vmap.usa.js") }}"></script>--}}
 
 <script src="{{ asset("/js/admin/js/pages/dashboard.init.js") }}"></script>
 

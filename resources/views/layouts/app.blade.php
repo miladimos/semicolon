@@ -16,6 +16,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/site/site.css') }}" rel="stylesheet">
     <link href="{{ asset('/fonts/fontawesome/css/all.css') }}" rel="stylesheet">
 </head>
 <body>

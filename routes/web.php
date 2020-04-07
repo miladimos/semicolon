@@ -56,6 +56,8 @@ Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
     Route::resource('category', 'CategoryController');
 
     Route::resource('tag', 'TagController');
+    Route::resource('role', 'RoleController');
+    Route::resource('permission', 'PermissionController');
 
     Route::get('/article', 'ArticleController@index')->name('article.index');
 

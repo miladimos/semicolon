@@ -16,7 +16,7 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::all();
-        return view('admin.permission.all', compact('permissions'));
+        return view('admin.permission.index', compact('permissions'));
     }
 
     /**
@@ -38,15 +38,8 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = Validator::make($request->all(), [
-            'name' => 'required',
-            'description' => 'required',
-        ]);
-        if ($validatedData->fails()) {
-            return back()->withInput()->withErrors($validatedData->errors())->with('error', 'some inputs value are wrong');
-        }
-
-        $permission = Permission::create($validatedData->validated());
+        $validated = $request->validated();
+        $permission = Permission::create($validated);
         return redirect()->route('permission.index')->with('Permission Created Successfully');
     }
 

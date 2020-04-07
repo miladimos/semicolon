@@ -5,8 +5,32 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-body">
+                    <h5 class="header-title mb-4 text-center">New Category</h5>
+                    <div>
+                        @include('admin.partials.errors')
+                        @if(session('success'))
+                            <span>{{ session()->get('success') }}</span>
+                        @endif
+                        <form action="{{ route('category.store') }}" method="post">
+                            @csrf
+                            <label for="category">Category Name:</label>
+                            <div class="d-flex">
+                                <div class="col-md-6"><input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="category"></div>
+                                <div class="col-md-6"><button class="btn btn-success" type="submit">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
                     <div class="float-right ml-2">
-                        <a href="#">Create New Category</a>
+{{--                        <a href="#">Create New Category</a>--}}
+
                     </div>
                     <h5 class="header-title mb-4">Latest Categories</h5>
 
@@ -24,56 +48,33 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <a href="#"># XO1345</a>
-                                </th>
-                                <td>Danny Johnson</td>
-                                <td>Danny-Johnson</td>
-                                <td>26 Jan</td>
-                                <td>
-                                    <div class="badge badge-soft-primary">Confirm</div>
-                                </td>
-                                <td>124</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
-                                            <i class="mdi mdi-eye"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
-                                            <i class="mdi mdi-pencil"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
-                                            <i class="mdi mdi-trash-can"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <a href="#"># 15</a>
-                                </th>
-                                <td>Danny Johnson</td>
-                                <td>Danny-Johnson</td>
-                                <td>26 Jan</td>
-                                <td>
-                                    <div class="badge badge-soft-primary">Confirm</div>
-                                </td>
-                                <td>124</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
-                                            <i class="mdi mdi-eye"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-warning btn-sm border-left-0 border-right-0" data-toggle="tooltip" data-placement="top" title="Edit">
-                                            <i class="mdi mdi-pencil"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
-                                            <i class="mdi mdi-trash-can"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                                @foreach($categories as $category)
+                                    <tr>
+                                        <th scope="row">
+                                            <a href="#"># {{ $loop->iteration }}</a>
+                                        </th>
+                                        <td>{{ $category->name }}</td>
+                                        <td>{{ $category->slug }}</td>
+                                        <td>{{ $category->created_at }}</td>
+                                        <td>
+                                            <div class="badge badge-soft-primary">Confirm</div>
+                                        </td>
+                                        <td>124</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
+                                                    <i class="mdi mdi-eye"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                    <i class="mdi mdi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <i class="mdi mdi-trash-can"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

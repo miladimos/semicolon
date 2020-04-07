@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -15,8 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-//        $categories = Category::paginate(10);
-        return view('admin.category.index');
+        $categories = Category::paginate(10);
+        return view('admin.category.index', compact('categories'));
     }
 
     /**
@@ -35,16 +36,10 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        $validatedData = Validator::make($request->all(), [
-            'name'=>'required'
-        ]);
-
-        if ( $validatedData->fails())
-            return back()->withErrors()->withInput()->with('error', 'wrong data');
-
-        $category = Category::create($validatedData->validated());
+        $validated = $request->validated();
+        $category = Category::create($validated);
         return redirect()->route('category.index')->with('success','Category Created Successfully');
     }
 

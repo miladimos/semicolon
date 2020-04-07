@@ -5,17 +5,17 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="header-title mb-4 text-center">New Tag</h5>
+                    <h5 class="header-title mb-4 text-center">New Permission</h5>
                     <div>
                         @include('admin.partials.errors')
                         @if(session('success'))
                             <span>{{ session()->get('success') }}</span>
                         @endif
-                        <form action="{{ route('tag.store') }}" method="post">
+                        <form action="{{ route('permission.store') }}" method="post">
                             @csrf
-                            <label for="tag">Tag Name:</label>
+                            <label for="permission">Permission Name:</label>
                             <div class="d-flex">
-                                <div class="col-md-6"><input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="tag"></div>
+                                <div class="col-md-6"><input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="permission"></div>
                                 <div class="col-md-6"><button class="btn btn-success" type="submit">Submit</button></div>
                             </div>
                         </form>
@@ -29,15 +29,16 @@
             <div class="card">
                 <div class="card-body">
                     <div class="float-right ml-2">
-                        <a href="#">Create New Tag</a>
+{{--                        <a href="#">Create New Category</a>--}}
+
                     </div>
-                    <h5 class="header-title mb-4">Latest Tags</h5>
+                    <h5 class="header-title mb-4">Latest Permissions</h5>
 
                     <div class="table-responsive">
                         <table class="table table-centered table-hover mb-0">
                             <thead>
                             <tr>
-                                <th scope="col">Tag ID</th>
+                                <th scope="col">Permission ID</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Slug</th>
                                 <th scope="col">Date</th>
@@ -47,27 +48,27 @@
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($tags as $tag)
+                                @foreach($permissions as $permission)
                                     <tr>
                                         <th scope="row">
                                             <a href="#"># {{ $loop->iteration }}</a>
                                         </th>
-                                        <td>{{ $tag->name }}</td>
-                                        <td>{{ $tag->slug }}</td>
-                                        <td>{{ $tag->created_at }}</td>
+                                        <td>{{ $permission->name }}</td>
+                                        <td>{{ $permission->slug }}</td>
+                                        <td>{{ $permission->created_at }}</td>
                                         <td>
                                             <div class="badge badge-soft-primary">Confirm</div>
                                         </td>
                                         <td>124</td>
                                         <td>
                                             <div class="btn-group" role="group">
-                                                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
                                                     <i class="mdi mdi-eye"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-outline-warning btn-sm border-left-0 border-right-0" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
                                                     <i class="mdi mdi-pencil"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
                                                     <i class="mdi mdi-trash-can"></i>
                                                 </button>
                                             </div>
@@ -100,4 +101,3 @@
         </div>
     </div>
 @endsection
-

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,6 +21,12 @@ class HomeController extends Controller
     {
         views($article)->record();
         return view('article', compact('article'));
+    }
+
+    public function categories()
+    {
+        $categroies = Category::all();
+        return view('site.pages.categories', compact('categroies'));
     }
 
 //    public function tredis()

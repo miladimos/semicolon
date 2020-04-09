@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,6 +28,11 @@ class HomeController extends Controller
     {
         $categroies = Category::all();
         return view('site.pages.categories', compact('categroies'));
+    }
+    public function tags()
+    {
+        $tags = Tag::all();
+        return view('site.pages.tags', compact('tags'));
     }
 
 //    public function tredis()

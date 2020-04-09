@@ -24,6 +24,7 @@
 Route::get('/', 'Home\HomeController@index')->name('site.index');
 Route::get('/help', 'Home\HomeController@help')->name('help');
 Route::get('/categories', 'Home\HomeController@categories')->name('categories');
+Route::get('/tags', 'Home\HomeController@tags')->name('tags');
 
 Auth::routes();
 //Route::get('/article/{article}', 'Home\HomeController@articleSingle')->name('article.single');

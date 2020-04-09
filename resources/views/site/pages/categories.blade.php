@@ -3,7 +3,10 @@
 @section('content')
     <div class="container">
         <div class="mt-5">
-            <h1 class="">Categories</h1>
+            <div class="d-flex align-items-center justify-content-between">
+                <h1>Categories</h1>
+                <span>123 categories</span>
+            </div>
             <hr>
             <div class="row text-center">
                @for($i=0; $i<6;$i++)

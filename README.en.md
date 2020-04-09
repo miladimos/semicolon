@@ -19,7 +19,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 ## Technologies
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This Project uses following Frameworks:
 
 - [Laravel 7.*](https://laravel.com).
 - [Vuejs 2.5.*](https://vuejs.org).
@@ -27,9 +27,12 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 ## Packages
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This Project uses following Packages or Libraries:
 
-- [composer require laravel/socialite](https://laravel.com/docs/7.x/socialite).
+- [cviebrock/eloquent-sluggable ^7.0](https://laravel.com).
+- [laravel/socialite ^4.3](https://laravel.com).
+- [fortawesome/fontawesome-free ^5.12.1](https://laravel.com).
+- [sweetalert2 ^9.10.3](https://laravel.com).
 
 ### Solar System Exploration, 1950s – 1960s
 

@@ -20,9 +20,17 @@
 - [Vuejs 2.5.*](https://vuejs.org).
 - [Bootstrap 4.2.*](https://bootstrap.com).
 
-#         پکیج ها و کتابخانه های استفاده شده 
+## پکیج ها و کتابخانه های استفاده شده 
 
-- [Laravel 7.*](https://laravel.com).
+- [cviebrock/eloquent-sluggable ^7.0](https://laravel.com).
+- [laravel/socialite ^4.3](https://laravel.com).
+- [fortawesome/fontawesome-free ^5.12.1](https://laravel.com).
+- [sweetalert2 ^9.10.3](https://laravel.com).
+
+### امکانات و ویژگی های مورد نیاز
+
+- [ ] Mercury
+- [x] Venus
 
 #همکاری برای توسعه پروژه   
 به این صورت میتوانید همکاری کنید

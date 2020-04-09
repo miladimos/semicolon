@@ -11,6 +11,10 @@ class Tag extends Model
 
     protected $fillable = ['name', 'slug'];
 
+    public function path()
+    {
+        return "/tag/".$this->slug;
+    }
 
 //    public function articles()
 //    {

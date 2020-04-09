@@ -8,13 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use Sluggable;
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['name', 'slug', 'image'];
 
 //    public function articles()
 //    {
 //        return $this->hasMany(Article::class);
 //    }
 
+    public function path()
+    {
+        return "/category/".$this->slug;
+    }
 
     /**
      * Return the sluggable configuration array for this model.

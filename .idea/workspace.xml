@@ -3,19 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/admin/adminvue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/admin/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/main-sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TagController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +26,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -213,7 +207,7 @@
       <workItem from="1586558881812" duration="890000" />
       <workItem from="1586756935675" duration="536000" />
       <workItem from="1586769992376" duration="2336000" />
-      <workItem from="1587127787008" duration="585000" />
+      <workItem from="1587127787008" duration="5959000" />
     </task>
     <servers />
   </component>
@@ -242,6 +236,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1586772163376" />
+    <state x="778" y="451" key="NewPhpClassDialog" timestamp="1587135405666">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="778" y="451" key="NewPhpClassDialog/0.0.1536.834@0.0.1536.834" timestamp="1587135405666" />
+    <state x="604" y="349" key="NewPhpFileDialog" timestamp="1587133592286">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="604" y="349" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1587133592286" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1586224154548">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

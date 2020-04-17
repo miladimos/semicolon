@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
 use App\Models\Tag;
-use App\Repositories\TagRepository\TagRepositoryInterface;
+use App\Repositories\TagRepository\CategoryRepositoryInterface;
 use Illuminate\Http\Request;
 
 class TagController extends Controller
@@ -13,7 +13,7 @@ class TagController extends Controller
 
     protected $tagRepository;
 
-    public function __construct(TagRepositoryInterface $tagRepository)
+    public function __construct(CategoryRepositoryInterface $tagRepository)
     {
         $this->tagRepository = $tagRepository;
     }

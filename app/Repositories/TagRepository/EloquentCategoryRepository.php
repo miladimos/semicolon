@@ -6,7 +6,7 @@ namespace App\Repositories\TagRepository;
 
 use App\Models\Tag;
 
-class EloquentTagRepository implements TagRepositoryInterface
+class EloquentCategoryRepository implements CategoryRepositoryInterface
 {
     private $model;
     public function __construct(Tag $tag)

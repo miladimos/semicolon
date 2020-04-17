@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use App\Repositories\ArticleRepository\ArticleRepositoryInterface;
 use App\Repositories\ArticleRepository\EloquentArticleRepository;
-use App\Repositories\TagRepository\EloquentTagRepository;
-use App\Repositories\TagRepository\TagRepositoryInterface;
+use App\Repositories\TagRepository\EloquentCategoryRepository;
+use App\Repositories\TagRepository\CategoryRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoriesServiceProvider extends ServiceProvider
@@ -27,7 +27,7 @@ class RepositoriesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(TagRepositoryInterface::class,EloquentTagRepository::class);
+        $this->app->bind(CategoryRepositoryInterface::class,EloquentCategoryRepository::class);
         $this->app->bind(ArticleRepositoryInterface::class,EloquentArticleRepository::class);
     }
 }

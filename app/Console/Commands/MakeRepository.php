@@ -11,14 +11,14 @@ class MakeRepository extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'make:repository {name:Name of RepositoryPattern} {--model=?}' ;
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Create New Repository Pattern files for your Model';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,6 @@ class MakeRepository extends Command
      */
     public function handle()
     {
-        //
+        return print('Test Repo');
     }
 }

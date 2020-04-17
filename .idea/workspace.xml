@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/MakeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/MakeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoriesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoriesServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,22 +146,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Laravel-Blog-Vue-SPA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\admin" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\lang\fa" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\admin" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site\user\article" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin\tags" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\app\Repositories" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\admin" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\lang\fa" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -207,7 +208,7 @@
       <workItem from="1586558881812" duration="890000" />
       <workItem from="1586756935675" duration="536000" />
       <workItem from="1586769992376" duration="2336000" />
-      <workItem from="1587127787008" duration="5959000" />
+      <workItem from="1587127787008" duration="8324000" />
     </task>
     <servers />
   </component>
@@ -228,6 +229,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="511" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587138543012">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="511" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1587138543012" />
     <state x="499" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586221065542">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

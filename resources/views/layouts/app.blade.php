@@ -20,7 +20,7 @@
     <link href="{{ asset('/fonts/fontawesome/css/all.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div>
         <nav class="navbar navbar-expand-md navbar-light bg-white py-2">
             <div class="container">
                 <a class="navbar-brand font-weight-bold" style="font-size: 26px;" href="{{ url('/') }}">
@@ -133,7 +133,7 @@
            </div>
         </div>
 
-        <main class="py-4">
+        <main class="py-4" id="app">
             @yield('content')
         </main>
     </div>

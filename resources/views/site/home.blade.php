@@ -20,6 +20,10 @@
                 <example-component></example-component>
                 <hr>
                 <testsite-component></testsite-component>
+                <hr>
+                <useronline-component></useronline-component>
+                <hr>
+                <newtest-component></newtest-component>
             </div>
         </div>
     </div>

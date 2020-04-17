@@ -62,6 +62,7 @@ Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
     Route::resource('permission', 'PermissionController');
 
     Route::get('/article', 'ArticleController@index')->name('article.index');
+    Route::get('/user', 'UserController@index')->name('user.index');
 
 
 //    Route::get('/article/trashed', 'ArticleController@trashed')->name('article.trashed');

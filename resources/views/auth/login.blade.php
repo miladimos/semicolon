@@ -70,7 +70,7 @@
                             <div class="col-md-10 text-center offset-md-1">
                                 <a href="#" class="btn btn-danger">Google <i class="fab fa-google-plus-g"></i></a>
                                 or
-                                <a href="#" class="btn btn-secondary">GitHub <i class="fab fa-github"></i></a>
+                                <a href="#" class="btn btn-secondary">GitHub <i class="fas fa-github"></i></a>
                             </div>
                         </div>
                     </form>

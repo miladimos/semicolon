@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <newarticle-component :name="milad"></newarticle-component>
         <div class="mt-5">
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="row">

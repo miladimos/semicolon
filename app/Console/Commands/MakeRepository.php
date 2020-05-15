@@ -20,6 +20,7 @@ class MakeRepository extends Command
      */
     protected $description = 'Create New Repository Pattern files for your Model';
 
+
     /**
      * Create a new command instance.
      *

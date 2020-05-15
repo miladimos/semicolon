@@ -24,6 +24,8 @@
                 <useronline-component></useronline-component>
                 <hr>
                 <newtest-component></newtest-component>
+                <hr>
+                <newarticle-component></newarticle-component>
             </div>
         </div>
     </div>

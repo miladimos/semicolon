@@ -25,6 +25,11 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function scopeConfirmed($query)
+    {
+        return $query->where('confirmed', 1);
+    }
+
 
 //    public function path()
 //    {

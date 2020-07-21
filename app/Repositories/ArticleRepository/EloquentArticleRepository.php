@@ -5,23 +5,43 @@ namespace App\Repositories\ArticleRepository;
 
 
 use App\Models\Article;
+use App\Repositories\BaseRepository;
 
-class EloquentArticleRepository implements ArticleRepositoryInterface
+class EloquentArticleRepository extends BaseRepository implements ArticleRepositoryInterface
 {
-    private $model;
 
-    public function __construct(Article $article)
+    public function all(): object
     {
-        $this->model = $article;
+        // TODO: Implement all() method.
     }
 
-    public function all()
+    public function paginate($perPage = 15, $columns = array('*'))
     {
-        return $this->model->all();
+        // TODO: Implement paginate() method.
     }
 
-    public function find($id)
+    public function find($id): object
     {
-        return $this->model->find($id);
+        // TODO: Implement find() method.
+    }
+
+    public function findBy($field, $value, $columns = array('*'))
+    {
+        // TODO: Implement findBy() method.
+    }
+
+    public function create($request): object
+    {
+        // TODO: Implement create() method.
+    }
+
+    public function destroy($id): object
+    {
+        // TODO: Implement destroy() method.
+    }
+
+    public function update($request, $id): void
+    {
+        // TODO: Implement update() method.
     }
 }

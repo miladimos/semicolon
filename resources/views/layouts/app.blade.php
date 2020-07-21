@@ -69,12 +69,12 @@
 {{--                                </div>--}}
 {{--                            </li>--}}
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" v-pre>
                                     <img class="img-thumbnail rounded-circle border border-primary" style="width: 46px; height: 46px;" src="{{asset('storage/avatars/default.jpg')}}" alt="{{ auth()->user()->username }}">
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right">
                                     <a class="d-block px-4 text-dark" href="{{ route('user.profile.index', ['username'=>auth()->user()->username]) }}">
                                         <span class="d-inline-block ">Name Family</span>
                                         <span class="d-inline-block mt-2">

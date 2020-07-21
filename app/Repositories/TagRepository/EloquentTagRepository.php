@@ -3,16 +3,14 @@
 
 namespace App\Repositories\TagRepository;
 
-
-use App\Models\Category;
 use App\Repositories\BaseRepository;
 
-class EloquentCategoryRepository extends BaseRepository implements CategoryRepositoryInterface
+class EloquentTagRepository extends BaseRepository implements TagRepositoryInterface
 {
 
     public function all(): object
     {
-        // TODO: Implement all() method.
+        $this->model->all();
     }
 
     public function paginate($perPage = 15, $columns = array('*'))

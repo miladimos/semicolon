@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:composer" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:composer" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:symfony" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/BaseRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/TagRepository/EloquentTagRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Advanced-Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Advanced-Blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/MakeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/MakeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoriesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoriesServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticleRepository/ArticleRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticleRepository/ArticleRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticleRepository/EloquentArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticleRepository/EloquentArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository/CategoryRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository/CategoryRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository/EloquentCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository/EloquentCategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/TagRepository/EloquentCategoryRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/TagRepository/TagRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/TagRepository/TagRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/user/article/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/user/article/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +66,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,35 +183,43 @@
       <path value="$PROJECT_DIR$/vendor/cviebrock/eloquent-sluggable" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Ye36sh5ASmurwnF8TODysPkOmn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kojeja" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Repositories" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin\tags" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Repositories" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\lang\tr" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\app\Repositories" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\admin" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\lang\fa" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin\tags" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,34 +270,38 @@
       <workItem from="1587155731041" duration="598000" />
       <workItem from="1587195083910" duration="3192000" />
       <workItem from="1587296682773" duration="406000" />
+      <workItem from="1594073968306" duration="370000" />
+      <workItem from="1594252123800" duration="1903000" />
+      <workItem from="1594373042850" duration="23000" />
+      <workItem from="1595326086803" duration="460000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="511" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587138543012">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="406" y="201" width="412" height="659" key="#com.intellij.ide.util.MemberChooser" timestamp="1595326546498">
+      <screen x="0" y="27" width="1920" height="987" />
+    </state>
+    <state x="406" y="201" width="412" height="659" key="#com.intellij.ide.util.MemberChooser/0.27.1920.987@0.27.1920.987" timestamp="1595326546498" />
+    <state x="639" y="27" width="774" height="987" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595326443205">
+      <screen x="0" y="27" width="1920" height="987" />
     </state>
     <state x="511" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1587138543012" />
-    <state x="499" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586221065542">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="499" y="175" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1586221065542" />
+    <state x="639" y="27" width="774" height="987" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.987@0.27.1920.987" timestamp="1595326443205" />
     <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1587200445872">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -255,10 +314,6 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="349" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1587133592286" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1586224154548">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1586224154548" />
     <state x="477" y="245" key="com.intellij.ide.util.TipDialog" timestamp="1587196884141">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

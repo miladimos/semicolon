@@ -4,9 +4,6 @@
 namespace App\Repositories\TagRepository;
 
 
-interface CategoryRepositoryInterface
-{
-    public function all();
+use App\Repositories\BaseRepositoryInterface;
 
-    public function find($id);
-}
+interface CategoryRepositoryInterface extends BaseRepositoryInterface {}

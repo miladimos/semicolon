@@ -40,25 +40,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/BaseRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/TagRepository/EloquentTagRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Advanced-Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Advanced-Blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoriesServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoriesServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticleRepository/ArticleRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticleRepository/ArticleRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/ArticleRepository/EloquentArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/ArticleRepository/EloquentArticleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository/CategoryRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository/CategoryRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/CategoryRepository/EloquentCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/CategoryRepository/EloquentCategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/TagRepository/EloquentCategoryRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/TagRepository/TagRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/TagRepository/TagRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,7 +255,7 @@
       <workItem from="1594073968306" duration="370000" />
       <workItem from="1594252123800" duration="1903000" />
       <workItem from="1594373042850" duration="23000" />
-      <workItem from="1595326086803" duration="460000" />
+      <workItem from="1595326086803" duration="639000" />
     </task>
     <servers />
   </component>

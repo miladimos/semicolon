@@ -229,7 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
 
-        'Helper' => App\Helpers\Helper::class,
+        'helper' => App\Helpers\helper::class,
 
     ],
 

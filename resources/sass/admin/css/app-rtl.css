@@ -17,7 +17,7 @@ File: Main Css (RTL) File
 8. Layouts
 9. Waves
 10. Avatar
-11. Helper
+11. helper
 12. Demos
 13. Plugins
 14. Authentication
@@ -1094,7 +1094,7 @@ body[data-layout="horizontal"][data-layout-size="boxed"] {
           justify-content: center;
   width: 100%; }
 
-/* 11. Helper */
+/* 11. helper */
 .font-size-11 {
   font-size: 11px !important; }
 

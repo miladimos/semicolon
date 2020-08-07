@@ -59,7 +59,7 @@ function scrollbarWidth() {
   return cachedScrollbarWidth;
 }
 
-// Helper function to retrieve options from element attributes
+// helper function to retrieve options from element attributes
 var getOptions = function getOptions(obj) {
   var options = Array.prototype.reduce.call(obj, function (acc, attribute) {
     var option = attribute.name.match(/data-simplebar-(.+)/);
@@ -358,7 +358,7 @@ function () {
    */
 
   /**
-   * Helper to fix browsers inconsistency on RTL:
+   * helper to fix browsers inconsistency on RTL:
    *  - Firefox inverts the scrollbar initial position
    *  - IE11 inverts both scrollbar position and scrolling offset
    * Directly inspired by @KingSora's OverlayScrollbars https://github.com/KingSora/OverlayScrollbars/blob/master/js/OverlayScrollbars.js#L1634

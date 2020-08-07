@@ -17,7 +17,7 @@ File: Main Css File
 8. Layouts
 9. Waves
 10. Avatar
-11. Helper
+11. helper
 12. Demos
 13. Plugins
 14. Authentication
@@ -922,10 +922,10 @@ body[data-layout="horizontal"][data-layout-size="boxed"] {
 /* 9. Waves */
 /*!
  * Waves v0.7.6
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE */
 .waves-effect {
   position: relative;
@@ -1093,7 +1093,7 @@ body[data-layout="horizontal"][data-layout-size="boxed"] {
           justify-content: center;
   width: 100%; }
 
-/* 11. Helper */
+/* 11. helper */
 .font-size-11 {
   font-size: 11px !important; }
 

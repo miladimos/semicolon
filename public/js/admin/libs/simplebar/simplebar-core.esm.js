@@ -325,7 +325,7 @@ function () {
    */
 
   /**
-   * Helper to fix browsers inconsistency on RTL:
+   * helper to fix browsers inconsistency on RTL:
    *  - Firefox inverts the scrollbar initial position
    *  - IE11 inverts both scrollbar position and scrolling offset
    * Directly inspired by @KingSora's OverlayScrollbars https://github.com/KingSora/OverlayScrollbars/blob/master/js/OverlayScrollbars.js#L1634

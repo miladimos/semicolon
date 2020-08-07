@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Helpers\Helper;
+use App\Helpers\helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Tag;
@@ -15,7 +15,8 @@ class HomeController extends Controller
     {
 //        $articles = Article::latest()->paginate(20);
 //        return view('site.home', compact('articles'));
-        return view('site.home');
+//        return view('site.home');
+        return view('site.user.master');
     }
 
     public function articleSingle(Article $article)

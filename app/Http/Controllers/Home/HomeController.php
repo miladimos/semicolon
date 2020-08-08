@@ -15,8 +15,7 @@ class HomeController extends Controller
     {
 //        $articles = Article::latest()->paginate(20);
 //        return view('site.home', compact('articles'));
-//        return view('site.home');
-        return view('site.user.master');
+        return view('site.home');
     }
 
     public function articleSingle(Article $article)

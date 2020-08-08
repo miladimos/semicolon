@@ -21,7 +21,7 @@
 </head>
 <body>
 <div>
-    <nav class="navbar navbar-expand-md navbar-light bg-white py-2">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-4">
         <div class="container">
             <a class="navbar-brand font-weight-bold" style="font-size: 26px;" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
@@ -49,25 +49,6 @@
                             </li>
                         @endif
                     @else
-                        {{--                            <li class="nav-item dropdown">--}}
-                        {{--                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
-                        {{--                                    <i class="fas fa-search fa-2x mt-2"></i>--}}
-                        {{--                                </a>--}}
-
-                        {{--                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
-                        {{--                                    <a class="dropdown-item" href="#"> Setting--}}
-                        {{--                                    </a>--}}
-                        {{--                                    <a class="dropdown-item" href="{{ route('logout') }}"--}}
-                        {{--                                       onclick="event.preventDefault();--}}
-                        {{--                                                     document.getElementById('logout-form').submit();">--}}
-                        {{--                                        {{ __('Logout') }}--}}
-                        {{--                                    </a>--}}
-
-                        {{--                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-                        {{--                                        @csrf--}}
-                        {{--                                    </form>--}}
-                        {{--                                </div>--}}
-                        {{--                            </li>--}}
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" v-pre>
                                 <img class="img-thumbnail rounded-circle border border-primary" style="width: 46px; height: 46px;" src="{{asset('storage/avatars/default.jpg')}}" alt="{{ auth()->user()->username }}">

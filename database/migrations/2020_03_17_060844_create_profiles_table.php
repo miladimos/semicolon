@@ -16,8 +16,8 @@ class CreateProfilesTable extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
+            $table->string('fname')->nullable();
+            $table->string('lname')->nullable();
             $table->string('phone')->unique()->nullable();
             $table->string('telegram')->unique()->nullable();
             $table->string('twitter')->unique()->nullable();
@@ -26,8 +26,11 @@ class CreateProfilesTable extends Migration
             $table->string('github')->unique()->nullable();
             $table->string('gitlab')->unique()->nullable();
             $table->string('virgol')->unique()->nullable();
+            $table->string('atbox')->unique()->nullable();
             $table->string('medium')->unique()->nullable();
-            $table->string('avatar')->unique()->nullable();
+            $table->string('avatar')->nullable();
+            $table->enum('gender', [0,1,2])->defaule(0);
+
             $table->timestamps();
         });
     }

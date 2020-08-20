@@ -18,8 +18,13 @@ class CreateProfilesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('fname')->nullable();
             $table->string('lname')->nullable();
+            $table->string('age')->nullable();
+            $table->mediumText('bio')->nullable();
             $table->string('phone')->unique()->nullable();
             $table->string('telegram')->unique()->nullable();
+            $table->string('instagram')->unique()->nullable();
+            $table->string('youtube')->unique()->nullable();
+            $table->string('site')->unique()->nullable();
             $table->string('twitter')->unique()->nullable();
             $table->string('facebook')->unique()->nullable();
             $table->string('linkedin')->unique()->nullable();

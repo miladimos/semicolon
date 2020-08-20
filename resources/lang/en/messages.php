@@ -14,6 +14,7 @@ return [
     'socials' => [
         'site' => 'Site',
         'instagram' => 'Instagram',
+        'telegram' => 'Telegram',
         'youtube' => 'Youtube',
         'aparat' => 'Aparat',
         'linkedin' => 'Linkedin',

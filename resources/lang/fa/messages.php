@@ -14,6 +14,7 @@ return [
     'socials' => [
         'site' => 'سایت',
         'instagram' => 'اینستاگرام',
+        'telegram' => 'تلگرام',
         'youtube' => 'یوتیوب',
         'aparat' => 'آپارات',
         'linkedin' => 'لینکدین',

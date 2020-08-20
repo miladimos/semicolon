@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <form method="post" enctype="multipart/form-data">
+                <form action="{{ route('user.setting.update') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-center">
@@ -15,30 +15,29 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="fname">First Name</label>
-                            <input type="text" name="fname" class="form-control" id="fname">
+                            <input type="text" name="fname" class="form-control" id="fname" value="{{ auth()->user()->profile->fname ?? '' }}">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lname">Last Name</label>
-                            <input type="text" class="form-control" name="lname" id="lname">
+                            <input type="text" class="form-control" name="lname" id="lname" value="{{ auth()->user()->profile->lname ?? '' }}">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="bio">Bio</label>
-                        <textarea class="form-control" name="bio" id="bio" cols="30" rows="4"></textarea>
+                        <textarea class="form-control" name="bio" id="bio" cols="30" rows="4">{{ auth()->user()->profile->bio ?? '' }}</textarea>
                     </div>
                     <div class="form-row d-flex justify-content-between">
                         <div class="form-group col-md-6">
                             <label for="gender">Gender</label>
                             <select id="gender" name="gender" class="form-control">
-                                <option value="null">-------</option>
-                                <option value="0">I don't like to say</option>
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
+                                <option value="0" @if(auth()->user()->profile->gender == 0) selected @endif>I don't like to say</option>
+                                <option value="1" @if(auth()->user()->profile->gender == 1) selected @endif>Male</option>
+                                <option value="2" @if(auth()->user()->profile->gender == 2) selected @endif>Female</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="age">Age</label>
-                            <input type="number" id="age" min="8" max="100" name="age" class="form-control">
+                            <input type="number" id="age" min="8" max="100" name="age" class="form-control" value="{{ auth()->user()->profile->age ?? '' }}">
                         </div>
                     </div>
                     <hr>
@@ -46,61 +45,61 @@
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Your Site</h5>
-                            <input type="text" name="site" class="form-control w-50" id="site">
+                            <input type="text" name="site" class="form-control w-50" id="site" value="{{ auth()->user()->profile->site ?? '' }}">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Instagram</h5>
-                            <input type="text" class="form-control w-50" name="instagram" id="instagram">
+                            <input type="text" class="form-control w-50" name="instagram" id="instagram" value="{{ auth()->user()->profile->instagram ?? '' }}">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Youtube</h5>
-                            <input type="text" class="form-control w-50" name="youtube" id="youtube">
+                            <input type="text" value="{{ auth()->user()->profile->youtube ?? '' }}" class="form-control w-50" name="youtube" id="youtube">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Tweeter</h5>
-                            <input type="text" class="form-control w-50" name="tweeter" id="tweeter">
+                            <input type="text" value="{{ auth()->user()->profile->tweeter ?? '' }}" class="form-control w-50" name="tweeter" id="tweeter">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Facebook</h5>
-                            <input type="text" class="form-control w-50" name="facebook" id="facebook">
+                            <input type="text" value="{{ auth()->user()->profile->facebook ?? '' }}" class="form-control w-50" name="facebook" id="facebook">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Telegram</h5>
-                            <input type="text" class="form-control w-50" name="telegram" id="telegram">
+                            <input type="text" value="{{ auth()->user()->profile->telegram ?? '' }}" class="form-control w-50" name="telegram" id="telegram">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Linkedin</h5>
-                            <input type="text" class="form-control w-50" name="linkedin" id="linkedin">
+                            <input type="text" value="{{ auth()->user()->profile->linkedin ?? '' }}" class="form-control w-50" name="linkedin" id="linkedin">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Github</h5>
-                            <input type="text" class="form-control w-50" name="github" id="github">
+                            <input type="text" value="{{ auth()->user()->profile->github ?? '' }}" class="form-control w-50" name="github" id="github">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Gitlab</h5>
-                            <input type="text" class="form-control w-50" name="gitlab" id="gitlab">
+                            <input type="text" value="{{ auth()->user()->profile->gitlab ?? '' }}" class="form-control w-50" name="gitlab" id="gitlab">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Atbox</h5>
-                            <input type="text" class="form-control w-50" name="atbox" id="atbox">
+                            <input type="text" value="{{ auth()->user()->profile->atbox ?? '' }}" class="form-control w-50" name="atbox" id="atbox">
                         </div>
                     </div>
 

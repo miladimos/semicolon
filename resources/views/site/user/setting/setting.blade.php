@@ -14,12 +14,12 @@
                     <h3 class="my-4">User Info</h3>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">First Name</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" class="form-control" id="fname">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputPassword4">Last Name</label>
-                            <input type="password" class="form-control" id="inputPassword4">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" name="lname" id="lname">
                         </div>
                     </div>
                     <div class="form-group">
@@ -28,17 +28,17 @@
                     </div>
                     <div class="form-row d-flex justify-content-between">
                         <div class="form-group col-md-6">
-                            <label for="inputState">Gender</label>
-                            <select id="inputState" class="form-control">
-                                <option >Male</option>
-                                <option >I don't like to say</option>
-                                <option >Male</option>
-                                <option >Female</option>
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" class="form-control">
+                                <option value="null">-------</option>
+                                <option value="0">I don't like to say</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="bio">Age</label>
-                            <input type="text" name="age" class="form-control">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" min="8" max="100" name="age" class="form-control">
                         </div>
                     </div>
                     <hr>
@@ -46,61 +46,61 @@
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Your Site</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" name="site" class="form-control w-50" id="site">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Instagram</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="instagram" id="instagram">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Youtube</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="youtube" id="youtube">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Tweeter</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="tweeter" id="tweeter">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Facebook</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="facebook" id="facebook">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Telegram</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="telegram" id="telegram">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Linkedin</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="linkedin" id="linkedin">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Github</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="github" id="github">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Gitlab</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="gitlab" id="gitlab">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12 d-flex justify-content-between align-items-center">
                             <h5>Atbox</h5>
-                            <input type="text" class="form-control w-50" id="inputCity">
+                            <input type="text" class="form-control w-50" name="atbox" id="atbox">
                         </div>
                     </div>
 

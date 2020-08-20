@@ -7,5 +7,20 @@ return [
     'categories' => 'Categories',
     'tags' => 'Tags',
     'contactus' => 'Contact us',
-    'aboutus' => 'About us',
+    'profile' => 'Profile',
+    'setting' => 'Setting',
+    'update' => 'Update',
+    'create' => 'Create',
+    'socials' => [
+        'site' => 'Site',
+        'instagram' => 'Instagram',
+        'youtube' => 'Youtube',
+        'aparat' => 'Aparat',
+        'linkedin' => 'Linkedin',
+        'email' => 'Email',
+        'tweeter' => 'Tweeter',
+        'github' => 'Github',
+        'gitlab' => 'Gitlab',
+        'atbox' => 'Atbox',
+    ]
 ];

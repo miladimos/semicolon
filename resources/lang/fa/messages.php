@@ -7,5 +7,20 @@ return [
     'categories' => 'دسته بندی ها',
     'tags' => 'برچسب ها',
     'contactus' => 'تماس با ما',
-    'aboutus' => 'درباره ما',
+    'profile' => 'پروفایل',
+    'setting' => 'تنظیمات',
+    'update' => 'بروزرسانی',
+    'create' => 'ایجاد',
+    'socials' => [
+        'site' => 'سایت',
+        'instagram' => 'اینستاگرام',
+        'youtube' => 'یوتیوب',
+        'aparat' => 'آپارات',
+        'linkedin' => 'لینکدین',
+        'email' => 'ایمیل',
+        'tweeter' => 'توییتر',
+        'github' => 'گیت هاب',
+        'gitlab' => 'گیت لب',
+        'atbox' => 'Atbox',
+    ]
 ];

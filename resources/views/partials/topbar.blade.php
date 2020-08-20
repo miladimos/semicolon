@@ -47,7 +47,8 @@
                     {{--                            </li>--}}
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" v-pre>
-                            <img class="img-thumbnail rounded-circle border border-primary" style="width: 46px; height: 46px;" src="{{asset('storage/avatars/default.jpg')}}" alt="{{ auth()->user()->username }}">
+                            <img class="img-thumbnail rounded-circle border border-primary" style="width: 46px; height: 46px;" src="{{asset('/images/default.png')}}" alt="{{ auth()->user()->username }}">
+
                             {{ Auth::user()->username }} <span class="caret"></span>
                         </a>
 

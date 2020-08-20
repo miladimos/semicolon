@@ -47,6 +47,7 @@ Route::group(['namespace'=>'User'], function() {
     Route::get('/article/drafts', 'ArticleController@drafts')->name('article.drafts');
 
     Route::get('/me/settings', 'SettingController@setting')->name('user.setting');
+    Route::post('/me/settings', 'SettingController@update')->name('user.setting.update');
     Route::get('/me/bookmarks', 'ArticleController@bookmarks')->name('article.bookmarks');
     Route::get('/me/likes', 'ArticleController@likes')->name('article.likes');
 

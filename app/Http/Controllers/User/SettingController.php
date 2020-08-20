@@ -17,4 +17,9 @@ class SettingController extends Controller
         $user = auth()->user();
         return view('site.user.setting.setting', compact('user'));
     }
+
+    public function update(Request $request)
+    {
+        return $request->all();
+    }
 }

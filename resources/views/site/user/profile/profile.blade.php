@@ -6,14 +6,14 @@
            <div class="col-md-8">
                 <div class="d-flex justify-content-between">
                     <div class="d-flex">
-                        <img class="img-thumbnail rounded-circle" style="width: 120px; height: 120px;" src="{{ asset('storage/avatars/default.jpg') }}" alt="{{ $user->username }}">
+                        <img class="img-thumbnail rounded-circle" style="width: 120px; height: 120px;" src="{{ asset('/images/default.png') }}" alt="{{ $user->username }}">
                         <div class="ml-3 mt-3">
                             <h2 class="font-weight-bold">{{ $user->username }}</h2>
-                            <p class="text-black-50">This is my bio.This is my bio.This is my bio.</p>
+                            <p class="text-black-50">{{ $user->profile->bio ?? '' }}</p>
                         </div>
                     </div>
                     <div class="mt-4">
-                        <a href="#" class="text-black btn btn-outline-dark rounded-pill">Profile Setting</a>
+                        <a href="{{ route('user.setting') }}" class="text-black btn btn-outline-dark rounded-pill">Profile Setting</a>
                     </div>
                 </div>
                <div class="d-flex justify-content-between mt-4 mx-2">
@@ -55,7 +55,7 @@
                        <div class="d-flex justify-content-between">
                            <div class="d-flex">
                                <div>
-                                   <img class="img-thumbnail rounded-circle" style="width: 50px; height: 50px" src="{{ asset('/storage/avatars/default.jpg') }}" alt="">
+                                   <img class="img-thumbnail rounded-circle" style="width: 50px; height: 50px" src="{{ asset('/images/default.png') }}" alt="">
                                </div>
                                <div class="ml-3 mt-2" style="line-height: .6;">
                                    <h6 class="font-weight-bold" style="font-size: 13px">Name Family</h6>
@@ -71,7 +71,7 @@
                            <a href="#" class="text-decoration-none text-reset">
                                <h2 class="p-2 mt-1 font-weight-bold text-black" style="font-size: 1.4rem;">This is Article Title</h2>
                                <figure class="figure">
-                                   <img src="{{ asset('/storage/avatars/default.jpg') }}" class="figure-img img-fluid rounded" alt="..." style="width:100%; height: 250px">
+                                   <img src="{{ asset('/images/article.jpg') }}" class="figure-img img-fluid rounded" alt="..." style="width:100%; height: 250px">
                                    <figcaption class="figure-caption" style="font-size: 1rem;">A caption for the above image.</figcaption>
                                </figure>
                            </a>

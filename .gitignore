@@ -1,12 +1,16 @@
 /node_modules
 /public/hot
+/public/images/default.png
+/public/images/article.jpg
 /public/storage
 /storage/*.key
 /vendor
 .env
+.env.example
 .env.backup
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+

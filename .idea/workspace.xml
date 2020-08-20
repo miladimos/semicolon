@@ -41,16 +41,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel-Advanced-Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel-Advanced-Blog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/SettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/UserObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_17_060844_create_profiles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_17_060844_create_profiles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fa/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/user/setting/setting.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/user/setting/setting.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/user/profile/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/user/profile/profile.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +181,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/laravel-follow" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Ye36sh5ASmurwnF8TODysPkOmn" />
@@ -197,18 +196,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\storage\app\public" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/storage/app/public" />
-      <recent name="$PROJECT_DIR$/app/Repositories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin\tags" />
@@ -274,7 +273,7 @@
       <workItem from="1596733826374" duration="600000" />
       <workItem from="1596799171862" duration="48000" />
       <workItem from="1596842374915" duration="4405000" />
-      <workItem from="1597955445626" duration="4596000" />
+      <workItem from="1597955445626" duration="6133000" />
     </task>
     <servers />
   </component>
@@ -310,10 +309,10 @@
       <screen x="0" y="27" width="1920" height="987" />
     </state>
     <state x="624" y="235" key="run.anything.popup/0.27.1920.987@0.27.1920.987" timestamp="1596845148434" />
-    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup" timestamp="1597958445841">
+    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup" timestamp="1597961979762">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1597958445841" />
+    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1597961979762" />
     <state x="539" y="210" width="840" height="803" key="search.everywhere.popup/0.27.1920.987@0.27.1920.987" timestamp="1596845450239" />
   </component>
   <component name="XDebuggerManager">

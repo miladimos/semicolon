@@ -1,10 +1,10 @@
-@include('admin.layouts.header')
+@include('webmaster.layouts.header')
 <!-- Begin page -->
 <div id="layout-wrapper">
 
-    @include('admin.sections.page-topbar')
+    @include('webmaster.sections.page-topbar')
 
-    @include('admin.sections.main-sidebar')
+    @include('webmaster.sections.main-sidebar')
 
     {{-- start main content   --}}
     <div class="main-content">
@@ -69,6 +69,6 @@
 </div>
 <!-- END layout-wrapper -->
 
-@include('admin.sections.right-sidebar')
+@include('webmaster.sections.right-sidebar')
 
-@include('admin.layouts.footer')
+@include('webmaster.layouts.footer')

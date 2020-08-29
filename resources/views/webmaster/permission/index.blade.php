@@ -1,4 +1,4 @@
-@extends("admin.layouts.master")
+@extends("webmaster.layouts.master")
 
 @section('content')
     <div class="row justify-content-center">
@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <h5 class="header-title mb-4 text-center">New Permission</h5>
                     <div>
-                        @include('admin.partials.errors')
+                        @include('webmaster.partials.errors')
                         @if(session('success'))
                             <span>{{ session()->get('success') }}</span>
                         @endif

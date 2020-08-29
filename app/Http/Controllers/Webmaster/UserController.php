@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Webmaster;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -16,7 +16,7 @@ class UserController extends Controller
     public function index()
     {
         $users =User::latest()->paginate(20);
-        return view('admin.user.index', compact('users'));
+        return view('webmaster.user.index', compact('users'));
     }
 
     /**
@@ -27,14 +27,14 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::latest()->get();
-        return view('admin.user.create', compact('roles'));
+        return view('webmaster.user.create', compact('roles'));
     }
 
     public function role()
     {
         $roles = Role::latest()->get();
         $users = User::where('level', 'admin')->get();
-        return view('admin.user.userrole', compact('roles', 'users'));
+        return view('webmaster.user.userrole', compact('roles', 'users'));
     }
 
     public function storerole(Request $request)
@@ -52,7 +52,7 @@ class UserController extends Controller
     public function admins()
     {
         $admins = User::where('level', 'admin')->get();
-        return view('admin.user.admins', compact('admins'));
+        return view('webmaster.user.admins', compact('admins'));
     }
     /**
      * Store a newly created resource in storage.

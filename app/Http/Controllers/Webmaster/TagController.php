@@ -1,14 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Webmaster;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CategoryRequest;
-use App\Models\Category;
+use App\Http\Requests\TagRequest;
+use App\Models\Tag;
+use App\Repositories\TagRepository\CategoryRepositoryInterface;
 use Illuminate\Http\Request;
 
-class CategoryController extends Controller
+class TagController extends Controller
 {
+
+//    protected $tagRepository;
+//
+//    public function __construct(CategoryRepositoryInterface $tagRepository)
+//    {
+//        $this->tagRepository = $tagRepository;
+//    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,8 +25,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(10);
-        return view('admin.category.index', compact('categories'));
+//        $tags = Tag::paginate(20);
+        $tags = Tag::all();
+        return view('webmaster.tag.index', compact('tags'));
     }
 
     /**
@@ -27,7 +37,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category.create');
+        return view('webmaster.tag.create');
+
     }
 
     /**
@@ -36,20 +47,20 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoryRequest $request)
+    public function store(TagRequest $request)
     {
         $validated = $request->validated();
-        $category = Category::create($validated);
-        return redirect()->route('category.index')->with('success','Category Created Successfully');
+        $tag = Tag::create($validated);
+        return redirect()->route('tag.index')->with('success','Tag Created Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(Tag $tag)
     {
         //
     }
@@ -57,10 +68,10 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Tag $tag)
     {
         //
     }
@@ -69,10 +80,10 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Tag $tag)
     {
         //
     }
@@ -80,12 +91,12 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Category  $category
+     * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Tag $tag)
     {
-        if($category->delete())
-            return redirect()->route('category.index')->with('success','Category Deleted Successfully');
+        if($tag->delete())
+            return redirect()->route('tag.index')->with('success','Tag Deleted Successfully');
     }
 }

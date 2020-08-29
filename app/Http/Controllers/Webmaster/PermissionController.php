@@ -1,23 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Webmaster;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\TagRequest;
-use App\Models\Tag;
-use App\Repositories\TagRepository\CategoryRepositoryInterface;
+use App\Models\Permission;
 use Illuminate\Http\Request;
 
-class TagController extends Controller
+class PermissionController extends Controller
 {
-
-    protected $tagRepository;
-
-    public function __construct(CategoryRepositoryInterface $tagRepository)
-    {
-        $this->tagRepository = $tagRepository;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -25,9 +15,8 @@ class TagController extends Controller
      */
     public function index()
     {
-//        $tags = Tag::paginate(20);
-        $tags = $this->tagRepository->all();
-        return view('admin.tag.index', compact('tags'));
+        $permissions = Permission::all();
+        return view('webmaster.permission.index', compact('permissions'));
     }
 
     /**
@@ -37,7 +26,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('admin.tag.create');
+        return view('webmaster.permission.create');
 
     }
 
@@ -47,20 +36,20 @@ class TagController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TagRequest $request)
+    public function store(Request $request)
     {
         $validated = $request->validated();
-        $tag = Tag::create($validated);
-        return redirect()->route('tag.index')->with('success','Tag Created Successfully');
+        $permission = Permission::create($validated);
+        return redirect()->route('permission.index')->with('Permission Created Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function show(Tag $tag)
+    public function show(Permission $permission)
     {
         //
     }
@@ -68,10 +57,10 @@ class TagController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tag $tag)
+    public function edit(Permission $permission)
     {
         //
     }
@@ -80,23 +69,25 @@ class TagController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag $tag)
+    public function update(Request $request, Permission $permission)
     {
-        //
+        $permission->update($request->all());
+
+        return redirect()->route('permission.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param  \App\Models\Permission  $permission
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tag $tag)
+    public function destroy(Permission $permission)
     {
-        if($tag->delete())
-            return redirect()->route('tag.index')->with('success','Tag Deleted Successfully');
+        $permission->delete();
+        return redirect()->route('permission.index')->with('success','Permission Deleted Successfully');
     }
 }

@@ -53,8 +53,8 @@ Route::group(['namespace'=>'User'], function() {
 
 });
 
-Route::group(['namespace'=>'Admin', 'prefix'=>'dashboard'], function(){
-    Route::get('/', 'AdminController@index')->name('dashboard.index');
+Route::group(['namespace'=>'Webmaster', 'prefix'=>'webmaster'], function(){
+    Route::get('/', 'WebmasterController@index')->name('webmaster.index');
 
     Route::resource('category', 'CategoryController');
 

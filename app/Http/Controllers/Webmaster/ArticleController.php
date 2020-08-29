@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Webmaster;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
@@ -18,13 +18,13 @@ class ArticleController extends Controller
 //        $this->authorize('edit-article');
 //        $articles = Article::latest()->paginate(10);
 //        $articles = Article::withTrashed()->get();
-        return view('admin.article.index');
+        return view('webmaster.article.index');
     }
 
     public function trashed()
     {
         $articles = Article::onlyTrashed()->paginate(20);
-        return view('admin.article.trashed', compact('articles'));
+        return view('webmaster.article.trashed', compact('articles'));
     }
 
     public function restore($id)
@@ -43,7 +43,7 @@ class ArticleController extends Controller
     {
         $tags = Tag::all();
         $categories = Category::all();
-        return view('admin.article.create', compact('tags','categories'));
+        return view('webmaster.article.create', compact('tags','categories'));
     }
 
     /**
@@ -127,7 +127,7 @@ class ArticleController extends Controller
     {
         $tags = Tag::all();
         $categories = Category::all();
-        return view('admin.article.edit', compact('article', 'tags', 'categories'));
+        return view('webmaster.article.edit', compact('article', 'tags', 'categories'));
     }
 
     /**

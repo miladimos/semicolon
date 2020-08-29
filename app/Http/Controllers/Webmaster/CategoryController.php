@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Webmaster;
 
 use App\Http\Controllers\Controller;
-use App\Models\Permission;
+use App\Http\Requests\CategoryRequest;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class PermissionController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::all();
-        return view('admin.permission.index', compact('permissions'));
+        $categories = Category::paginate(10);
+        return view('webmaster.category.index', compact('categories'));
     }
 
     /**
@@ -26,8 +27,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('admin.permission.create');
-
+        return view('webmaster.category.create');
     }
 
     /**
@@ -36,20 +36,20 @@ class PermissionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
         $validated = $request->validated();
-        $permission = Permission::create($validated);
-        return redirect()->route('permission.index')->with('Permission Created Successfully');
+        $category = Category::create($validated);
+        return redirect()->route('category.index')->with('success','Category Created Successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Permission  $permission
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Permission $permission)
+    public function show(Category $category)
     {
         //
     }
@@ -57,10 +57,10 @@ class PermissionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Permission  $permission
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Permission $permission)
+    public function edit(Category $category)
     {
         //
     }
@@ -69,25 +69,23 @@ class PermissionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Permission  $permission
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Permission $permission)
+    public function update(Request $request, Category $category)
     {
-        $permission->update($request->all());
-
-        return redirect()->route('permission.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Permission  $permission
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Permission $permission)
+    public function destroy(Category $category)
     {
-        $permission->delete();
-        return redirect()->route('permission.index')->with('success','Permission Deleted Successfully');
+        if($category->delete())
+            return redirect()->route('category.index')->with('success','Category Deleted Successfully');
     }
 }

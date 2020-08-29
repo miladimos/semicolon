@@ -17,7 +17,7 @@
                                 <th scope="col">User ID</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">status</th>
+                                <th scope="col">Email Status</th>
                                 <th scope="col">Article Count</th>
                                 <th scope="col">Followings Count</th>
                                 <th scope="col">Followers Count</th>
@@ -26,33 +26,37 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <th scope="row">
-                                    <a href="#"># XO1345</a>
-                                </th>
-                                <td>Username</td>
-                                <td>admin@gmail.com</td>
-                                <td>
-                                    <div class="badge badge-soft-primary">Confirm</div>
-                                </td>
-                                <td>124</td>
-                                <td>124</td>
-                                <td>124</td>
-                                <td>26 Jan</td>
-                                <td>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
-                                            <i class="mdi mdi-eye"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
-                                            <i class="mdi mdi-pencil"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
-                                            <i class="mdi mdi-trash-can"></i>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
+                                @foreach($users as $user)
+                                    <tr>
+                                        <td>{{ ($users->currentpage()-1) * $users->perpage() + $loop->index + 1 }}</td>
+                                        <td><a href="#">{{ $user->username }}</a></td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>
+                                            @if($user->email_verified_at != null)
+                                                <div class="badge badge-soft-primary">Confirm</div>
+                                            @else
+                                                <div class="badge badge-soft-danger">UnConfirm</div>
+                                            @endif
+                                        </td>
+                                        <td>{{ $user->articles()->count() ?? '' }}</td>
+                                        <td>124</td>
+                                        <td>124</td>
+                                        <td>{{ $user->created_at }}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="View">
+                                                    <i class="mdi mdi-eye"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                    <i class="mdi mdi-pencil"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                    <i class="mdi mdi-trash-can"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

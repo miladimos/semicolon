@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Webmaster/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Webmaster/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TagTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TagTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/user/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/user/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/webmaster/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webmaster/user/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +249,7 @@
       <workItem from="1597955445626" duration="6710000" />
       <workItem from="1597995566270" duration="1432000" />
       <workItem from="1598657398339" duration="422000" />
-      <workItem from="1598659919005" duration="1302000" />
+      <workItem from="1598659919005" duration="1757000" />
     </task>
     <servers />
   </component>
@@ -296,10 +290,10 @@
       <screen x="0" y="27" width="1920" height="987" />
     </state>
     <state x="624" y="235" key="run.anything.popup/0.27.1920.987@0.27.1920.987" timestamp="1596845148434" />
-    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup" timestamp="1598661091734">
+    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup" timestamp="1598661531542">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598661091734" />
+    <state x="431" y="155" width="672" height="679" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598661531542" />
     <state x="539" y="210" width="840" height="803" key="search.everywhere.popup/0.27.1920.987@0.27.1920.987" timestamp="1596845450239" />
   </component>
   <component name="XDebuggerManager">

@@ -64,7 +64,7 @@
                                         </span>
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('dashboard.index') }}"> Dashboard </a>
+                                <a class="dropdown-item" href="{{ route('webmaster.index') }}"> Webmaster </a>
                                 <a class="dropdown-item @if(request()->is("article/new")) active @endif" href="{{ route('article.new') }}"> New Article </a>
                                 <a class="dropdown-item @if(request()->is("article/drafts")) active @endif" href="{{ route('article.drafts') }}"> Drafts </a>
                                 <a class="dropdown-item" href="{{ route('article.bookmarks') }}"> Bookmarks </a>

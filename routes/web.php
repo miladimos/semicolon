@@ -52,29 +52,3 @@ Route::group(['namespace'=>'User'], function() {
     Route::get('/me/likes', 'ArticleController@likes')->name('article.likes');
 
 });
-
-Route::group(['namespace'=>'Webmaster', 'prefix'=>'webmaster'], function(){
-    Route::get('/', 'WebmasterController@index')->name('webmaster.index');
-
-    Route::resource('category', 'CategoryController');
-
-    Route::resource('tag', 'TagController');
-    Route::resource('role', 'RoleController');
-    Route::resource('permission', 'PermissionController');
-
-    Route::get('/article', 'ArticleController@index')->name('article.index');
-    Route::get('/user', 'UserController@index')->name('user.index');
-
-
-//    Route::get('/article/trashed', 'ArticleController@trashed')->name('article.trashed');
-//    Route::delete('/article/trashed/{id}', 'ArticleController@restore')->name('article.restore');
-//    Route::delete('/article/trashed/{id}/fdelete', 'ArticleController@fdestroy')->name('article.fdestroy');
-//    Route::resource('article', 'ArticleController');
-//
-//
-//    Route::get('/user/role', 'UserController@role')->name('user.role');
-//    Route::post('/user/role', 'UserController@storerole')->name('user.role.store');
-//    Route::get('/user/admins', 'UserController@admins')->name('user.admins');
-//    Route::resource('user', 'UserController');
-
-});

@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     public function path()
     {
-        return "@$this->username";
+        return url("@$this->username");
     }
 
 //    public function getFullNameAttributes()

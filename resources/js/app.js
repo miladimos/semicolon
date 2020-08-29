@@ -6,9 +6,9 @@ window.Vue = require('vue');
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 // Vue.component('testsite-component', require('./components/TestSiteComponent.vue').default);
-Vue.component('useronline-component', require('./components/site/UserOnlineComponent.vue').default);
-Vue.component('newtest-component', require('./components/NewTestComponent.vue').default);
-Vue.component('newarticle-component', require('./components/site/NewArticleComponent').default);
+// Vue.component('useronline-component', require('./components/site/UserOnlineComponent.vue').default);
+// Vue.component('newtest-component', require('./components/NewTestComponent.vue').default);
+// Vue.component('newarticle-component', require('./components/site/NewArticleComponent').default);
 
 const app = new Vue({
     el: '#app',

@@ -13,7 +13,11 @@
                         </div>
                     </div>
                     <div class="mt-4">
-                        <a href="{{ route('user.setting') }}" class="text-black btn btn-outline-dark rounded-pill">Profile Setting</a>
+                        @if(auth()->user()->id == $user->id)
+                            <a href="{{ route('user.setting') }}" class="text-black btn btn-outline-dark rounded-pill">Profile Setting</a>
+                        @else
+                            <a href="{{ route('user.setting') }}" class="text-black btn btn-outline-primary rounded-pill">Follow</a>
+                        @endif
                     </div>
                 </div>
                <div class="d-flex justify-content-between mt-4 mx-2">

@@ -29,7 +29,7 @@
                                 @foreach($users as $user)
                                     <tr>
                                         <td>{{ ($users->currentpage()-1) * $users->perpage() + $loop->index + 1 }}</td>
-                                        <td><a href="#">{{ $user->username }}</a></td>
+                                        <td><a href="{{ $user->path() }}">{{ $user->username }}</a></td>
                                         <td>{{ $user->email }}</td>
                                         <td>
                                             @if($user->email_verified_at != null)

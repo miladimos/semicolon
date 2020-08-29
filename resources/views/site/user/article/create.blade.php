@@ -1,9 +1,16 @@
 @extends('layouts.app')
 
+@section('scripts')
+    <script>
+        let app = new Vue({
+
+        });
+    </script>
+@endsection
+
 @section('content')
     <div class="container">
-        <newarticle-component :name="milad"></newarticle-component>
-        <div class="mt-5">
+        <div class="mt-5" id="app">
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-10 mx-auto">

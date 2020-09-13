@@ -5,11 +5,13 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix'=>'webmaster'], function(){
     Route::get('/', 'WebmasterController@index')->name('webmaster.index');
 
-    Route::resource('category', 'CategoryController');
 
-    Route::resource('tag', 'TagController');
-    Route::resource('role', 'RoleController');
-    Route::resource('permission', 'PermissionController');
+    Route::resources([
+        'category'=>'CategoryController',
+        'tag'=>'TagController',
+        'role'=>'RoleController',
+        'permission'=>'PermissionController'
+    ]);
 
     Route::get('/article', 'ArticleController@index')->name('article.index');
     Route::get('/user', 'UserController@index')->name('user.index');
@@ -24,6 +26,5 @@ Route::group(['prefix'=>'webmaster'], function(){
 //    Route::get('/user/role', 'UserController@role')->name('user.role');
 //    Route::post('/user/role', 'UserController@storerole')->name('user.role.store');
 //    Route::get('/user/admins', 'UserController@admins')->name('user.admins');
-//    Route::resource('user', 'UserController');
 
 });

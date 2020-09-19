@@ -42,7 +42,8 @@ class RoleController extends Controller
         $validated = $request->validated();
         $role = Role::create($validated);
         if ($request->permissions)
-            $role->permissions()->sync($request->permissions);
+            $role->syncPermissions($request->permissions);
+
         return redirect()->route('role.index')->with('Role Created Successfully');
     }
 

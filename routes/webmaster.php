@@ -5,7 +5,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix'=>'webmaster'], function(){
     Route::get('/', 'WebmasterController@index')->name('webmaster.index');
 
-
+    Route::get('/roles/user', 'RoleController@roleUserView')->name('roles.user.view');
+    Route::post('/roles/user', 'RoleController@storeRoleUser')->name('roles.user.store');
     Route::resources([
         'category'=>'CategoryController',
         'tag'=>'TagController',

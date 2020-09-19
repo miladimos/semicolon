@@ -61,6 +61,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('role.index') }}">All Roles</a></li>
                         <li><a href="{{ route('role.create') }}">New Role</a></li>
+                        <li><a href="{{ route('roles.user.view') }}">assign Role to User</a></li>
 
                     </ul>
                 </li>

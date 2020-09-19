@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Webmaster;
 use App\Http\Controllers\Controller;
 use App\Models\Permission;
 use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -97,5 +98,20 @@ class RoleController extends Controller
     {
         $role->delete();
         return redirect()->route('role.index')->with('success','Role Deleted Successfully');
+    }
+
+    public function roleUserView()
+    {
+        $roles = Role::all();
+        $users = User::all();
+        return view('webmaster.role.role_user', compact('roles','users'));
+    }
+
+    public function storeRoleUser(Request $request)
+    {
+//        return $request->all();
+        $user = User::findOrFail($request->user_id);
+        $user->syncRoles($request->roles);
+        return redirect()->route('role.index')->with('Role Assigned To User Successfully');
     }
 }

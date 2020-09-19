@@ -23,6 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Webmaster/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Webmaster/RoleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/webmaster/sections/main-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webmaster/sections/main-sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/webmaster.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/webmaster.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +180,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/webmaster/role" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -186,11 +188,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Laravel-Advanced-Blog\resources\views\webmaster\role" />
       <recent name="C:\laragon\www\Laravel-Advanced-Blog\public\fonts" />
       <recent name="C:\laragon\www\Laravel-Advanced-Blog" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\storage\app\public" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Laravel-Advanced-Blog\app\Http\Requests\Webmaster" />
@@ -264,7 +266,7 @@
       <workItem from="1598659919005" duration="2483000" />
       <workItem from="1598683054377" duration="3149000" />
       <workItem from="1599977752010" duration="3310000" />
-      <workItem from="1600505927626" duration="5170000" />
+      <workItem from="1600505927626" duration="6972000" />
     </task>
     <servers />
   </component>

@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7af0c8e8-509e-4172-954b-a75239f2f34f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Webmaster/PermissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Webmaster/PermissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Webmaster/ArticleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Webmaster/CategoryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PermissionRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Webmaster/PermissionRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RoleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Webmaster/RoleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TagRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Webmaster/TagRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/webmaster/permission/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/webmaster/permission/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +39,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -184,18 +179,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/fonts" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Laravel-Advanced-Blog\public\fonts" />
       <recent name="C:\laragon\www\Laravel-Advanced-Blog" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\storage\app\public" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog" />
-      <recent name="$PROJECT_DIR$/public/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Laravel-Advanced-Blog\app\Http\Requests\Webmaster" />
@@ -269,7 +265,7 @@
       <workItem from="1598659919005" duration="2483000" />
       <workItem from="1598683054377" duration="3149000" />
       <workItem from="1599977752010" duration="3310000" />
-      <workItem from="1600505927626" duration="2919000" />
+      <workItem from="1600505927626" duration="3664000" />
     </task>
     <servers />
   </component>
@@ -310,11 +306,11 @@
       <screen x="0" y="27" width="1920" height="987" />
     </state>
     <state x="624" y="235" key="run.anything.popup/0.27.1920.987@0.27.1920.987" timestamp="1596845148434" />
-    <state x="539" y="195" width="840" height="855" key="search.everywhere.popup" timestamp="1599978999429">
+    <state x="539" y="195" width="840" height="855" key="search.everywhere.popup" timestamp="1600514070436">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="431" y="155" width="672" height="679" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1598687025411" />
-    <state x="539" y="195" width="840" height="855" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1599978999429" />
+    <state x="539" y="195" width="840" height="855" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1600514070436" />
     <state x="539" y="210" width="840" height="803" key="search.everywhere.popup/0.27.1920.987@0.27.1920.987" timestamp="1596845450239" />
   </component>
   <component name="XDebuggerManager">

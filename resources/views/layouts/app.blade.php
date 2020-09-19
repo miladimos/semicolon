@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @if(app()->getLocale() == "fa") dir="rtl" @endif>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +18,7 @@
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/site/site.css') }}" rel="stylesheet">
     <link href="{{ asset('/fonts/fontawesome/css/all.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('/css/vazir-font.css') }}" rel="stylesheet">--}}
 </head>
 <body>
     <div>

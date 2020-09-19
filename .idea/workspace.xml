@@ -179,17 +179,17 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin\tags" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
-      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Laravel-Advanced-Blog" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog\storage\app\public" />
       <recent name="F:\laragon\www\Laravel-Advanced-Blog" />
       <recent name="$PROJECT_DIR$/public/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\js\components\admin\tags" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\public\images" />
+      <recent name="F:\laragon\www\Laravel-Advanced-Blog\resources\views\site" />
     </key>
   </component>
   <component name="RunManager">
@@ -256,6 +256,7 @@
       <workItem from="1598659919005" duration="2483000" />
       <workItem from="1598683054377" duration="3149000" />
       <workItem from="1599977752010" duration="3310000" />
+      <workItem from="1600505927626" duration="685000" />
     </task>
     <servers />
   </component>

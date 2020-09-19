@@ -13,10 +13,16 @@
                         @endif
                         <form action="{{ route('permission.store') }}" method="post">
                             @csrf
-                            <label for="permission">Permission Name:</label>
-                            <div class="d-flex">
-                                <div class="col-md-6"><input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="permission"></div>
-                                <div class="col-md-6"><button class="btn btn-success" type="submit">Submit</button></div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="col-md-4">
+                                    <label for="name">Permission Name:</label>
+                                    <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="name">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="fa_name">Fa Name:</label>
+                                    <input class="form-control @error('fa_name') is-invalid @enderror" type="text" name="fa_name" id="fa_name">
+                                </div>
+                                <div class="col-md-2 mt-4"><button class="btn btn-success" type="submit">Submit</button></div>
                             </div>
                         </form>
                     </div>
@@ -40,6 +46,7 @@
                             <tr>
                                 <th scope="col">Permission ID</th>
                                 <th scope="col">Name</th>
+                                <th scope="col">Fa Name</th>
                                 <th scope="col">Slug</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">status</th>
@@ -54,6 +61,7 @@
                                             <a href="#"># {{ $loop->iteration }}</a>
                                         </th>
                                         <td>{{ $permission->name }}</td>
+                                        <td>{{ $permission->fa_name }}</td>
                                         <td>{{ $permission->slug }}</td>
                                         <td>{{ $permission->created_at }}</td>
                                         <td>

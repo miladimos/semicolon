@@ -245,7 +245,7 @@ return [
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'Image' => Intervention\Image\Facades\Image::class,
 
-        
+
     ],
 
 ];

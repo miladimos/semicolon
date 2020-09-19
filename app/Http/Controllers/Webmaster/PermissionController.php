@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Webmaster;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Webmaster\PermissionRequest;
 use App\Models\Permission;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,7 @@ class PermissionController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
@@ -34,9 +35,9 @@ class PermissionController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PermissionRequest $request)
     {
         $validated = $request->validated();
         $permission = Permission::create($validated);

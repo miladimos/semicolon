@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Webmaster;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,7 +24,8 @@ class PermissionRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:categories|min:2|max:255',
+            'name' => 'required|unique:permissions',
+            'fa_name' => 'required|unique:permissions',
         ];
     }
 }

@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Overtrue\LaravelFollow\Followable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable, Followable;
+    use Notifiable, Followable, HasRoles;
 
 //    protected $fillable = [
 //        'username', 'email', 'password','level',
@@ -37,46 +38,10 @@ class User extends Authenticatable
 //        return $this->profile->first_name . $this->profile()->last_name;
 //    }
 //
-//    public function roles()
+//    public function setPasswordAttribute($value)
 //    {
-//        return $this->belongsToMany(Role::class);
+//        $this->attributes['password'] = bcrypt($value);
 //    }
-//
-//    public function hasAnyRole($roles)
-//    {
-//        if(is_array($roles)){
-//            foreach ($roles as $role){
-//                if($this->hasRole($role)) {
-//                    return true;
-//                }
-//            }
-//        } else {
-//            if($this->hasRole($roles)) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-//
-//    public function hasRole($role)
-//    {
-//        if($this->roles()->where('name', $role)->first()) {
-//            return true;
-//        }
-//        return false;
-//    }
-
-
-
-
-
-
-
-
-
-
-
-
 
     protected $hidden = [
         'password', 'remember_token',

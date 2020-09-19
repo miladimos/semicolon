@@ -17,7 +17,8 @@
         "laravel/legacy-factories": "^1.0",
         "laravel/socialite": "^4.3",
         "laravel/tinker": "^2.0",
-        "overtrue/laravel-follow": "^2.1"
+        "overtrue/laravel-follow": "^2.1",
+        "spatie/laravel-permission": "^3.17"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

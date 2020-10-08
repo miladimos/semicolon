@@ -15,6 +15,25 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->unique()->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
+                ->on('users')
+                ->references('id')
+                ->onDelete('cascade');
+            $table->string('title')->unique();
+            $table->string('slug')->unique();
+            $table->string('description');
+            $table->text('bode');
+            $table->string('category_id');
+            $table->string('tags');
+            $table->string('images');
+            $table->unsignedInteger('viewCount')->default(0);
+            $table->boolean('isDraft')->default(0);
+            $table->boolean('isDisable')->default(0);
+            $table->boolean('isVip')->default(0);
+            $table->timestamp('published_at')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

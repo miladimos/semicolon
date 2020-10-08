@@ -5,12 +5,52 @@ namespace App\Models;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Article extends Model
 {
-    use HasFactory, Sluggable;
+    use HasFactory, Sluggable, SoftDeletes;
+
+    protected $fillable = ['title','slug','description','body','viewCount', 'tags', 'category_id', 'image_url'];
+
+    protected $casts = [
+        'tags' => 'array'
+    ];
+
+    protected $dates = [
+        'deleted_at'
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function scopeConfirmed($query)
+    {
+        return $query->where('confirmed', 1);
+    }
 
 
+//    public function path()
+//    {
+//        return "/@$this->user->username/$this->slug";
+//    }
+//
+//    public function category()
+//    {
+//        return $this->belongsTo(Category::class);
+//    }
+//
+//    public function tags()
+//    {
+//        return $this->belongsToMany(Tag::class);
+//    }
+
+//    public function getRouteKeyName()
+//    {
+//        return 'slug';
+//    }
 
     /**
      * Return the sluggable configuration array for this model.

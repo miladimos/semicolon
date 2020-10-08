@@ -19,6 +19,23 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class);
+    }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
+    public function path()
+    {
+        return url("@$this->username");
+    }
+
+
+
     /**
      * The attributes that are mass assignable.
      *

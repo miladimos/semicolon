@@ -11,7 +11,7 @@ class Article extends Model
     use HasFactory, Sluggable;
 
 
-    
+
     /**
      * Return the sluggable configuration array for this model.
      *

@@ -15,19 +15,15 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique()->nullable();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')
-                ->on('users')
-                ->references('id')
-                ->onDelete('cascade');
+            $table->string('category_id');
+            $table->string('code')->unique()->nullable();
             $table->string('title')->unique();
             $table->string('slug')->unique();
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->text('bode');
-            $table->string('category_id');
             $table->string('tags');
-            $table->string('images');
+            $table->string('images')->nullable();
             $table->unsignedInteger('viewCount')->default(0);
             $table->boolean('isDraft')->default(0);
             $table->boolean('isDisable')->default(0);
@@ -35,6 +31,16 @@ class CreateArticlesTable extends Migration
             $table->timestamp('published_at')->nullable();
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->on('users')
+                ->references('id')
+                ->onDelete('cascade');
+
+            $table->foreign('category_id')
+                ->on('categories')
+                ->references('id')
+                ->onDelete('cascade');
         });
     }
 

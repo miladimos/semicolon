@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->string('code')->unique()->nullable();
             $table->string('title')->unique();
             $table->string('slug')->unique();
@@ -37,10 +37,10 @@ class CreateArticlesTable extends Migration
                 ->references('id')
                 ->onDelete('cascade');
 
-            $table->foreign('category_id')
-                ->on('categories')
-                ->references('id')
-                ->onDelete('cascade');
+//            $table->foreign('category_id')
+//                ->on('categories')
+//                ->references('id')
+//                ->onDelete('cascade');
         });
     }
 

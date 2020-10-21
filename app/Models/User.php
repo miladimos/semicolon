@@ -92,16 +92,28 @@ class User extends Authenticatable
         return url("@$this->username");
     }
 
+    public function setPasswordAttribute($value)
+    {
+        return $this->attributes['password'] = bcrypt($value);
+    }
+
+    public function getFullNameAttribute()
+    {
+        return $this->profile->fname . $this->profile->lname;
+    }
 
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+
+//    /**
+//     * The attributes that are mass assignable.
+//     *
+//     * @var array
+//     */
+//    protected $fillable = [
+//        'username', 'email', 'password',
+//    ];
+
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.

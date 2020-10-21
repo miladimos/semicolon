@@ -30,7 +30,8 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory, Sluggable;
-    protected $fillable = ['name', 'slug', 'image'];
+
+    protected $fillable = ['name', 'slug', 'image', 'parent_id'];
 
 //    public function articles()
 //    {

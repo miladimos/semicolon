@@ -16,13 +16,13 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->default(0);
             $table->string('code')->unique()->nullable();
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->string('description')->nullable();
             $table->text('bode');
-            $table->string('tags');
+            $table->string('tags')->nullable();
             $table->string('images')->nullable();
             $table->unsignedInteger('viewCount')->default(0);
             $table->boolean('isDraft')->default(0);

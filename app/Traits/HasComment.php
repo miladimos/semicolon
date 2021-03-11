@@ -10,7 +10,7 @@ trait HasComment
 
     public function comments()
     {
-        return $this->commentsRelation;
+        return $this->commentsRelation();
     }
 
     public function commentsRelation(): MorphMany

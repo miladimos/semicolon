@@ -9,7 +9,7 @@ trait HasTags
 {
     public function tags()
     {
-        return $this->tagsRelation;
+        return $this->tagsRelation();
     }
 
     public function tagsRelation(): MorphToMany
@@ -19,12 +19,12 @@ trait HasTags
 
     public function syncTags(array $tags)
     {
-        $this->save();
         $this->tagsRelation()->sync($tags);
+        $this->save();
     }
 
-    public function removeTags()
+    public function removeTags(array $tags)
     {
-        $this->tagsRelation()->detach();
+        $this->tagsRelation()->detach($tags);
     }
 }

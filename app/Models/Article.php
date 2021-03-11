@@ -2,8 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Comment;
 use App\Traits\HasUUID;
 use App\Scope\ActiveScope;
+use App\Traits\HasAuthor;
+use App\Traits\HasComment;
+use App\Traits\HasTags;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -15,11 +19,17 @@ class Article extends Model
     use HasFactory,
         Sluggable,
         SoftDeletes,
-        HasUUID;
+        HasUUID,
+        HasComment,
+        HasTags,
+        HasAuthor;
 
     protected $table = 'articles';
 
-    protected $fillable = ['title', 'slug', 'description', 'body', 'viewCount', 'category_id', 'image_url'];
+    // protected $fillable = [
+    //     'title', 'slug', 'description', 'body', 'viewCount',
+    //     'category_id', 'image_url', 'uuid', 'active', 'deleted_at'
+    // ];
 
     protected $guarded = [];
 
@@ -36,31 +46,15 @@ class Article extends Model
         static::addGlobalScope(new ActiveScope());
     }
 
-    public function user()
+    public function path()
     {
-        return $this->belongsTo(User::class);
+        return "/@$this->user->username/$this->slug";
     }
 
-    public function scopeConfirmed($query)
+    public function url()
     {
-        return $query->where('confirmed', 1);
+        return url($this->path());
     }
-
-
-    //    public function path()
-    //    {
-    //        return "/@$this->user->username/$this->slug";
-    //    }
-    //
-    //    public function category()
-    //    {
-    //        return $this->belongsTo(Category::class);
-    //    }
-    //
-    //    public function tags()
-    //    {
-    //        return $this->belongsToMany(Tag::class);
-    //    }
 
     public function getRouteKeyName()
     {

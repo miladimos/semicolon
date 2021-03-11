@@ -15,6 +15,7 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique()->index();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id')->default(0);
             $table->string('code')->unique()->nullable();

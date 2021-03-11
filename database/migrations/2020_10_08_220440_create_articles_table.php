@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique()->index();
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id');
             $table->unsignedBigInteger('category_id')->default(0);
             $table->string('code')->unique()->nullable();
             $table->string('title')->unique();
@@ -30,13 +30,16 @@ class CreateArticlesTable extends Migration
             $table->boolean('isDisable')->default(0);
             $table->boolean('isVip')->default(0);
             $table->timestamp('published_at')->nullable();
+            $table->boolean('active')->default(true);
             $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('user_id')
                 ->on('users')
                 ->references('id')
+                ->onUpdate('cascade')
                 ->onDelete('cascade');
+                
 
 //            $table->foreign('category_id')
 //                ->on('categories')

@@ -12,6 +12,8 @@ class UserProfile extends Model
     use HasFactory,
         HasUUID;
 
+    protected $table = 'user_profiles';
+
     ///    protected $fillable = [
     ////        'telegram', 'twitter', 'instagram', 'github', 'gitlab', 'virgol', 'atbox',
     ////        'phone', 'facebook', 'linkedin', 'avatar'

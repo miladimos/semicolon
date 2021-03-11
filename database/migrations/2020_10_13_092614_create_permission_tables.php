@@ -25,6 +25,7 @@ class CreatePermissionTables extends Migration
             $table->uuid('uuid')->unique()->index();
             $table->string('name');
             $table->string('guard_name');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
 
@@ -33,6 +34,7 @@ class CreatePermissionTables extends Migration
             $table->uuid('uuid')->unique()->index();
             $table->string('name');
             $table->string('guard_name');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
 

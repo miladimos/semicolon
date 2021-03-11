@@ -20,13 +20,16 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique()->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('phone')->nullable();
+            $table->timestamp('phone_verified_at')->nullable();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
+            $table->string('provider_id')->nullable();
+            $table->string('provider')->nullable();
             $table->boolean('blocked')->default(0);
             $table->timestamp('blocked_at')->nullable();
             $table->boolean('active')->default(0);
             $table->timestamp('activated_at')->nullable();
-            $table->boolean('confirmed')->default(0);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

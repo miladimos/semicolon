@@ -32,6 +32,9 @@ use Laravel\Jetstream\Team as JetstreamTeam;
  */
 class Team extends JetstreamTeam
 {
+    protected $table = '';
+
+    
     /**
      * The attributes that should be cast to native types.
      *

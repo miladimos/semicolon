@@ -16,12 +16,11 @@ class CreateUserProfilesTable extends Migration
         Schema::create('user_profiles', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique()->index();
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id');
             $table->string('fname')->nullable();
             $table->string('lname')->nullable();
-            $table->string('age')->nullable();
-            $table->mediumText('bio')->nullable();
-            $table->string('phone')->unique()->nullable();
+            $table->unsignedTinyInteger('age')->nullable();
+            $table->string('bio', 250)->nullable();
             $table->string('telegram')->unique()->nullable();
             $table->string('instagram')->unique()->nullable();
             $table->string('youtube')->unique()->nullable();
@@ -35,8 +34,13 @@ class CreateUserProfilesTable extends Migration
             $table->string('atbox')->unique()->nullable();
             $table->string('medium')->unique()->nullable();
             $table->string('avatar')->nullable();
-            $table->enum('gender', [0,1,2])->defaule(0);
+            $table->enum('gender', ['n', 'f', 'm'])->default('n'); // n = unknown, f = female, m = male
+            $table->timestamp('birthday')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

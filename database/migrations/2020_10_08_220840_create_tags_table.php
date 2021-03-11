@@ -18,6 +18,7 @@ class CreateTagsTable extends Migration
             $table->uuid('uuid')->unique()->index();
             $table->string('name')->unique();
             $table->string('slug')->unique();
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

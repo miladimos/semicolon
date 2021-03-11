@@ -22,38 +22,9 @@ class User extends Authenticatable
         HasUUID;
 
 
-    public function profile()
-    {
-        return $this->hasOne(UserProfile::class);
-    }
-
-    public function articles()
-    {
-        return $this->hasMany(Article::class);
-    }
-
-    public function path()
-    {
-        return url("@$this->username");
-    }
-
-    public function setPasswordAttribute($value)
-    {
-        return $this->attributes['password'] = bcrypt($value);
-    }
-
-    public function getFullNameAttribute()
-    {
-        return $this->profile->fname . $this->profile->lname;
-    }
+    protected $table = 'users';
 
 
-
-    //    /**
-    //     * The attributes that are mass assignable.
-    //     *
-    //     * @var array
-    //     */
     //    protected $fillable = [
     //        'username', 'email', 'password',
     //    ];
@@ -88,5 +59,36 @@ class User extends Authenticatable
      */
     protected $appends = [
         'profile_photo_url',
+        'full_name',
     ];
+
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class);
+    }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
+    public function path()
+    {
+        return "@$this->username";
+    }
+
+    public function url()
+    {
+        return url($this->path());
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        return $this->attributes['password'] = bcrypt($value);
+    }
+
+    public function getFullNameAttribute()
+    {
+        return $this->profile->fname . $this->profile->lname;
+    }
 }

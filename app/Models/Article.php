@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\HasUUID;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -59,9 +60,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Article extends Model
 {
-    use HasFactory, Sluggable, SoftDeletes;
+    use HasFactory,
+        Sluggable,
+        SoftDeletes,
+        HasUUID;
 
-    protected $fillable = ['title','slug','description','body','viewCount', 'tags', 'category_id', 'image_url'];
+    protected $fillable = ['title', 'slug', 'description', 'body', 'viewCount', 'category_id', 'image_url'];
+
+    protected $guarded = [];
 
     protected $casts = [
         'tags' => 'array'
@@ -82,32 +88,32 @@ class Article extends Model
     }
 
 
-//    public function path()
-//    {
-//        return "/@$this->user->username/$this->slug";
-//    }
-//
-//    public function category()
-//    {
-//        return $this->belongsTo(Category::class);
-//    }
-//
-//    public function tags()
-//    {
-//        return $this->belongsToMany(Tag::class);
-//    }
+    //    public function path()
+    //    {
+    //        return "/@$this->user->username/$this->slug";
+    //    }
+    //
+    //    public function category()
+    //    {
+    //        return $this->belongsTo(Category::class);
+    //    }
+    //
+    //    public function tags()
+    //    {
+    //        return $this->belongsToMany(Tag::class);
+    //    }
 
-//    public function getRouteKeyName()
-//    {
-//        return 'slug';
-//    }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     /**
      * Return the sluggable configuration array for this model.
      *
      * @return array
      */
-    public function sluggable()
+    public function sluggable(): array
     {
         return [
             'slug' => [

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\HasUUID;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -29,18 +30,20 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Category extends Model
 {
-    use HasFactory, Sluggable;
+    use HasFactory,
+        Sluggable,
+        HasUUID;
 
     protected $fillable = ['name', 'slug', 'image', 'parent_id'];
 
-//    public function articles()
-//    {
-//        return $this->hasMany(Article::class);
-//    }
+    //    public function articles()
+    //    {
+    //        return $this->hasMany(Article::class);
+    //    }
 
     public function path()
     {
-        return "/category/".$this->slug;
+        return "/category/" . $this->slug;
     }
 
     /**

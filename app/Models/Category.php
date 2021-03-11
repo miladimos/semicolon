@@ -3,19 +3,28 @@
 namespace App\Models;
 
 use App\Traits\HasUUID;
+use App\Scope\ActiveScope;
+use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $table = 'categories';
 
     use HasFactory,
         Sluggable,
         HasUUID;
 
+    protected $table = 'categories';
+
     protected $fillable = ['name', 'slug', 'image', 'parent_id'];
+
+    protected $guarded = [];
+
+    public static function booted()
+    {
+        static::addGlobalScope(new ActiveScope());
+    }
 
     //    public function articles()
     //    {

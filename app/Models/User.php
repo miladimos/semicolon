@@ -62,6 +62,11 @@ class User extends Authenticatable
         'full_name',
     ];
 
+    // public static function booted()
+    // {
+    //     static::addGlobalScope(new ActiveScope());
+    // }
+
     public function profile()
     {
         return $this->hasOne(UserProfile::class);

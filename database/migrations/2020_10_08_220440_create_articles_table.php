@@ -16,35 +16,27 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique()->index();
-            $table->foreignId('user_id');
-            $table->unsignedBigInteger('category_id')->default(0);
+            $table->foreignId('author_id');
             $table->string('code')->unique()->nullable();
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->string('description')->nullable();
             $table->text('bode');
-            $table->string('tags')->nullable();
             $table->string('images')->nullable();
             $table->unsignedInteger('viewCount')->default(0);
             $table->boolean('isDraft')->default(0);
             $table->boolean('isDisable')->default(0);
             $table->boolean('isVip')->default(0);
+            $table->boolean('active')->default(false);
             $table->timestamp('published_at')->nullable();
-            $table->boolean('active')->default(true);
             $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('user_id')
+            $table->foreign('author_id')
                 ->on('users')
                 ->references('id')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
-                
-
-//            $table->foreign('category_id')
-//                ->on('categories')
-//                ->references('id')
-//                ->onDelete('cascade');
         });
     }
 

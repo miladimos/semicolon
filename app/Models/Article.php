@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use App\Traits\HasUUID;
-use Cviebrock\EloquentSluggable\Sluggable;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Scope\ActiveScope;
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
@@ -29,6 +30,11 @@ class Article extends Model
     protected $dates = [
         'deleted_at'
     ];
+
+    public static function booted()
+    {
+        static::addGlobalScope(new ActiveScope());
+    }
 
     public function user()
     {

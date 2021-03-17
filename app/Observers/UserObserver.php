@@ -7,6 +7,17 @@ use App\Models\User;
 class UserObserver
 {
     /**
+     * Handle the user "creating" event.
+     *
+     * @param  \App\Models\User  $user
+     * @return void
+     */
+    public function creating(User $user)
+    {
+        //
+    }
+
+    /**
      * Handle the user "created" event.
      *
      * @param  \App\Models\User  $user

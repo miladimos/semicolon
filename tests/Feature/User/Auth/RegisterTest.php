@@ -61,7 +61,6 @@ class RegisterTest extends TestCase
             'password_confirmation' => '12344321',
         ]);
 
-
         $this->assertAuthenticated();
 
         auth()->user()->markEmailAsVerified();

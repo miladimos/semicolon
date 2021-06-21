@@ -16,7 +16,7 @@ class SiteController extends Controller
 
     public function index()
     {
-        auth()->loginUsingId(1);
+//        auth()->loginUsingId(1);
 
         // auth()->logout();
 
@@ -40,6 +40,15 @@ class SiteController extends Controller
 
         return view('site.pages.about-us');
     }
+
+    public function contactUs()
+    {
+        $this->seo()->setTitle('درباره ما');
+
+        return view('site.pages.contact');
+    }
+
+
     public function tags(Tag $tag)
     {
         $this->seo()->setTitle('برچسب ها');

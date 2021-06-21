@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e07fba97e3ab43f7476a2a3a07c8faf0",
+    "content-hash": "810b2f12108acc4e386827c254d6236f",
     "packages": [
         {
             "name": "artesaos/seotools",
-            "version": "v0.19.1",
+            "version": "v0.20.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/artesaos/seotools.git",
-                "reference": "bad3f025748dde06e6e0730190b280e4d8bc0ab3"
+                "reference": "7a2901eb3f5f6a8c70245d60568f0377eb5d3229"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/artesaos/seotools/zipball/bad3f025748dde06e6e0730190b280e4d8bc0ab3",
-                "reference": "bad3f025748dde06e6e0730190b280e4d8bc0ab3",
+                "url": "https://api.github.com/repos/artesaos/seotools/zipball/7a2901eb3f5f6a8c70245d60568f0377eb5d3229",
+                "reference": "7a2901eb3f5f6a8c70245d60568f0377eb5d3229",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "seotools",
                 "webmaster"
             ],
-            "time": "2020-10-14T13:18:57+00:00"
+            "time": "2021-05-03T21:46:46+00:00"
         },
         {
             "name": "asm89/stack-cors",

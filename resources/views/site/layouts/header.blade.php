@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Site Metas -->
-    <title>Semicolon - Stylish Magazine Blog Template</title>
+    {!! SEO::generate(true) !!}
+
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">

@@ -11,7 +11,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^7.4",
         "artesaos/seotools": "^0.19.0",
         "cviebrock/eloquent-sluggable": "^8.0",
         "fideloper/proxy": "^4.2",
@@ -26,7 +26,6 @@
         "hekmatinasser/verta": "^1.11.5",
         "intervention/image": "^2.5.1",
         "laravel/socialite": "^5.1",
-        "laravel/telescope": "^3.5.1",
         "maatwebsite/excel": "^3.1",
         "morilog/jalali": "3.*",
         "predis/predis": "^1.1",

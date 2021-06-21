@@ -25,6 +25,33 @@ class Category extends Model
     {
         static::addGlobalScope(new ActiveScope());
     }
+    public function parent()
+    {
+        return $this->hasOne(Category::class, 'id', 'parent_id')->withDefault(['name' => '---']);
+    }
+
+    public function children()
+    {
+        return $this->hasMany(Category::class, 'parent_id', 'id');
+    }
+
+    public function articles()
+    {
+        return $this->morphedByMany(Article::class, 'categoriable', 'categoriables');
+    }
+
+    public function childrenRecursive()
+    {
+        return $this->children()->with('childrenRecursive');
+    }
+
+    /**
+     * Get all of the articles that are assigned this tag.
+     */
+    public function podcasts()
+    {
+        return $this->morphedByMany(Podcast::class, 'categoriable', 'categoriables');
+    }
 
     //    public function articles()
     //    {

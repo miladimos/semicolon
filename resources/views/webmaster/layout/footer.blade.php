@@ -12,19 +12,19 @@
 
 @include('sweetalert::alert')
 <!-- BEGIN: Vendor JS-->
-<script src="{{ asset('/webmaster/vendors/js/vendors.min.js') }}"></script>
-<script src="{{ asset('/webmaster/vendors/js/charts/apexcharts.min.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/vendors/js/vendors.min.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/vendors/js/charts/apexcharts.min.js') }}"></script>
 <!-- END: Page Vendor JS-->
 
 <!-- BEGIN: Theme JS-->
-<script src="{{ asset('/webmaster/js/core/app-menu.js') }}"></script>
-<script src="{{ asset('/webmaster/js/core/app.js') }}"></script>
-<script src="{{ asset('/webmaster/js/scripts/components.js') }}"></script>
-<script src="{{ asset('/webmaster/vendors/js/forms/select/select2.full.min.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/js/core/app-menu.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/js/core/app.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/js/scripts/components.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/vendors/js/forms/select/select2.full.min.js') }}"></script>
 <!-- END: Theme JS-->
 
 
-<script src="{{ asset('/webmaster/js/scripts/pages/dashboard-ecommerce.js') }}"></script>
+<script src="{{ asset('/statics/webmaster/js/scripts/pages/dashboard-ecommerce.js') }}"></script>
 
 
 @yield('scripts')

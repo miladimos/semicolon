@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Webmaster;
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Models\Course;
+use App\Models\Article;
 use App\Models\User;
 
 class WebmasterController extends Controller
@@ -15,8 +15,8 @@ class WebmasterController extends Controller
 
         $earnings = DB::table('payments')->where('payment', 1)->sum('amount');
         // $teacherCount = User::
-        $courseCount = Course::count();
+        $articleCount = Article::count();
         $userCount = User::count();
-        return view('webmaster.index', compact('earnings', 'courseCount', 'userCount'));
+        return view('webmaster.index', compact('earnings', 'articleCount', 'userCount'));
     }
 }

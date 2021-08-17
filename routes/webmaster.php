@@ -4,8 +4,8 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', [\App\Http\Controllers\Webmaster\WebmasterController::class, 'index'])->name('admin.index');
+Route::group(['prefix' => 'webmaster', 'as' =>'webmaster.'], function () {
+    Route::get('', [\App\Http\Controllers\Webmaster\WebmasterController::class, 'index'])->name('admin.index');
     Route::get('/statistics', [\App\Http\Controllers\Webmaster\Statistics\StatisticsController::class, 'index'])->name('statistics');
     Route::get('/users/account/setting', [\App\Http\Controllers\Webmaster\User\UserController::class, 'setting'])->name('users.setting');
 

@@ -10,7 +10,6 @@
                         <!-- li.nav-item.mobile-menu.d-xl-none.mr-auto-->
                         <!--   a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')-->
                         <!--     i.ficon.feather.icon-menu-->
-                        <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{  route('webmaster.todos.index') }}" data-toggle="tooltip" data-placement="top" title="Todo"><i class="ficon feather icon-check-square"></i></a></li>
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-chat.html" data-toggle="tooltip" data-placement="top" title="Chat"><i class="ficon feather icon-message-square"></i></a></li>
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-email.html" data-toggle="tooltip" data-placement="top" title="Email"><i class="ficon feather icon-mail"></i></a></li>
                         <li class="nav-item d-none d-lg-block"><a class="nav-link" href="app-calender.html" data-toggle="tooltip" data-placement="top" title="Calendar"><i class="ficon feather icon-calendar"></i></a></li>
@@ -81,7 +80,7 @@
                                 <span class="user-status">آنلاین</span>
                             </div>
                             <span>
-                                <img class="round" src="{{ asset('/webmaster/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40">
+                                <img class="round" src="{{ asset('/statics/webmaster/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40">
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -107,7 +106,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between w-100" href="#">
             <div class="d-flex">
-                <div class="mr-50"><img src="{{ asset('/webmaster/images/icons/xls.png') }}" alt="png" height="32"></div>
+                <div class="mr-50"><img src="{{ asset('/statics/webmaster/images/icons/xls.png') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
                 </div>
@@ -115,7 +114,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between w-100" href="#">
             <div class="d-flex">
-                <div class="mr-50"><img src="{{ asset('/webmaster/images/icons/jpg.png') }}" alt="png" height="32"></div>
+                <div class="mr-50"><img src="{{ asset('/statics/webmaster/images/icons/jpg.png') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
                 </div>
@@ -123,7 +122,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between w-100" href="#">
             <div class="d-flex">
-                <div class="mr-50"><img src="{{ asset('/webmaster/images/icons/pdf.png') }}" alt="png" height="32"></div>
+                <div class="mr-50"><img src="{{ asset('/statics/webmaster/images/icons/pdf.png') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
                 </div>
@@ -131,7 +130,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between w-100" href="#">
             <div class="d-flex">
-                <div class="mr-50"><img src="{{ asset('/webmaster/images/icons/doc.png') }}" alt="png" height="32"></div>
+                <div class="mr-50"><img src="{{ asset('/statics/webmaster/images/icons/doc.png') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
                 </div>
@@ -142,7 +141,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
             <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="{{ asset('/webmaster/images/portrait/small/avatar-s-8.jpg') }}" alt="png" height="32"></div>
+                <div class="avatar mr-50"><img src="{{ asset('/statics/webmaster/images/portrait/small/avatar-s-8.jpg') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
                 </div>
@@ -150,7 +149,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
             <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="{{ asset('/webmaster/images/portrait/small/avatar-s-1.jpg') }}" alt="png" height="32"></div>
+                <div class="avatar mr-50"><img src="{{ asset('/statics/webmaster/images/portrait/small/avatar-s-1.jpg') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
                 </div>
@@ -158,7 +157,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
             <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="{{ asset('/webmaster/images/portrait/small/avatar-s-14.jpg') }}" alt="png" height="32"></div>
+                <div class="avatar mr-50"><img src="{{ asset('/statics/webmaster/images/portrait/small/avatar-s-14.jpg') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
                 </div>
@@ -166,7 +165,7 @@
         </a></li>
     <li class="auto-suggestion d-flex align-items-center cursor-pointer"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="#">
             <div class="d-flex align-items-center">
-                <div class="avatar mr-50"><img src="{{ asset('/webmaster/images/portrait/small/avatar-s-6.jpg') }}" alt="png" height="32"></div>
+                <div class="avatar mr-50"><img src="{{ asset('/statics/webmaster/images/portrait/small/avatar-s-6.jpg') }}" alt="png" height="32"></div>
                 <div class="search-data">
                     <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
                 </div>

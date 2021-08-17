@@ -20,7 +20,7 @@ class SiteController extends Controller
 
         // auth()->logout();
 
-        $this->seo()->setTitle('پلتفرمی برای حرفه ای شدن');
+        $this->seo()->setTitle('Blogging ...');
 
         return view('site.index');
     }

@@ -3,7 +3,7 @@ use App\Models\Course;
 <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ route('site.home') }}">
+            <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ route('site.index') }}">
                     <div class="brand-logo"></div>
                     <h2 class="brand-text mb-0">Devlearn</h2>
                 </a></li>
@@ -209,16 +209,6 @@ use App\Models\Course;
                 <li><a href="{{ route('webmaster.permissions.create') }}"><i class="feather icon-circle"></i><span
                             class="menu-item" data-i18n="View">ایجاد سطح
                             دسترسی جدید</span></a>
-            </ul>
-        </li>
-        <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title"
-                    data-i18n="User">Todos</span></a>
-            <ul class="menu-content">
-                <li><a href="{{ route('webmaster.todos.index') }}"><i class="feather icon-circle"></i><span
-                            class="menu-item" data-i18n="List">همه Todo ها</span></a>
-                </li>
-                <li><a href="{{ route('webmaster.todos.create') }}"><i class="feather icon-circle"></i><span
-                            class="menu-item" data-i18n="View">ایجاد Todo جدید</span></a>
             </ul>
         </li>
         <li class=" navigation-header"><span>بخش های دیگر</span>

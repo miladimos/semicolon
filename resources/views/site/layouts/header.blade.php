@@ -12,10 +12,6 @@
     <!-- Site Metas -->
     {!! SEO::generate(true) !!}
 
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <!-- Site Icons -->
     <link rel="shortcut icon" href="{{ asset('/statics/site/images/favicon.ico') }}" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{{ asset('/statics/site/images/apple-touch-icon.png') }}">

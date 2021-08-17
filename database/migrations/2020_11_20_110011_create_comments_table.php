@@ -17,6 +17,7 @@ class CreateCommentsTable extends Migration
             $table->text('comment');
             $table->morphs('commentable');
             $table->boolean('approved')->default(0);
+            $table->timestamp('approved_at')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')

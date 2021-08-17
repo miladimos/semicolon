@@ -45,20 +45,20 @@ class CreateCoursesTable extends Migration
                 ->onUpdate('CASCADE')
                 ->onDelete('CASCADE');
 
-            $table->foreign('level_id')
-                ->references('id')->on('course_levels')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
+            // $table->foreign('level_id')
+            //     ->references('id')->on('course_levels')
+            //     ->onUpdate('CASCADE')
+            //     ->onDelete('CASCADE');
 
-            $table->foreign('type_id')
-                ->references('id')->on('course_types')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
+            // $table->foreign('type_id')
+            //     ->references('id')->on('course_types')
+            //     ->onUpdate('CASCADE')
+            //     ->onDelete('CASCADE');
 
-            $table->foreign('status_id')
-                ->references('id')->on('course_statuses')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
+            // $table->foreign('status_id')
+            //     ->references('id')->on('course_statuses')
+            //     ->onUpdate('CASCADE')
+            //     ->onDelete('CASCADE');
         });
     }
 

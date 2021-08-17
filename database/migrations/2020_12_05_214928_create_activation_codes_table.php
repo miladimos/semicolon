@@ -12,7 +12,7 @@ class CreateActivationCodesTable extends Migration
         Schema::create('activation_codes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->enum('type', ['phone', 'email'])->default('phone');
+            $table->char('type')->default('p');
             $table->unsignedInteger('code');
             $table->timestamp('expired_at');
             $table->unique(['user_id', 'code']);

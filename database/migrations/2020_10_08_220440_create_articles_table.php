@@ -23,12 +23,14 @@ class CreateArticlesTable extends Migration
             $table->string('description')->nullable();
             $table->text('bode');
             $table->string('images')->nullable();
+            $table->text('thumbnail_path')->nullable();
             $table->unsignedInteger('viewCount')->default(0);
-            $table->boolean('isDraft')->default(0);
-            $table->boolean('isDisable')->default(0);
             $table->boolean('isVip')->default(0);
-            $table->boolean('active')->default(false);
             $table->timestamp('published_at')->nullable();
+            $table->integer('status')->default(0);
+            $table->boolean('draft')->default(0);
+            $table->boolean('pinned')->default(false);
+            $table->boolean('active')->default(false);
             $table->softDeletes();
             $table->timestamps();
 

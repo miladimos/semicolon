@@ -22,7 +22,7 @@ class CreateCategoriesTable extends Migration
             $table->boolean('active')->default(false);
             $table->timestamps();
 
-            $table->foreign('parent_id')->on('categories')->references('id')->onDelete("SET NULL");
+            // $table->foreign('parent_id')->on('categories')->references('id')->onDelete("SET NULL");
         });
     }
 

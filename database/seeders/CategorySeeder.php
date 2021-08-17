@@ -22,6 +22,8 @@ class CategorySeeder extends Seeder
         foreach ($categories as $category) {
             Category::create([
                 'name' => $category,
+                'en_name' => $category,
+                'en_slug' => $category,
             ]);
         }
 

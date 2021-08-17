@@ -16,8 +16,8 @@ class CreateTicketsTable extends Migration
             $table->foreignId('admin_id')->nullable();
             $table->foreignId('parent_id')->nullable();
             $table->foreignId('subject_id')->nullable();
-            $table->foreignId('status_id')->default(1);
-            $table->foreignId('priority_id')->nullable();
+            $table->char('status')->nullable();
+            $table->char('priority')->nullable();
             $table->string('title')->nullable();
             $table->text('body');
             $table->text('file')->nullable();
@@ -36,21 +36,6 @@ class CreateTicketsTable extends Migration
                 ->references('id')->on('ticket_subjects')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-
-            $table->foreign('status_id')
-                ->references('id')->on('ticket_statuses')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            $table->foreign('priority_id')
-                ->references('id')->on('ticket_priorities')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-
-            // $table->foreign('parent_id')
-            //     ->references('id')->on('tickets')
-            //     ->onDelete('cascade')
-            //     ->onUpdate('cascade');
 
         });
     }

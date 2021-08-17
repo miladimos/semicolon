@@ -13,7 +13,12 @@ class CreateTaggablesTable extends Migration
             $table->id();
             $table->foreignId('tag_id');
             $table->morphs('taggable');
+            $table->unique(['tag_id', 'taggable_id', 'taggable_type'], 'taggables_ids_type_unique');
             $table->timestamps();
+
+            $table->foreign('tag_id')
+                ->references('id')->on('tags')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

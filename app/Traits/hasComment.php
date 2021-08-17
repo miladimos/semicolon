@@ -7,9 +7,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasComment
 {
-    /**
-     * @return \App\Models\Comment[]
-     */
+
     public function comments()
     {
         return $this->commentsRelation();
@@ -17,7 +15,7 @@ trait HasComment
 
     public function commentsRelation(): MorphMany
     {
-        return $this->morphMany(Comment::class, 'commentable');
+        return $this->morphMany(Comment::class, 'commentable', 'commentables')->withTimestamps();
     }
 
     // /**

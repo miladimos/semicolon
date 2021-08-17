@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasLikes
 {
+    //
     protected static function bootHasLikes()
     {
         static::deleting(function ($model) {

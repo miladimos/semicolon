@@ -4,7 +4,6 @@ namespace App\Traits;
 
 trait HasJWT
 {
-
     public function getJWTIdentifier(): int
     {
         return $this->getKey();

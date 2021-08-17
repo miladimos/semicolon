@@ -3,6 +3,8 @@
 
 </div><!-- end wrapper -->
 
+@include('sweetalert::alert')
+
 <!-- Core JavaScript
 ================================================== -->
 <script src="{{ asset('/statics/site/js/jquery.min.js') }}"></script>

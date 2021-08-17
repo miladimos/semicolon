@@ -34,7 +34,7 @@
                                 Trends</a></li>
                         <li class="list-inline-item"><a href="blog-category-02.html"><i class="fa fa-bolt"></i> Hot
                                 Topics</a></li>
-                        <li class="list-inline-item"><a href="{{  route('admin.index') }}"><i class="fa fa-bolt"></i> Hot
+                        <li class="list-inline-item"><a href="{{  route('webmaster.index') }}"><i class="fa fa-bolt"></i>
                                 Webmaster</a></li>
                         <li class="list-inline-item"><a href="page-contact.html"><i class="fa fa-user-circle-o"></i>
                                 Write for us</a></li>
@@ -180,16 +180,7 @@
                                     <li><a class="dropdown-item" href="single-fullwidth.html">Single Fullwidth</a></li>
                                 </ul>
                             </li>
-                            <li><a class="dropdown-item" href="single.html">Blog Category <span
-                                        class="hidden-md-down hidden-sm-down hidden-xs-down"><i
-                                            class="fa fa-angle-right"></i></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="blog-category-01.html">Blog Category A</a></li>
-                                    <li><a class="dropdown-item" href="blog-category-02.html">Blog Category B</a></li>
-                                </ul>
-                            </li>
                             <li><a class="dropdown-item" href="blog-author.html">Blog Author</a></li>
-                            <li><a class="dropdown-item" href="page-contact.html">Contact Page</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -198,9 +189,6 @@
                     <li class="nav-item">
                         <a class="nav-link color-yellow-hover" href="blog-category-05.html"><i
                                 class="fa fa-play-circle-o"></i> Vlogs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-grey-hover" href="blog-category-06.html">Health</a>
                     </li>
                 </ul>
             </div>

@@ -10,12 +10,12 @@ use App\Repositories\Tag\TagEloquentRepositoryInterface;
 class TagController extends Controller
 {
 
-    private $tagRepo;
+    // private $tagRepo;
 
-    public function __construct(TagEloquentRepositoryInterface $tagRepo)
-    {
-        $this->tagRepo = $tagRepo;
-    }
+    // public function __construct(TagEloquentRepositoryInterface $tagRepo)
+    // {
+    //     $this->tagRepo = $tagRepo;
+    // }
 
     public function index()
     {

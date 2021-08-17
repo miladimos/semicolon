@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Site\Newsletters\NewslettersSubscriberController;
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\Site\SiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\Site\SiteController::class, 'index'])->name('site.index');
+Route::get('/', [SiteController::class, 'index'])->name('site.index');
+
+Route::group([], function () {
+    Route::post('newsletters/subscibe', [NewslettersSubscriberController::class, 'subscribe'])->name('newsletters.subscribe');
+    Route::post('newsletters/unsubscibe', [NewslettersSubscriberController::class, 'unsubscibe'])->name('newsletters.unsubscibe');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
-

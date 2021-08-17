@@ -51,67 +51,9 @@ use App\Models\Course;
                 </ul>
             </li>
             {{-- @can('manage-books') --}}
-            <li class=" nav-item"><a href="#"><i class="feather
-                icon-book"></i><span class="menu-title" data-i18n="User">کتاب ها</span></a>
-                <ul class="menu-content">
-                    <li><a href="{{ route('webmaster.books.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه کتاب ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.books.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد کتاب جدید</span></a>
-                    <li><a href="{{ route('webmaster.publishers.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه انتشارات </span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.publishers.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد انتشارات جدید</span></a>
-                </ul>
-            </li>
-            {{-- @endcan --}}
-            <li class=" nav-item"><a href="#"><i class="feather icon-video"></i><span class="menu-title"
-                        data-i18n="User">دوره ها</span></a>
-                <ul class="menu-content">
-                    <li><a href="{{ route('webmaster.courses.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه دوره ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.courses.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد دوره جدید</span></a>
-                    <li><a href="{{ route('webmaster.courses.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">سطح دوره ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.courses.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">وضعیت دوره ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.courses.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">نوع دوره ها</span></a>
-                    </li>
 
-                </ul>
-            </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-music"></i><span class="menu-title"
-                        data-i18n="User">پادکست ها</span></a>
-                <ul class="menu-content">
-                    <li><a href="{{ route('webmaster.podcasts.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه پادکست ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.podcasts.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد پادکست جدید</span></a>
-                </ul>
-            </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-film"></i><span class="menu-title"
-                        data-i18n="User">درس ها</span></a>
-                <ul class="menu-content">
-                    <li><a href="{{ route('webmaster.episodes.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه درس ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.episodes.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد درس جدید</span></a>
-                    <li><a href="{{ route('webmaster.chapters.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه سرفصل ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.chapters.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد سرفصل جدید</span></a>
-                </ul>
-            </li>
+            {{-- @endcan --}}
+
             <li class=" nav-item"><a href="#"><i class="feather icon-layers"></i><span class="menu-title"
                         data-i18n="User">دست بندی ها</span></a>
                 <ul class="menu-content">
@@ -132,17 +74,7 @@ use App\Models\Course;
                                 class="menu-item" data-i18n="View">ایجاد برچسب جدید</span></a>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><i class="feather icon-percent"></i><span class="menu-title"
-                        data-i18n="User">تخفیف ها</span></a>
-                <ul class="menu-content">
 
-                    <li><a href="{{ route('webmaster.discounts.index') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="List">همه تخفیف ها</span></a>
-                    </li>
-                    <li><a href="{{ route('webmaster.discounts.create') }}"><i class="feather icon-circle"></i><span
-                                class="menu-item" data-i18n="View">ایجاد تخفیف جدید</span></a>
-                </ul>
-            </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-credit-card"></i><span class="menu-title"
                         data-i18n="User">بخش مالی </span></a>
                 <ul class="menu-content">
@@ -233,6 +165,9 @@ use App\Models\Course;
             <ul class="menu-content">
                 <li><a href="{{ route('webmaster.newsletters.index') }}"><i class="feather icon-circle"></i><span
                             class="menu-item" data-i18n="List">خبرنامه ها</span></a>
+                </li>
+                <li><a href="{{ route('webmaster.newsletter-subscribers.index') }}"><i class="feather icon-circle"></i><span
+                            class="menu-item" data-i18n="List">مشترک ها</span></a>
                 </li>
             </ul>
         </li>

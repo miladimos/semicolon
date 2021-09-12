@@ -28,6 +28,7 @@
         "maatwebsite/excel": "^3.1",
         "mcamara/laravel-localization": "^1.6",
         "miladimos/conf": "^0.5.5",
+        "miladimos/laravel-toolkit": "^0.9.4",
         "morilog/jalali": "3.*",
         "predis/predis": "^1.1",
         "realrashid/sweet-alert": "^4.0",
@@ -61,7 +62,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

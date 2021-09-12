@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9506f13ee020b882cee90c98fcd2061c",
+    "content-hash": "4fc01d6f97d09a74df14c4b1c68fb132",
     "packages": [
         {
             "name": "artesaos/seotools",
@@ -2756,6 +2756,76 @@
             "time": "2020-10-01T07:45:06+00:00"
         },
         {
+            "name": "miladimos/conf",
+            "version": "v0.5.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miladimos/conf.git",
+                "reference": "87110895fb14f922dbbd88814ef03ba9137036a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miladimos/conf/zipball/87110895fb14f922dbbd88814ef03ba9137036a6",
+                "reference": "87110895fb14f922dbbd88814ef03ba9137036a6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.17",
+                "phpunit/phpunit": "^9.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Miladimos\\Conf\\Providers\\ConfServiceProvider"
+                    ],
+                    "aliases": {
+                        "Conf": "Miladimos\\Conf\\Facades\\ConfFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Miladimos\\Conf\\": "src/"
+                },
+                "files": [
+                    "./src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "miladimos",
+                    "email": "message.tome1331@gmail.com",
+                    "homepage": "https://github.com/miladimos",
+                    "role": "maintaner"
+                }
+            ],
+            "description": "a dynamic key:value json config file",
+            "homepage": "https://github.com/miladimos/conf",
+            "keywords": [
+                "json config",
+                "laravel",
+                "laravel config",
+                "laravel packages",
+                "laravel-package",
+                "lumen packages",
+                "lumen support"
+            ],
+            "support": {
+                "issues": "https://github.com/miladimos/conf/issues",
+                "source": "https://github.com/miladimos/conf/tree/v0.5.5"
+            },
+            "time": "2021-08-14T07:03:29+00:00"
+        },
+        {
             "name": "mobiledetect/mobiledetectlib",
             "version": "2.8.37",
             "source": {
@@ -4467,6 +4537,88 @@
                 }
             ],
             "time": "2020-11-09T14:08:36+00:00"
+        },
+        {
+            "name": "spatie/laravel-translatable",
+            "version": "4.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-translatable.git",
+                "reference": "5900d6002a5795712058a04c7ca7c2c44b3e0850"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-translatable/zipball/5900d6002a5795712058a04c7ca7c2c44b3e0850",
+                "reference": "5900d6002a5795712058a04c7ca7c2c44b3e0850",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^4.0|^5.0|^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Translatable\\TranslatableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Translatable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "theMohamedSaid@gmail.com",
+                    "role": "Original idea"
+                }
+            ],
+            "description": "A trait to make an Eloquent model hold translations",
+            "homepage": "https://github.com/spatie/laravel-translatable",
+            "keywords": [
+                "eloquent",
+                "i8n",
+                "laravel-translatable",
+                "model",
+                "multilingual",
+                "spatie",
+                "translate"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-translatable/issues",
+                "source": "https://github.com/spatie/laravel-translatable/tree/4.6.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-11-19T14:19:29+00:00"
         },
         {
             "name": "spatie/temporary-directory",

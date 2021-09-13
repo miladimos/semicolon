@@ -1,7 +1,17 @@
 [
     {
         "id": 1,
-        "key": "key",
-        "value": "value"
+        "key": "instagram",
+        "value": "https://instagram.com/semicolon"
+    },
+    {
+        "id": 1,
+        "key": "gmail",
+        "value": "info@semicolon.com"
+    },
+    {
+        "id": 1,
+        "key": "admin_email",
+        "value": "miladimos@outlook.com"
     }
 ]

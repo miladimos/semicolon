@@ -83,7 +83,7 @@
                         <hr class="invis">
 
                         <div class="newsletter-widget text-center">
-                            <form class="form-inline" method="post" action="{{ route('newsletters.subscribe') }}">
+                            <form class="form-inline" method="post" action="{{ route('site.newsletters.subscribe') }}">
                                 @csrf
                                 <input type="email" class="form-control" name="email"
                                     placeholder="Enter your email address" required>

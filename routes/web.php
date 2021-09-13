@@ -14,12 +14,15 @@ use \App\Http\Controllers\Site\SiteController;
 |
 */
 
-Route::get('/', [SiteController::class, 'index'])->name('site.index');
 
-Route::group([], function () {
+Route::group(['as' => 'site.'], function () {
+    Route::get('/', [SiteController::class, 'index'])->name('index');
     Route::post('newsletters/subscibe', [NewslettersSubscriberController::class, 'subscribe'])->name('newsletters.subscribe');
     Route::post('newsletters/unsubscibe', [NewslettersSubscriberController::class, 'unsubscibe'])->name('newsletters.unsubscibe');
 });
+
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

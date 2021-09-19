@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Site\Newsletters\NewslettersSubscriberController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Site\Newsletters\NewslettersSubscriberController;
 use \App\Http\Controllers\Site\SiteController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

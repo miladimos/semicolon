@@ -10,21 +10,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
-
     use HasFactory,
         Sluggable,
         HasUUID;
 
     protected $table = 'categories';
 
-    protected $fillable = ['name', 'slug', 'image', 'parent_id'];
+    protected $fillable = ['name', 'slug', 'description', 'parent_id', 'thumbnail', 'active', 'uuid'];
 
-    protected $guarded = [];
+    // protected $guarded = [];
 
-    public static function booted()
-    {
-        static::addGlobalScope(new ActiveScope());
-    }
     public function parent()
     {
         return $this->hasOne(Category::class, 'id', 'parent_id')->withDefault(['name' => '---']);

@@ -36,8 +36,10 @@
                                 Topics</a></li>
                         <li class="list-inline-item"><a href="{{  route('webmaster.index') }}"><i class="fa fa-bolt"></i>
                                 Webmaster</a></li>
-                        <li class="list-inline-item"><a href="page-contact.html"><i class="fa fa-user-circle-o"></i>
-                                Write for us</a></li>
+                        <li class="list-inline-item"><a href="{{ route('auth.register.form') }}"><i class="fa fa-user-circle-o"></i>
+                                Join us</a></li>
+                        <li class="list-inline-item"><a href="{{ route('auth.login.form') }}"><i class="fa fa-user-circle-o"></i>
+                                Login</a></li>
                     </ul><!-- end ul -->
                 </div><!-- end topmenu -->
             </div><!-- end col -->
@@ -57,7 +59,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="logo">
-                    <a href="index.html"><img src="{{ asset('/statics/site/images/logo.png') }}" alt=""></a>
+                    <a href="{{ route('site.index') }}"><img src="{{ asset('/statics/site/images/logo.png') }}" alt=""></a>
                 </div><!-- end logo -->
             </div>
         </div><!-- end row -->
@@ -74,7 +76,7 @@
             <div class="collapse navbar-collapse justify-content-md-center" id="cloapediamenu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link color-pink-hover" href="index.html">Home</a>
+                        <a class="nav-link color-pink-hover" href="{{ route('site.index') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown has-submenu menu-large hidden-md-down hidden-sm-down hidden-xs-down">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"

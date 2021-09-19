@@ -43,12 +43,6 @@
 </head>
 <body>
 
-<!-- LOADER -->
-<div id="preloader">
-    <img class="preloader" src="{{ asset('/statics/site/images/loader.gif') }}" alt="">
-</div><!-- end loader -->
-<!-- END LOADER -->
-
 <div id="wrapper">
 
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\Auth\LoginController;
 use App\Http\Controllers\Site\Auth\RegisterController;
 
-Route::group(['as' => 'auth.'], function () {
+Route::group(['as' => 'auth.', 'prefix' => 'auth'], function () {
 
     Route::group(['middleware' => 'guest'], function () {
         Route::get('register', [RegisterController::class, 'showRegisterForm'])->name('register.form');

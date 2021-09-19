@@ -3,7 +3,7 @@
 @section('breadcrumb')
     @parent
 
-    <li class="breadcrumb-item active"><a href="#">دسته بندی ها</a></li>
+    <li class="breadcrumb-item active"><a href="{{ route('webmaster.categories.index') }}">دسته بندی ها</a></li>
 
     <li class="breadcrumb-item active"><a href="#">ثبت دسته بندی جدید</a>
     </li>

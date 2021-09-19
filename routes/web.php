@@ -22,7 +22,9 @@ Route::group(['as' => 'site.'], function () {
     Route::post('newsletters/unsubscibe', [NewslettersSubscriberController::class, 'unsubscibe'])->name('newsletters.unsubscibe');
 });
 
-
+Route::group(['prefix' => 'account', 'middleware' => 'auth', 'as' => 'account.'], function () {
+    //
+});
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

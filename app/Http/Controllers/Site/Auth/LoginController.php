@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Events\Site\Auth\UserLoggedin;
+use Illuminate\Support\Facades\Response;
 use App\Http\Requests\Site\Auth\LoginRequest;
 
 class LoginController extends Controller
@@ -38,18 +39,19 @@ class LoginController extends Controller
 
         event(new UserLoggedin($user));
 
-        return redirect()->route('site.index')->with('success');
+        return Response::success('site.index', 'Login Successfuly.');;
     }
 
-    public function user($email)
+    public function user($username)
     {
-        return User::where('email', $email)->orWhere('username', $email)->first();
+        return User::where('email', $username)->orWhere('username', $username)->first();
     }
 
     public function authenticate($request)
     {
         if (auth()->attempt([$this->username() => $request->username, 'password' => $request->password])) {
-            $request->session()->regenerate();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
             return true;
         }
         return false;

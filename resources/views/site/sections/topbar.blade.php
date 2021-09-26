@@ -30,16 +30,36 @@
             <div class="col-lg-4 hidden-md-down">
                 <div class="topmenu text-center">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="blog-category-01.html"><i class="fa fa-star"></i>
-                                Trends</a></li>
-                        <li class="list-inline-item"><a href="blog-category-02.html"><i class="fa fa-bolt"></i> Hot
-                                Topics</a></li>
-                        <li class="list-inline-item"><a href="{{  route('webmaster.index') }}"><i class="fa fa-bolt"></i>
-                                Webmaster</a></li>
-                        <li class="list-inline-item"><a href="{{ route('auth.register.form') }}"><i class="fa fa-user-circle-o"></i>
-                                Join us</a></li>
-                        <li class="list-inline-item"><a href="{{ route('auth.login.form') }}"><i class="fa fa-user-circle-o"></i>
-                                Login</a></li>
+                        <li class="list-inline-item">
+                            <a href="blog-category-01.html"><i class="fa fa-star"></i>
+                                Trends</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="blog-category-02.html"><i class="fa fa-bolt"></i> Hot
+                                Topics</a>
+                        </li>
+
+                        @auth
+                            <li class="list-inline-item">
+                                <a href="{{ route('webmaster.index') }}"><i class="fa fa-bolt"></i>
+                                    Webmaster</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <form action="{{ route('auth.logout') }}" method="post" id="frmLogout">@csrf</form>
+                                <a onclick="document.getElementById('frmLogout').submit()"><i class="fa fa-bolt"></i>
+                                    Logout</a>
+                            </li>
+                        @else
+                            <li class="list-inline-item">
+                                <a href="{{ route('auth.register.form') }}"><i class="fa fa-user-circle-o"></i>
+                                    Join us</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="{{ route('auth.login.form') }}"><i class="fa fa-user-circle-o"></i>
+                                    Login</a>
+                            </li>
+                        @endauth
+
                     </ul><!-- end ul -->
                 </div><!-- end topmenu -->
             </div><!-- end col -->
@@ -59,7 +79,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="logo">
-                    <a href="{{ route('site.index') }}"><img src="{{ asset('/statics/site/images/logo.png') }}" alt=""></a>
+                    <a href="{{ route('site.index') }}"><img src="{{ asset('/statics/site/images/logo.png') }}"
+                            alt=""></a>
                 </div><!-- end logo -->
             </div>
         </div><!-- end row -->

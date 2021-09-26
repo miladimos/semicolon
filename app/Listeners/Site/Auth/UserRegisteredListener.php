@@ -6,7 +6,6 @@ use App\Events\Site\Auth\UserRegistered;
 use App\Notifications\Site\Auth\SendEmailVerificationNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Support\Facades\Notification;
 
 class UserRegisteredListener implements ShouldQueue
 {
@@ -30,6 +29,6 @@ class UserRegisteredListener implements ShouldQueue
      */
     public function handle(UserRegistered $event)
     {
-        $event->user->notify(new SendEmailVerificationNotification());
+        // $event->user->notify(new SendEmailVerificationNotification());
     }
 }

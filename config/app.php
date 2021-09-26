@@ -182,6 +182,7 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
         App\Providers\ObserverServiceProvider::class,
+        App\Providers\MacroableServiceProvider::class,
 
     ],
 

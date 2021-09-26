@@ -4,10 +4,8 @@
         <div class="breadcrumb-wrapper col-12">
             <ol class="breadcrumb">
                 @section('breadcrumb')
-                    <li class="breadcrumb-item"><a href="/admin">داشبورد</a>
-                    </li>
+                    <li class="breadcrumb-item"><a href="{{ route('webmaster.index') }}">داشبورد</a></li>
                 @show
-
             </ol>
         </div>
     </div>

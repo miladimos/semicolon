@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Site\Auth;
 
-use Exception;
 use App\Models\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Laravel\Socialite\Facades\Socialite;
+use App\Events\Site\Auth\UserRegistered;
 use App\Http\Requests\Site\Auth\RegisterRequest;
+use Response;
 
 class RegisterController extends Controller
 {
@@ -26,18 +25,14 @@ class RegisterController extends Controller
 
         auth()->login($user, true);
 
-        // event(new UserRegistered($user));
+        event(new UserRegistered($user));
 
-        return redirect()->route('site.index')->with('success');
+        return Response::success('site.index', 'Registered Successfuly.');;
     }
 
     public function create($request)
     {
-        $user =  User::create($request->except('fname', 'lname', 'password_confirmation'));
-        $user->profile()->update([
-            'fname' => $request->fname,
-            'lname' => $request->lname,
-        ]);
+        $user =  User::create($request->only('username', 'email', 'password'));
         return $user;
     }
 }

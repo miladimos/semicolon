@@ -26,7 +26,7 @@ use App\Http\Controllers\Webmaster\Newsletters\NewslettersController;
 use App\Http\Controllers\Webmaster\Newsletters\NewsletterSubscribersController;
 
 
-Route::group(['prefix' => 'webmaster', 'as' => 'webmaster.'], function () {
+Route::group(['prefix' => 'webmaster', 'as' => 'webmaster.', 'middleware' => ['isadmin']], function () {
     Route::get('', [WebmasterController::class, 'index'])->name('index');
     Route::get('/statistics', [StatisticsController::class, 'index'])->name('statistics');
     Route::get('/users/account/setting', [UserController::class, 'setting'])->name('users.setting');

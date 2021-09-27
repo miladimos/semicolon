@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1\Site\Ticket;
+namespace App\Http\Controllers\Site\Ticket;
 
 use App\Http\Controllers\Api\v1\ApiBaseController;
 use App\Http\Resources\v1\Webmaster\Ticket\TicketSubjectCollection;

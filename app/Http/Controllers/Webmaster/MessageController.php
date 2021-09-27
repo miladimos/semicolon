@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Webmaster;
 
-use Illuminate\Http\Request;
-use App\Message;
-use App\Jobs\SendMailJob;
+use App\Models\User;
 use Carbon\Carbon;
-use App\User;
+use App\Jobs\SendMailJob;
 use App\Mail\NewArrivals;
+use Illuminate\Http\Request;
+use Illuminate\Mail\Message;
+use App\Http\Controllers\Controller;
 
 class MessageController extends Controller
 {

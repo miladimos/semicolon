@@ -72,7 +72,7 @@
                                     class="fa fa-facebook"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
                                     class="fa fa-twitter"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i
+                            <a href="{{ conf('instagram_url') }}" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i
                                     class="fa fa-instagram"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
                                     class="fa fa-google-plus"></i></a>

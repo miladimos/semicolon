@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Auth\Password;
+namespace App\Http\Controllers\Site\Auth\Password;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Models\PasswordReset;
+use Illuminate\Auth\Events\PasswordReset;
+
 use App\Http\Controllers\Controller;
 
 class ResetPasswordController extends Controller

@@ -20,7 +20,7 @@ class RedirectIfNotAdmin
     public function handle(Request $request, Closure $next)
     {
 
-        if (!Auth::user()->is_admin) {
+        if (!user()->isAdmin()) {
             return redirect(RouteServiceProvider::HOME);
         }
 

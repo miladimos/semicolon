@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Webmaster\Contact;
 
+use App\Models\Category;
+use App\Models\Tag;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;

@@ -10,7 +10,8 @@
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
-                                    <span class="bg-aqua"><a href="blog-category-01.html" title="">Lifestyle</a></span>
+                                    <span class="bg-aqua"><a href="blog-category-01.html"
+                                            title="">Lifestyle</a></span>
                                     <h4><a href="single.html" title="">The golden rules you need to know for a positive
                                             life</a></h4>
                                     <small><a href="single.html" title="">24 July, 2017</a></small>
@@ -67,7 +68,8 @@
                         <div class="shadoweffect">
                             <div class="shadow-desc">
                                 <div class="blog-meta">
-                                    <span class="bg-aqua"><a href="blog-category-01.html" title="">Lifestyle</a></span>
+                                    <span class="bg-aqua"><a href="blog-category-01.html"
+                                            title="">Lifestyle</a></span>
                                     <h4><a href="single.html" title="">The rules you need to know for a happy union</a></h4>
                                     <small><a href="single.html" title="">03 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Jessica</a></small>
@@ -114,26 +116,6 @@
 
                             <hr class="invis">
 
-                            <div class="blog-box">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_06.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect">
-                                            <span></span>
-                                        </div><!-- end hover -->
-                                    </a>
-                                </div><!-- end media -->
-                                <div class="blog-meta big-meta">
-                                    <h4><a href="single.html" title="">I have a desert visit this summer</a></h4>
-                                    <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                        pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh,
-                                        maximus ac felis nec, maximus tempor odio.</p>
-                                    <small><a href="blog-category-01.html" title="">Lifestyle</a></small>
-                                    <small><a href="single.html" title="">22 July, 2017</a></small>
-                                    <small><a href="blog-author.html" title="">by Martines</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
                         </div><!-- end col -->
                     </div><!-- end row -->
                 </div><!-- end col -->
@@ -163,22 +145,6 @@
 
                             <hr class="invis">
 
-                            <div class="blog-box">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_02.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect">
-                                            <span></span>
-                                        </div><!-- end hover -->
-                                    </a>
-                                </div><!-- end media -->
-                                <div class="blog-meta">
-                                    <h4><a href="single.html" title="">Is summer, have you bought a cane</a></h4>
-                                    <small><a href="blog-category-01.html" title="">Fashion</a></small>
-                                    <small><a href="blog-category-01.html" title="">11 July, 2017</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
                         </div><!-- end col -->
 
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -201,24 +167,6 @@
                             </div><!-- end blog-box -->
 
                             <hr class="invis">
-
-                            <div class="blog-box">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_04.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect">
-                                            <span></span>
-                                        </div><!-- end hover -->
-                                    </a>
-                                </div><!-- end media -->
-                                <div class="blog-meta">
-                                    <h4><a href="single.html" title="">How to be more cool with clothing</a></h4>
-                                    <small><a href="blog-category-01.html" title="">Fashion</a>, <a
-                                            href="blog-category-01.html" title="">Style</a></small>
-                                    <small><a href="blog-category-01.html" title="">04 July, 2017</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
                         </div><!-- end col -->
                     </div><!-- end row -->
                 </div><!-- end col -->
@@ -269,53 +217,6 @@
                         </div><!-- end blog-box -->
 
                         <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_square_02.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">Let's make an introduction to the glorious world of
-                                        history</a></h4>
-                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus
-                                    ac felis nec, maximus tempor odio.</p>
-                                <small><a href="blog-category-01.html" title="">Travel</a></small>
-                                <small><a href="single.html" title="">20 July, 2017</a></small>
-                                <small><a href="blog-author.html" title="">by Samanta</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_square_03.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">Did you see the most beautiful sea in the world?</a></h4>
-                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus
-                                    ac felis nec, maximus tempor odio.</p>
-                                <small><a href="blog-category-01.html" title="">Travel</a></small>
-                                <small><a href="single.html" title="">19 July, 2017</a></small>
-                                <small><a href="blog-author.html" title="">by Jackie</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
                     </div><!-- end blog-list -->
 
                     <hr class="invis">
@@ -349,51 +250,6 @@
 
                         <hr class="invis">
 
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_square_06.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">10 practical ways to choose organic vegetables</a></h4>
-                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus
-                                    ac felis nec, maximus tempor odio.</p>
-                                <small><a href="blog-category-01.html" title="">Food</a></small>
-                                <small><a href="single.html" title="">10 July, 2017</a></small>
-                                <small><a href="blog-author.html" title="">by Matilda</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-
-                        <hr class="invis">
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_square_07.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">We are making homemade ravioli</a></h4>
-                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus
-                                    ac felis nec, maximus tempor odio.</p>
-                                <small><a href="blog-category-01.html" title="">Food</a></small>
-                                <small><a href="single.html" title="">09 July, 2017</a></small>
-                                <small><a href="blog-author.html" title="">by Matilda</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
                     </div><!-- end blog-list -->
                 </div><!-- end col -->
 
@@ -405,7 +261,8 @@
                     <div class="blog-box">
                         <div class="post-media">
                             <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_10.jpg') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('/statics/site/upload/blog_10.jpg') }}" alt=""
+                                    class="img-fluid">
                                 <div class="hovereffect">
                                     <span class="videohover"></span>
                                 </div><!-- end hover -->
@@ -420,42 +277,6 @@
 
                     <hr class="invis">
 
-                    <div class="blog-box">
-                        <div class="post-media">
-                            <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_11.jpg') }}" alt="" class="img-fluid">
-                                <div class="hovereffect">
-                                    <span class="videohover"></span>
-                                </div><!-- end hover -->
-                            </a>
-                        </div><!-- end media -->
-                        <div class="blog-meta">
-                            <h4><a href="single.html" title="">Nostalgia at work</a></h4>
-                            <small><a href="blog-category-01.html" title="">Videos</a></small>
-                            <small><a href="blog-category-01.html" title="">20 July, 2017</a></small>
-                        </div><!-- end meta -->
-                    </div><!-- end blog-box -->
-
-                    <hr class="invis">
-
-                    <div class="blog-box">
-                        <div class="post-media">
-                            <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_12.jpg') }}" alt="" class="img-fluid">
-                                <div class="hovereffect">
-                                    <span class="videohover"></span>
-                                </div><!-- end hover -->
-                            </a>
-                        </div><!-- end media -->
-                        <div class="blog-meta">
-                            <h4><a href="single.html" title="">How to become a good vlogger</a></h4>
-                            <small><a href="blog-category-01.html" title="">Beauty</a></small>
-                            <small><a href="blog-category-01.html" title="">20 July, 2017</a></small>
-                        </div><!-- end meta -->
-                    </div><!-- end blog-box -->
-
-                    <hr class="invis">
-
                     <div class="section-title">
                         <h3 class="color-grey"><a href="blog-category-01.html" title="">Health</a></h3>
                     </div><!-- end title -->
@@ -463,7 +284,8 @@
                     <div class="blog-box">
                         <div class="post-media">
                             <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_07.jpg') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('/statics/site/upload/blog_07.jpg') }}" alt=""
+                                    class="img-fluid">
                                 <div class="hovereffect">
                                     <span></span>
                                 </div><!-- end hover -->
@@ -477,40 +299,6 @@
                     </div><!-- end blog-box -->
 
                     <hr class="invis">
-
-                    <div class="blog-box">
-                        <div class="post-media">
-                            <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_08.jpg') }}" alt="" class="img-fluid">
-                                <div class="hovereffect">
-                                    <span></span>
-                                </div><!-- end hover -->
-                            </a>
-                        </div><!-- end media -->
-                        <div class="blog-meta">
-                            <h4><a href="single.html" title="">2017 trends in health tourism</a></h4>
-                            <small><a href="blog-category-01.html" title="">Health</a></small>
-                            <small><a href="blog-category-01.html" title="">20 July, 2017</a></small>
-                        </div><!-- end meta -->
-                    </div><!-- end blog-box -->
-
-                    <hr class="invis">
-
-                    <div class="blog-box">
-                        <div class="post-media">
-                            <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_09.jpg') }}" alt="" class="img-fluid">
-                                <div class="hovereffect">
-                                    <span></span>
-                                </div><!-- end hover -->
-                            </a>
-                        </div><!-- end media -->
-                        <div class="blog-meta">
-                            <h4><a href="single.html" title="">Experience the effects of miraculous stones</a></h4>
-                            <small><a href="blog-category-01.html" title="">Beauty</a></small>
-                            <small><a href="blog-category-01.html" title="">20 July, 2017</a></small>
-                        </div><!-- end meta -->
-                    </div><!-- end blog-box -->
                 </div><!-- end col -->
             </div><!-- end row -->
 

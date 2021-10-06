@@ -10,6 +10,7 @@ return [
     'profile' => 'Profile',
     'setting' => 'Setting',
     'update' => 'Update',
+    'submit' => 'Submit',
     'create' => 'Create',
     'socials' => [
         'site' => 'Site',

@@ -16,7 +16,7 @@ class CategoryController extends Controller
 
         $categories = Category::latest()->paginate(10);
 
-        return view('webmaster.categories.all', compact('categories'));
+        return view('webmaster.categories.index', compact('categories'));
     }
 
     public function create()

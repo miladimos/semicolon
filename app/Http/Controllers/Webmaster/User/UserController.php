@@ -19,7 +19,7 @@ class UserController extends Controller
         $this->seo()->setTitle('کاربران');
 
         // $date = Carbon::now()->subDays(7);
-  
+
         // $users = User::where('created_at', '>=', $date)->get();
 
         $users = User::query();
@@ -37,7 +37,7 @@ class UserController extends Controller
         // request()->fullUrlWithQuery(['admin'=>1]);
         // $users = $users->latest()->paginate(20)->appends( ['search' => request('search') ]);
         $users = $users->latest()->paginate(10);
-        return view('webmaster.users.all', compact('users'));
+        return view('webmaster.users.index', compact('users'));
     }
     // public function index()
     // {

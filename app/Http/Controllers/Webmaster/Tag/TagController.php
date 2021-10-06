@@ -22,7 +22,7 @@ class TagController extends Controller
         $this->seo()->setTitle('برچسب ها');
         $tags = $this->tagRepo->all();
 
-        return view('webmaster.tags.all', compact('tags'));
+        return view('webmaster.tags.index', compact('tags'));
     }
 
     public function create()

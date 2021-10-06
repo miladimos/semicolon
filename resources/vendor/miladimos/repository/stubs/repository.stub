@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ $repositoryNamespace }};
+
+use Miladimos\Repository\Repositories\BaseRepository;
+use {{ $modelNamespace }}
+use {{ $repositoryInterfaceNamespace }}EloquentRepositoryInterface;
+
+class {{ $modelName }}Repository extends BaseRepository implements {{ $modelName }}EloquentRepositoryInterface
+{
+    public function model()
+    {
+        return {{ $modelName }}::class;
+    }
+}

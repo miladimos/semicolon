@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ $repositoryInterfaceNamespace }};
+
+interface {{ $modelName }}EloquentRepositoryInterface
+{
+    // define your custom methods
+}
+
+

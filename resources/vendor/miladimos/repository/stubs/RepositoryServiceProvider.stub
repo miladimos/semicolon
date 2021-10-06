@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class {{ $providerName }} extends ServiceProvider
+{
+
+    /**
+    * define your repositories here
+    */
+    protected $repositories = [
+        [
+            ModelRepositoryInterface::class,
+            ModelRepository::class
+        ],
+    ];
+
+    public function register()
+    {
+        foreach ($this->repositories as $repository) {
+            $this->app->bind($repository[0], $repository[1]);
+        }
+    }
+}

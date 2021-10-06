@@ -9,24 +9,39 @@ use Tests\TestCase;
 
 class LoginTest extends TestCase
 {
-    use WithFaker;
+    use WithFaker,
+        RefreshDatabase;
+
+    public function test_user_can_see_login_form()
+    {
+        $response = $this->get(route('auth.login.form'));
+        $response->assertSeeText("Login");
+    }
 
     /**
-     * A basic feature test user_can_login.
-     *
-     * @return void
+     * Test User Login with Username
+     * @depends test_user_can_see_login_form
      */
-    public function test_user_can_login()
+    public function test_user_can_login_by_username()
     {
-        $user = User::create([
-            'username' => $this->faker->userName,
-            'email' => $this->faker->safeEmail,
-            'password' => '1234'
+        $data = User::factory()->make()->toArray();
+        $user = User::create($data);
+
+        $this->post(route('auth.login'), [
+            'auth' => $user->username,
+            'password' => '12344321'
         ]);
 
-        $this->post(route('login'), [
-            'auth' => $user->username,
-            'password' => '1234'
+        $this->assertAuthenticated();
+    }
+
+    public function test_user_can_login_by_email()
+    {
+        $user = User::factory()->create();
+
+        $this->post(route('auth.login'), [
+            'auth' => $user->email,
+            'password' => '12344321',
         ]);
 
         $this->assertAuthenticated();

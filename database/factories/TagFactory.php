@@ -23,6 +23,7 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
+            'uuid' => $this->faker->uuid,
             'name' => Str::random(5)
         ];
     }

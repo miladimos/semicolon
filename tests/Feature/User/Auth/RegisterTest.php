@@ -9,6 +9,9 @@ use Tests\TestCase;
 
 class RegisterTest extends TestCase
 {
+    use WithFaker,
+        RefreshDatabase;
+
     /**
      * A basic feature test example.
      *
@@ -16,57 +19,58 @@ class RegisterTest extends TestCase
      */
     public function test_user_can_see_register_form()
     {
-        $response = $this->get('/register');
+        $response = $this->get(route('auth.register.form'));
 
         $response->assertStatus(200);
     }
 
-    /**
-     * @return void
-     */
-    public function test_user_can_register()
-    {
-        $response = $this->post(route('register'), [
-            'username' => '',
-            'email'    => 'email@gmail.com',
-            'password' => '12344321',
-            'password_confirmation' => '12344321',
-        ]);
+    // /**
+    //  * @return void
+    //  */
+    // public function test_user_can_register()
+    // {
 
-        $response->assertRedirect(route('site.index'));
+    //     $response = $this->post(route('auth.register'), [
+    //         'username' => 'username',
+    //         'email'    => 'email@gmail.com',
+    //         'password' => '12344321',
+    //         'password_confirmation' => '12344321',
+    //     ]);
 
-        $this->assertCount(1, User::all());
-    }
+    //     $response->assertRedirect(route('site.index'));
 
-    public function user_must_be_verify_account()
-    {
-        $this->post(route('register'), [
-            'username' => '',
-            'email'    => 'email@gmail.com',
-            'password' => '12344321',
-            'password_confirmation' => '12344321',
-        ]);
+    //     $this->assertCount(1, User::all());
+    // }
 
-        $response = $this->get(route('site.index'));
+    // public function user_must_be_verify_account()
+    // {
+    //     $this->post(route('register'), [
+    //         'username' => '',
+    //         'email'    => 'email@gmail.com',
+    //         'password' => '12344321',
+    //         'password_confirmation' => '12344321',
+    //     ]);
 
-        $response->assertRedirect(route('verification'));
-    }
+    //     $response = $this->get(route('site.index'));
 
-    public function test_verified_user_can_see_home()
-    {
-        $this->post(route('register'), [
-            'username' => '',
-            'email'    => 'email@gmail.com',
-            'password' => '12344321',
-            'password_confirmation' => '12344321',
-        ]);
+    //     $response->assertRedirect(route('verification'));
+    // }
 
-        $this->assertAuthenticated();
+    // public function test_verified_user_can_see_home()
+    // {
+    //     $this->post(route('register'), [
+    //         'username' => '',
+    //         'email'    => 'email@gmail.com',
+    //         'password' => '12344321',
+    //         'password_confirmation' => '12344321',
+    //     ]);
 
-        auth()->user()->markEmailAsVerified();
+    //     $this->assertAuthenticated();
 
-        $response = $this->get(route('site.index'));
+    //     auth()->user()->markEmailAsVerified();
 
-        $response->assertOk();
-    }
+    //     $response = $this->get(route('site.index'));
+
+    //     $response->assertOk();
+    // }
 }

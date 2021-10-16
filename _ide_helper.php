@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.63.0.
+ * Generated for Laravel 8.64.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -700,7 +700,7 @@
          * @param int $code
          * @param string $message
          * @param array $headers
-         * @return void 
+         * @return \Illuminate\Foundation\never 
          * @throws \Symfony\Component\HttpKernel\Exception\HttpException
          * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
          * @static 
@@ -708,7 +708,7 @@
         public static function abort($code, $message = '', $headers = [])
         {
                         /** @var \Illuminate\Foundation\Application $instance */
-                        $instance->abort($code, $message, $headers);
+                        return $instance->abort($code, $message, $headers);
         }
                     /**
          * Register a terminating callback with the application.
@@ -4251,102 +4251,6 @@
             /**
      * 
      *
-     * @see \Illuminate\Encryption\Encrypter
-     */ 
-        class Crypt {
-                    /**
-         * Determine if the given key and cipher combination is valid.
-         *
-         * @param string $key
-         * @param string $cipher
-         * @return bool 
-         * @static 
-         */ 
-        public static function supported($key, $cipher)
-        {
-                        return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
-        }
-                    /**
-         * Create a new encryption key for the given cipher.
-         *
-         * @param string $cipher
-         * @return string 
-         * @static 
-         */ 
-        public static function generateKey($cipher)
-        {
-                        return \Illuminate\Encryption\Encrypter::generateKey($cipher);
-        }
-                    /**
-         * Encrypt the given value.
-         *
-         * @param mixed $value
-         * @param bool $serialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */ 
-        public static function encrypt($value, $serialize = true)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->encrypt($value, $serialize);
-        }
-                    /**
-         * Encrypt a string without serialization.
-         *
-         * @param string $value
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */ 
-        public static function encryptString($value)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->encryptString($value);
-        }
-                    /**
-         * Decrypt the given value.
-         *
-         * @param string $payload
-         * @param bool $unserialize
-         * @return mixed 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */ 
-        public static function decrypt($payload, $unserialize = true)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->decrypt($payload, $unserialize);
-        }
-                    /**
-         * Decrypt the given string without unserialization.
-         *
-         * @param string $payload
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */ 
-        public static function decryptString($payload)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->decryptString($payload);
-        }
-                    /**
-         * Get the encryption key.
-         *
-         * @return string 
-         * @static 
-         */ 
-        public static function getKey()
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->getKey();
-        }
-         
-    }
-            /**
-     * 
-     *
      * @see \Illuminate\Database\DatabaseManager
      * @see \Illuminate\Database\Connection
      */ 
@@ -5402,24 +5306,17 @@
      */ 
         class Event {
                     /**
-         * 
+         * Register an event listener with the dispatcher.
          *
+         * @param \Closure|string|array $events
+         * @param \Closure|string|array|null $listener
+         * @return void 
          * @static 
          */ 
         public static function listen($events, $listener = null)
         {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
-                        return $instance->listen($events, $listener);
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function getOriginalListeners($eventName)
-        {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
-                        return $instance->getOriginalListeners($eventName);
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->listen($events, $listener);
         }
                     /**
          * Determine if a given event has listeners.
@@ -5429,8 +5326,8 @@
          * @static 
          */ 
         public static function hasListeners($eventName)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->hasListeners($eventName);
         }
                     /**
@@ -5441,8 +5338,8 @@
          * @static 
          */ 
         public static function hasWildcardListeners($eventName)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->hasWildcardListeners($eventName);
         }
                     /**
@@ -5454,8 +5351,8 @@
          * @static 
          */ 
         public static function push($event, $payload = [])
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->push($event, $payload);
         }
                     /**
@@ -5466,8 +5363,8 @@
          * @static 
          */ 
         public static function flush($event)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->flush($event);
         }
                     /**
@@ -5478,8 +5375,8 @@
          * @static 
          */ 
         public static function subscribe($subscriber)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->subscribe($subscriber);
         }
                     /**
@@ -5491,8 +5388,8 @@
          * @static 
          */ 
         public static function until($event, $payload = [])
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->until($event, $payload);
         }
                     /**
@@ -5505,8 +5402,8 @@
          * @static 
          */ 
         public static function dispatch($event, $payload = [], $halt = false)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->dispatch($event, $payload, $halt);
         }
                     /**
@@ -5517,8 +5414,8 @@
          * @static 
          */ 
         public static function getListeners($eventName)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->getListeners($eventName);
         }
                     /**
@@ -5530,8 +5427,8 @@
          * @static 
          */ 
         public static function makeListener($listener, $wildcard = false)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->makeListener($listener, $wildcard);
         }
                     /**
@@ -5543,8 +5440,8 @@
          * @static 
          */ 
         public static function createClassListener($listener, $wildcard = false)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->createClassListener($listener, $wildcard);
         }
                     /**
@@ -5555,8 +5452,8 @@
          * @static 
          */ 
         public static function forget($event)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->forget($event);
         }
                     /**
@@ -5566,20 +5463,20 @@
          * @static 
          */ 
         public static function forgetPushed()
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->forgetPushed();
         }
                     /**
          * Set the queue resolver implementation.
          *
          * @param callable $resolver
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher 
+         * @return \Illuminate\Events\Dispatcher 
          * @static 
          */ 
         public static function setQueueResolver($resolver)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->setQueueResolver($resolver);
         }
                     /**
@@ -5591,8 +5488,8 @@
          * @static 
          */ 
         public static function macro($name, $macro)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::macro($name, $macro);
+        {
+                        \Illuminate\Events\Dispatcher::macro($name, $macro);
         }
                     /**
          * Mix another object into the class.
@@ -5604,8 +5501,8 @@
          * @static 
          */ 
         public static function mixin($mixin, $replace = true)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::mixin($mixin, $replace);
+        {
+                        \Illuminate\Events\Dispatcher::mixin($mixin, $replace);
         }
                     /**
          * Checks if macro is registered.
@@ -5615,8 +5512,8 @@
          * @static 
          */ 
         public static function hasMacro($name)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::hasMacro($name);
+        {
+                        return \Illuminate\Events\Dispatcher::hasMacro($name);
         }
                     /**
          * Assert if an event has a listener attached to it.
@@ -11493,46 +11390,6 @@
      */ 
         class Route {
                     /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function spyRouteConflict()
-        {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
-                        return $instance->spyRouteConflict();
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function updateGroupStack($attributes)
-        {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
-                        return $instance->updateGroupStack($attributes);
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function routeError($info, $err, $msg)
-        {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
-                        return $instance->routeError($info, $err, $msg);
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function addRoute($methods, $uri, $action)
-        {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
-                        return $instance->addRoute($methods, $uri, $action);
-        }
-                    /**
          * Register a new GET route with the router.
          *
          * @param string $uri
@@ -11541,8 +11398,8 @@
          * @static 
          */ 
         public static function get($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->get($uri, $action);
         }
                     /**
@@ -11554,8 +11411,8 @@
          * @static 
          */ 
         public static function post($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->post($uri, $action);
         }
                     /**
@@ -11567,8 +11424,8 @@
          * @static 
          */ 
         public static function put($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->put($uri, $action);
         }
                     /**
@@ -11580,8 +11437,8 @@
          * @static 
          */ 
         public static function patch($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->patch($uri, $action);
         }
                     /**
@@ -11593,8 +11450,8 @@
          * @static 
          */ 
         public static function delete($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->delete($uri, $action);
         }
                     /**
@@ -11606,8 +11463,8 @@
          * @static 
          */ 
         public static function options($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->options($uri, $action);
         }
                     /**
@@ -11619,8 +11476,8 @@
          * @static 
          */ 
         public static function any($uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->any($uri, $action);
         }
                     /**
@@ -11631,8 +11488,8 @@
          * @static 
          */ 
         public static function fallback($action)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->fallback($action);
         }
                     /**
@@ -11645,8 +11502,8 @@
          * @static 
          */ 
         public static function redirect($uri, $destination, $status = 302)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->redirect($uri, $destination, $status);
         }
                     /**
@@ -11658,8 +11515,8 @@
          * @static 
          */ 
         public static function permanentRedirect($uri, $destination)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->permanentRedirect($uri, $destination);
         }
                     /**
@@ -11674,8 +11531,8 @@
          * @static 
          */ 
         public static function view($uri, $view, $data = [], $status = 200, $headers = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->view($uri, $view, $data, $status, $headers);
         }
                     /**
@@ -11688,8 +11545,8 @@
          * @static 
          */ 
         public static function match($methods, $uri, $action = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->match($methods, $uri, $action);
         }
                     /**
@@ -11701,8 +11558,8 @@
          * @static 
          */ 
         public static function resources($resources, $options = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->resources($resources, $options);
         }
                     /**
@@ -11715,8 +11572,8 @@
          * @static 
          */ 
         public static function resource($name, $controller, $options = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->resource($name, $controller, $options);
         }
                     /**
@@ -11728,8 +11585,8 @@
          * @static 
          */ 
         public static function apiResources($resources, $options = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->apiResources($resources, $options);
         }
                     /**
@@ -11742,8 +11599,8 @@
          * @static 
          */ 
         public static function apiResource($name, $controller, $options = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->apiResource($name, $controller, $options);
         }
                     /**
@@ -11755,8 +11612,8 @@
          * @static 
          */ 
         public static function group($attributes, $routes)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->group($attributes, $routes);
         }
                     /**
@@ -11768,8 +11625,8 @@
          * @static 
          */ 
         public static function mergeWithLastGroup($new, $prependExistingPrefix = true)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->mergeWithLastGroup($new, $prependExistingPrefix);
         }
                     /**
@@ -11779,9 +11636,23 @@
          * @static 
          */ 
         public static function getLastGroupPrefix()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getLastGroupPrefix();
+        }
+                    /**
+         * Add a route to the underlying route collection.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param array|string|callable|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function addRoute($methods, $uri, $action)
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
+                        return $instance->addRoute($methods, $uri, $action);
         }
                     /**
          * Create a new Route object.
@@ -11793,8 +11664,8 @@
          * @static 
          */ 
         public static function newRoute($methods, $uri, $action)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->newRoute($methods, $uri, $action);
         }
                     /**
@@ -11805,8 +11676,8 @@
          * @static 
          */ 
         public static function respondWithRoute($name)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->respondWithRoute($name);
         }
                     /**
@@ -11817,8 +11688,8 @@
          * @static 
          */ 
         public static function dispatch($request)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->dispatch($request);
         }
                     /**
@@ -11829,8 +11700,8 @@
          * @static 
          */ 
         public static function dispatchToRoute($request)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->dispatchToRoute($request);
         }
                     /**
@@ -11841,8 +11712,8 @@
          * @static 
          */ 
         public static function gatherRouteMiddleware($route)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->gatherRouteMiddleware($route);
         }
                     /**
@@ -11854,8 +11725,8 @@
          * @static 
          */ 
         public static function prepareResponse($request, $response)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->prepareResponse($request, $response);
         }
                     /**
@@ -11867,8 +11738,8 @@
          * @static 
          */ 
         public static function toResponse($request, $response)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter::toResponse($request, $response);
+        {
+                        return \Illuminate\Routing\Router::toResponse($request, $response);
         }
                     /**
          * Substitute the route bindings onto the route.
@@ -11879,8 +11750,8 @@
          * @static 
          */ 
         public static function substituteBindings($route)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->substituteBindings($route);
         }
                     /**
@@ -11892,8 +11763,8 @@
          * @static 
          */ 
         public static function substituteImplicitBindings($route)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->substituteImplicitBindings($route);
         }
                     /**
@@ -11904,8 +11775,8 @@
          * @static 
          */ 
         public static function matched($callback)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->matched($callback);
         }
                     /**
@@ -11915,8 +11786,8 @@
          * @static 
          */ 
         public static function getMiddleware()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getMiddleware();
         }
                     /**
@@ -11924,12 +11795,12 @@
          *
          * @param string $name
          * @param string $class
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter 
+         * @return \Illuminate\Routing\Router 
          * @static 
          */ 
         public static function aliasMiddleware($name, $class)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->aliasMiddleware($name, $class);
         }
                     /**
@@ -11940,8 +11811,8 @@
          * @static 
          */ 
         public static function hasMiddlewareGroup($name)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->hasMiddlewareGroup($name);
         }
                     /**
@@ -11951,8 +11822,8 @@
          * @static 
          */ 
         public static function getMiddlewareGroups()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getMiddlewareGroups();
         }
                     /**
@@ -11960,12 +11831,12 @@
          *
          * @param string $name
          * @param array $middleware
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter 
+         * @return \Illuminate\Routing\Router 
          * @static 
          */ 
         public static function middlewareGroup($name, $middleware)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->middlewareGroup($name, $middleware);
         }
                     /**
@@ -11975,12 +11846,12 @@
          *
          * @param string $group
          * @param string $middleware
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter 
+         * @return \Illuminate\Routing\Router 
          * @static 
          */ 
         public static function prependMiddlewareToGroup($group, $middleware)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->prependMiddlewareToGroup($group, $middleware);
         }
                     /**
@@ -11990,23 +11861,23 @@
          *
          * @param string $group
          * @param string $middleware
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter 
+         * @return \Illuminate\Routing\Router 
          * @static 
          */ 
         public static function pushMiddlewareToGroup($group, $middleware)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->pushMiddlewareToGroup($group, $middleware);
         }
                     /**
          * Flush the router's middleware groups.
          *
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter 
+         * @return \Illuminate\Routing\Router 
          * @static 
          */ 
         public static function flushMiddlewareGroups()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->flushMiddlewareGroups();
         }
                     /**
@@ -12018,8 +11889,8 @@
          * @static 
          */ 
         public static function bind($key, $binder)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->bind($key, $binder);
         }
                     /**
@@ -12032,8 +11903,8 @@
          * @static 
          */ 
         public static function model($key, $class, $callback = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->model($key, $class, $callback);
         }
                     /**
@@ -12044,8 +11915,8 @@
          * @static 
          */ 
         public static function getBindingCallback($key)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getBindingCallback($key);
         }
                     /**
@@ -12055,8 +11926,8 @@
          * @static 
          */ 
         public static function getPatterns()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getPatterns();
         }
                     /**
@@ -12068,8 +11939,8 @@
          * @static 
          */ 
         public static function pattern($key, $pattern)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->pattern($key, $pattern);
         }
                     /**
@@ -12080,8 +11951,8 @@
          * @static 
          */ 
         public static function patterns($patterns)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->patterns($patterns);
         }
                     /**
@@ -12091,8 +11962,8 @@
          * @static 
          */ 
         public static function hasGroupStack()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->hasGroupStack();
         }
                     /**
@@ -12102,8 +11973,8 @@
          * @static 
          */ 
         public static function getGroupStack()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getGroupStack();
         }
                     /**
@@ -12115,8 +11986,8 @@
          * @static 
          */ 
         public static function input($key, $default = null)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->input($key, $default);
         }
                     /**
@@ -12126,8 +11997,8 @@
          * @static 
          */ 
         public static function getCurrentRequest()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getCurrentRequest();
         }
                     /**
@@ -12137,8 +12008,8 @@
          * @static 
          */ 
         public static function getCurrentRoute()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getCurrentRoute();
         }
                     /**
@@ -12148,8 +12019,8 @@
          * @static 
          */ 
         public static function current()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->current();
         }
                     /**
@@ -12160,8 +12031,8 @@
          * @static 
          */ 
         public static function has($name)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->has($name);
         }
                     /**
@@ -12171,8 +12042,8 @@
          * @static 
          */ 
         public static function currentRouteName()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->currentRouteName();
         }
                     /**
@@ -12183,8 +12054,8 @@
          * @static 
          */ 
         public static function is(...$patterns)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->is(...$patterns);
         }
                     /**
@@ -12195,8 +12066,8 @@
          * @static 
          */ 
         public static function currentRouteNamed(...$patterns)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->currentRouteNamed(...$patterns);
         }
                     /**
@@ -12206,8 +12077,8 @@
          * @static 
          */ 
         public static function currentRouteAction()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->currentRouteAction();
         }
                     /**
@@ -12218,8 +12089,8 @@
          * @static 
          */ 
         public static function uses(...$patterns)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->uses(...$patterns);
         }
                     /**
@@ -12230,8 +12101,8 @@
          * @static 
          */ 
         public static function currentRouteUses($action)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->currentRouteUses($action);
         }
                     /**
@@ -12242,8 +12113,8 @@
          * @static 
          */ 
         public static function singularResourceParameters($singular = true)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->singularResourceParameters($singular);
         }
                     /**
@@ -12254,8 +12125,8 @@
          * @static 
          */ 
         public static function resourceParameters($parameters = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->resourceParameters($parameters);
         }
                     /**
@@ -12266,8 +12137,8 @@
          * @static 
          */ 
         public static function resourceVerbs($verbs = [])
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->resourceVerbs($verbs);
         }
                     /**
@@ -12277,8 +12148,8 @@
          * @static 
          */ 
         public static function getRoutes()
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->getRoutes();
         }
                     /**
@@ -12289,8 +12160,8 @@
          * @static 
          */ 
         public static function setRoutes($routes)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->setRoutes($routes);
         }
                     /**
@@ -12301,8 +12172,8 @@
          * @static 
          */ 
         public static function setCompiledRoutes($routes)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         $instance->setCompiledRoutes($routes);
         }
                     /**
@@ -12313,19 +12184,19 @@
          * @static 
          */ 
         public static function uniqueMiddleware($middleware)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter::uniqueMiddleware($middleware);
+        {
+                        return \Illuminate\Routing\Router::uniqueMiddleware($middleware);
         }
                     /**
          * Set the container instance used by the router.
          *
          * @param \Illuminate\Container\Container $container
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter 
+         * @return \Illuminate\Routing\Router 
          * @static 
          */ 
         public static function setContainer($container)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->setContainer($container);
         }
                     /**
@@ -12337,8 +12208,8 @@
          * @static 
          */ 
         public static function macro($name, $macro)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter::macro($name, $macro);
+        {
+                        \Illuminate\Routing\Router::macro($name, $macro);
         }
                     /**
          * Mix another object into the class.
@@ -12350,8 +12221,8 @@
          * @static 
          */ 
         public static function mixin($mixin, $replace = true)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter::mixin($mixin, $replace);
+        {
+                        \Illuminate\Routing\Router::mixin($mixin, $replace);
         }
                     /**
          * Checks if macro is registered.
@@ -12361,8 +12232,8 @@
          * @static 
          */ 
         public static function hasMacro($name)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter::hasMacro($name);
+        {
+                        return \Illuminate\Routing\Router::hasMacro($name);
         }
                     /**
          * Dynamically handle calls to the class.
@@ -12374,8 +12245,8 @@
          * @static 
          */ 
         public static function macroCall($method, $parameters)
-        {            //Method inherited from \Illuminate\Routing\Router         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyRouter $instance */
+        {
+                        /** @var \Illuminate\Routing\Router $instance */
                         return $instance->macroCall($method, $parameters);
         }
          
@@ -15160,6 +15031,19 @@
                         return $instance->renderComponent();
         }
                     /**
+         * Get an item from the component data that exists above the current component.
+         *
+         * @param string $key
+         * @param mixed $default
+         * @return mixed|null 
+         * @static 
+         */ 
+        public static function getConsumableComponentData($key, $default = null)
+        {
+                        /** @var \Illuminate\View\Factory $instance */
+                        return $instance->getConsumableComponentData($key, $default);
+        }
+                    /**
          * Start the slot rendering process.
          *
          * @param string $name
@@ -15562,40 +15446,6 @@
      *
      */ 
         class Str {
-         
-    }
-            /**
-     * 
-     *
-     */ 
-        class Collection {
-                    /**
-         * 
-         *
-         * @see \Maatwebsite\Excel\Mixins\DownloadCollection::downloadExcel()
-         * @param string $fileName
-         * @param string|null $writerType
-         * @param mixed $withHeadings
-         * @static 
-         */ 
-        public static function downloadExcel($fileName, $writerType = null, $withHeadings = false)
-        {
-                        return \Illuminate\Support\Collection::downloadExcel($fileName, $writerType, $withHeadings);
-        }
-                    /**
-         * 
-         *
-         * @see \Maatwebsite\Excel\Mixins\StoreCollection::storeExcel()
-         * @param string $filePath
-         * @param string|null $disk
-         * @param string|null $writerType
-         * @param mixed $withHeadings
-         * @static 
-         */ 
-        public static function storeExcel($filePath, $disk = null, $writerType = null, $withHeadings = false)
-        {
-                        return \Illuminate\Support\Collection::storeExcel($filePath, $disk, $writerType, $withHeadings);
-        }
          
     }
      
@@ -18675,250 +18525,6 @@
      
 }
 
-    namespace Maatwebsite\Excel\Facades { 
-            /**
-     * 
-     *
-     */ 
-        class Excel {
-                    /**
-         * 
-         *
-         * @param object $export
-         * @param string|null $fileName
-         * @param string $writerType
-         * @param array $headers
-         * @throws \PhpOffice\PhpSpreadsheet\Exception
-         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
-         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse 
-         * @static 
-         */ 
-        public static function download($export, $fileName, $writerType = null, $headers = [])
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->download($export, $fileName, $writerType, $headers);
-        }
-                    /**
-         * 
-         *
-         * @param object $export
-         * @param string $filePath
-         * @param string|null $disk
-         * @param string $writerType
-         * @param mixed $diskOptions
-         * @throws \PhpOffice\PhpSpreadsheet\Exception
-         * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
-         * @return bool 
-         * @static 
-         */ 
-        public static function store($export, $filePath, $diskName = null, $writerType = null, $diskOptions = [])
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->store($export, $filePath, $diskName, $writerType, $diskOptions);
-        }
-                    /**
-         * 
-         *
-         * @param object $export
-         * @param string $filePath
-         * @param string|null $disk
-         * @param string $writerType
-         * @param mixed $diskOptions
-         * @return \Illuminate\Foundation\Bus\PendingDispatch 
-         * @static 
-         */ 
-        public static function queue($export, $filePath, $disk = null, $writerType = null, $diskOptions = [])
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->queue($export, $filePath, $disk, $writerType, $diskOptions);
-        }
-                    /**
-         * 
-         *
-         * @param object $export
-         * @param string $writerType
-         * @return string 
-         * @static 
-         */ 
-        public static function raw($export, $writerType)
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->raw($export, $writerType);
-        }
-                    /**
-         * 
-         *
-         * @param object $import
-         * @param string|\Symfony\Component\HttpFoundation\File\UploadedFile $filePath
-         * @param string|null $disk
-         * @param string|null $readerType
-         * @return \Maatwebsite\Excel\Reader|\Illuminate\Foundation\Bus\PendingDispatch 
-         * @static 
-         */ 
-        public static function import($import, $filePath, $disk = null, $readerType = null)
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->import($import, $filePath, $disk, $readerType);
-        }
-                    /**
-         * 
-         *
-         * @param object $import
-         * @param string|\Symfony\Component\HttpFoundation\File\UploadedFile $filePath
-         * @param string|null $disk
-         * @param string|null $readerType
-         * @return array 
-         * @static 
-         */ 
-        public static function toArray($import, $filePath, $disk = null, $readerType = null)
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->toArray($import, $filePath, $disk, $readerType);
-        }
-                    /**
-         * 
-         *
-         * @param object $import
-         * @param string|\Symfony\Component\HttpFoundation\File\UploadedFile $filePath
-         * @param string|null $disk
-         * @param string|null $readerType
-         * @return \Illuminate\Support\Collection 
-         * @static 
-         */ 
-        public static function toCollection($import, $filePath, $disk = null, $readerType = null)
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->toCollection($import, $filePath, $disk, $readerType);
-        }
-                    /**
-         * 
-         *
-         * @param \Illuminate\Contracts\Queue\ShouldQueue $import
-         * @param string|\Symfony\Component\HttpFoundation\File\UploadedFile $filePath
-         * @param string|null $disk
-         * @param string $readerType
-         * @return \Illuminate\Foundation\Bus\PendingDispatch 
-         * @static 
-         */ 
-        public static function queueImport($import, $filePath, $disk = null, $readerType = null)
-        {
-                        /** @var \Maatwebsite\Excel\Excel $instance */
-                        return $instance->queueImport($import, $filePath, $disk, $readerType);
-        }
-                    /**
-         * 
-         *
-         * @param string $concern
-         * @param callable $handler
-         * @param string $event
-         * @static 
-         */ 
-        public static function extend($concern, $handler, $event = 'Maatwebsite\\Excel\\Events\\BeforeWriting')
-        {
-                        return \Maatwebsite\Excel\Excel::extend($concern, $handler, $event);
-        }
-                    /**
-         * When asserting downloaded, stored, queued or imported, use regular expression
-         * to look for a matching file path.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function matchByRegex()
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        $instance->matchByRegex();
-        }
-                    /**
-         * When asserting downloaded, stored, queued or imported, use regular string
-         * comparison for matching file path.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function doNotMatchByRegex()
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        $instance->doNotMatchByRegex();
-        }
-                    /**
-         * 
-         *
-         * @param string $fileName
-         * @param callable|null $callback
-         * @static 
-         */ 
-        public static function assertDownloaded($fileName, $callback = null)
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        return $instance->assertDownloaded($fileName, $callback);
-        }
-                    /**
-         * 
-         *
-         * @param string $filePath
-         * @param string|callable|null $disk
-         * @param callable|null $callback
-         * @static 
-         */ 
-        public static function assertStored($filePath, $disk = null, $callback = null)
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        return $instance->assertStored($filePath, $disk, $callback);
-        }
-                    /**
-         * 
-         *
-         * @param string $filePath
-         * @param string|callable|null $disk
-         * @param callable|null $callback
-         * @static 
-         */ 
-        public static function assertQueued($filePath, $disk = null, $callback = null)
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        return $instance->assertQueued($filePath, $disk, $callback);
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function assertQueuedWithChain($chain)
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        return $instance->assertQueuedWithChain($chain);
-        }
-                    /**
-         * 
-         *
-         * @param string $classname
-         * @param callable|null $callback
-         * @static 
-         */ 
-        public static function assertExportedInRaw($classname, $callback = null)
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        return $instance->assertExportedInRaw($classname, $callback);
-        }
-                    /**
-         * 
-         *
-         * @param string $filePath
-         * @param string|callable|null $disk
-         * @param callable|null $callback
-         * @static 
-         */ 
-        public static function assertImported($filePath, $disk = null, $callback = null)
-        {
-                        /** @var \Maatwebsite\Excel\Fakes\ExcelFake $instance */
-                        return $instance->assertImported($filePath, $disk, $callback);
-        }
-         
-    }
-     
-}
-
     namespace Mcamara\LaravelLocalization\Facades { 
             /**
      * 
@@ -19976,6 +19582,7 @@
      * @property string $hex
      * @property string $node
      * @property string $string
+     * @property string $uuid_ordered
      * @property string $time
      * @property string $urn
      * @property string $variant
@@ -20328,7 +19935,6 @@ namespace  {
             class Cache extends \Illuminate\Support\Facades\Cache {}
             class Config extends \Illuminate\Support\Facades\Config {}
             class Cookie extends \Illuminate\Support\Facades\Cookie {}
-            class Crypt extends \Illuminate\Support\Facades\Crypt {}
             class DB extends \Illuminate\Support\Facades\DB {}
             class Eloquent extends \Illuminate\Database\Eloquent\Model {             
                 /**
@@ -23636,13 +23242,13 @@ namespace  {
                 /**
              * Die and dump the current SQL and bindings.
              *
-             * @return void 
+             * @return \Illuminate\Database\Query\never 
              * @static 
              */ 
             public static function dd()
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
-                                $instance->dd();
+                                return $instance->dd();
             }
              
                 /**
@@ -23723,7 +23329,6 @@ namespace  {
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
             class Socialite extends \Laravel\Socialite\Facades\Socialite {}
             class Livewire extends \Livewire\Livewire {}
-            class Excel extends \Maatwebsite\Excel\Facades\Excel {}
             class LaravelLocalization extends \Mcamara\LaravelLocalization\Facades\LaravelLocalization {}
             class Conf extends \Miladimos\Conf\Facades\ConfFacade {}
             class Repository extends \Miladimos\Repository\Facades\RepositoryFacade {}

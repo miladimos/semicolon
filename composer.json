@@ -11,7 +11,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.4",
+        "php": "^8.0",
         "artesaos/seotools": "^0.20.1",
         "cviebrock/eloquent-sluggable": "^8.0",
         "fideloper/proxy": "^4.0",
@@ -25,18 +25,17 @@
         "laravel/socialite": "^5.1",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.0",
-        "maatwebsite/excel": "^3.1",
         "mcamara/laravel-localization": "^1.6",
-        "miladimos/conf": "^0.5.5",
-        "miladimos/laravel-repository": "0.8.*",
-        "miladimos/laravel-toolkit": "0.9.*",
+        "miladimos/conf": "^0.5",
+        "miladimos/laravel-repository": "^0.8",
+        "miladimos/laravel-toolkit": "~0.9.5",
         "morilog/jalali": "3.*",
         "predis/predis": "^1.1",
         "realrashid/sweet-alert": "^4.0",
         "spatie/laravel-backup": "^6.14",
         "spatie/laravel-permission": "^3.17",
         "spatie/laravel-translatable": "^4.6",
-        "webpatser/laravel-uuid": "^3.0"
+        "webpatser/laravel-uuid": "^4.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8",

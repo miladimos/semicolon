@@ -4,7 +4,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.82.0.
+ * Generated for Laravel 8.83.25.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2169,6 +2169,17 @@
                         return $instance->setRequest($request);
         }
                     /**
+         * Get the timebox instance used by the guard.
+         *
+         * @return \Illuminate\Support\Timebox 
+         * @static 
+         */ 
+        public static function getTimebox()
+        {
+                        /** @var \Illuminate\Auth\SessionGuard $instance */
+                        return $instance->getTimebox();
+        }
+                    /**
          * Determine if the current user is authenticated. If not, throw an exception.
          *
          * @return \App\Models\User 
@@ -2349,6 +2360,17 @@
         public static function render($string, $data = [], $deleteCachedView = false)
         {
                         return \Illuminate\View\Compilers\BladeCompiler::render($string, $data, $deleteCachedView);
+        }
+                    /**
+         * Render a component instance to HTML.
+         *
+         * @param \Illuminate\View\Component $component
+         * @return string 
+         * @static 
+         */ 
+        public static function renderComponent($component)
+        {
+                        return \Illuminate\View\Compilers\BladeCompiler::renderComponent($component);
         }
                     /**
          * Strip the parentheses from the given expression.
@@ -5412,24 +5434,17 @@
      */ 
         class Event {
                     /**
-         * 
+         * Register an event listener with the dispatcher.
          *
+         * @param \Closure|string|array $events
+         * @param \Closure|string|array|null $listener
+         * @return void 
          * @static 
          */ 
         public static function listen($events, $listener = null)
         {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
-                        return $instance->listen($events, $listener);
-        }
-                    /**
-         * 
-         *
-         * @static 
-         */ 
-        public static function getOriginalListeners($eventName)
-        {
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
-                        return $instance->getOriginalListeners($eventName);
+                        /** @var \Illuminate\Events\Dispatcher $instance */
+                        $instance->listen($events, $listener);
         }
                     /**
          * Determine if a given event has listeners.
@@ -5439,8 +5454,8 @@
          * @static 
          */ 
         public static function hasListeners($eventName)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->hasListeners($eventName);
         }
                     /**
@@ -5451,8 +5466,8 @@
          * @static 
          */ 
         public static function hasWildcardListeners($eventName)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->hasWildcardListeners($eventName);
         }
                     /**
@@ -5464,8 +5479,8 @@
          * @static 
          */ 
         public static function push($event, $payload = [])
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->push($event, $payload);
         }
                     /**
@@ -5476,8 +5491,8 @@
          * @static 
          */ 
         public static function flush($event)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->flush($event);
         }
                     /**
@@ -5488,8 +5503,8 @@
          * @static 
          */ 
         public static function subscribe($subscriber)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->subscribe($subscriber);
         }
                     /**
@@ -5501,8 +5516,8 @@
          * @static 
          */ 
         public static function until($event, $payload = [])
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->until($event, $payload);
         }
                     /**
@@ -5515,8 +5530,8 @@
          * @static 
          */ 
         public static function dispatch($event, $payload = [], $halt = false)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->dispatch($event, $payload, $halt);
         }
                     /**
@@ -5527,8 +5542,8 @@
          * @static 
          */ 
         public static function getListeners($eventName)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->getListeners($eventName);
         }
                     /**
@@ -5540,8 +5555,8 @@
          * @static 
          */ 
         public static function makeListener($listener, $wildcard = false)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->makeListener($listener, $wildcard);
         }
                     /**
@@ -5553,8 +5568,8 @@
          * @static 
          */ 
         public static function createClassListener($listener, $wildcard = false)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->createClassListener($listener, $wildcard);
         }
                     /**
@@ -5565,8 +5580,8 @@
          * @static 
          */ 
         public static function forget($event)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->forget($event);
         }
                     /**
@@ -5576,20 +5591,20 @@
          * @static 
          */ 
         public static function forgetPushed()
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         $instance->forgetPushed();
         }
                     /**
          * Set the queue resolver implementation.
          *
          * @param callable $resolver
-         * @return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher 
+         * @return \Illuminate\Events\Dispatcher 
          * @static 
          */ 
         public static function setQueueResolver($resolver)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        /** @var \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher $instance */
+        {
+                        /** @var \Illuminate\Events\Dispatcher $instance */
                         return $instance->setQueueResolver($resolver);
         }
                     /**
@@ -5601,8 +5616,8 @@
          * @static 
          */ 
         public static function macro($name, $macro)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::macro($name, $macro);
+        {
+                        \Illuminate\Events\Dispatcher::macro($name, $macro);
         }
                     /**
          * Mix another object into the class.
@@ -5614,8 +5629,8 @@
          * @static 
          */ 
         public static function mixin($mixin, $replace = true)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::mixin($mixin, $replace);
+        {
+                        \Illuminate\Events\Dispatcher::mixin($mixin, $replace);
         }
                     /**
          * Checks if macro is registered.
@@ -5625,8 +5640,8 @@
          * @static 
          */ 
         public static function hasMacro($name)
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        return \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::hasMacro($name);
+        {
+                        return \Illuminate\Events\Dispatcher::hasMacro($name);
         }
                     /**
          * Flush the existing macros.
@@ -5635,8 +5650,8 @@
          * @static 
          */ 
         public static function flushMacros()
-        {            //Method inherited from \Illuminate\Events\Dispatcher         
-                        \Imanghafoori\LaravelMicroscope\SpyClasses\SpyDispatcher::flushMacros();
+        {
+                        \Illuminate\Events\Dispatcher::flushMacros();
         }
                     /**
          * Assert if an event has a listener attached to it.
@@ -8712,7 +8727,7 @@
                     /**
          * Push a new job onto the queue.
          *
-         * @param string $job
+         * @param string|object $job
          * @param mixed $data
          * @param string|null $queue
          * @return mixed 
@@ -8741,7 +8756,7 @@
          * Push a new job onto the queue after a delay.
          *
          * @param \DateTimeInterface|\DateInterval|int $delay
-         * @param string $job
+         * @param string|object $job
          * @param mixed $data
          * @param string|null $queue
          * @return mixed 
@@ -8756,7 +8771,7 @@
          * Push a new job onto the queue.
          *
          * @param string $queue
-         * @param string $job
+         * @param string|object $job
          * @param mixed $data
          * @return mixed 
          * @static 
@@ -8771,7 +8786,7 @@
          *
          * @param string $queue
          * @param \DateTimeInterface|\DateInterval|int $delay
-         * @param string $job
+         * @param string|object $job
          * @param mixed $data
          * @return mixed 
          * @static 
@@ -11707,6 +11722,7 @@
      * @method static \Illuminate\Routing\RouteRegistrar prefix(string $prefix)
      * @method static \Illuminate\Routing\RouteRegistrar scopeBindings()
      * @method static \Illuminate\Routing\RouteRegistrar where(array $where)
+     * @method static \Illuminate\Routing\RouteRegistrar withoutMiddleware(array|string $middleware)
      * @see \Illuminate\Routing\Router
      */ 
         class Route {
@@ -17641,6 +17657,16 @@
                     /**
          * 
          *
+         * @static 
+         */ 
+        public static function filterReportsUsing($filterReportsCallable)
+        {
+                        /** @var \Facade\FlareClient\Flare $instance */
+                        return $instance->filterReportsUsing($filterReportsCallable);
+        }
+                    /**
+         * 
+         *
          * @return null|string 
          * @static 
          */ 
@@ -18482,6 +18508,7 @@
                     /**
          * Retrieve the mobile grading, using self::MOBILE_GRADE_* constants.
          *
+         * @deprecated This is no longer being maintained, it was an experiment at the time.
          * @return string One of the self::MOBILE_GRADE_* constants.
          * @static 
          */ 

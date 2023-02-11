@@ -46,9 +46,7 @@
             </div>
           </a>
           <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-            <a href="#" class="dropdown-item">Set status</a>
             <a href="#" class="dropdown-item">Profile & account</a>
-            <a href="#" class="dropdown-item">Feedback</a>
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">Settings</a>
             <a href="#" class="dropdown-item">Logout</a>
@@ -86,29 +84,74 @@
                     New
                   </a>
                 </div>
-
               </div>
             </div>
-            {{-- <div class="dropdown-menu">
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" /><line x1="12" y1="12" x2="20" y2="7.5" /><line x1="12" y1="12" x2="12" y2="21" /><line x1="12" y1="12" x2="4" y2="7.5" /><line x1="16" y1="5.25" x2="8" y2="9.75" /></svg>
+              </span>
+              <span class="nav-link-title">
+                Articles
+              </span>
+            </a>
+            <div class="dropdown-menu">
               <div class="dropdown-menu-columns">
                 <div class="dropdown-menu-column">
-                  <a class="dropdown-item" href="{{ route('webmaster.users.index') }}" >
+                  <a class="dropdown-item" href="{{ route('webmaster.articles.index') }}" >
                     All
                   </a>
-                </div>
-                <div class="dropdown-menu-column">
-                  <div class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
-                      Authentication
-                    </a>
-                    <div class="dropdown-menu">
-                      <a href="./sign-in.html" class="dropdown-item">Sign in</a>
-                    </div>
-                  </div>
-
+                  <a class="dropdown-item" href="{{ route('webmaster.articles.create') }}" >
+                    New
+                  </a>
                 </div>
               </div>
-            </div> --}}
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" /><line x1="12" y1="12" x2="20" y2="7.5" /><line x1="12" y1="12" x2="12" y2="21" /><line x1="12" y1="12" x2="4" y2="7.5" /><line x1="16" y1="5.25" x2="8" y2="9.75" /></svg>
+              </span>
+              <span class="nav-link-title">
+                Categories
+              </span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-columns">
+                <div class="dropdown-menu-column">
+                  <a class="dropdown-item" href="{{ route('webmaster.categories.index') }}" >
+                    All
+                  </a>
+                  <a class="dropdown-item" href="{{ route('webmaster.categories.create') }}" >
+                    New
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
+              <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" /><line x1="12" y1="12" x2="20" y2="7.5" /><line x1="12" y1="12" x2="12" y2="21" /><line x1="12" y1="12" x2="4" y2="7.5" /><line x1="16" y1="5.25" x2="8" y2="9.75" /></svg>
+              </span>
+              <span class="nav-link-title">
+                Tags
+              </span>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-menu-columns">
+                <div class="dropdown-menu-column">
+                  <a class="dropdown-item" href="{{ route('webmaster.tags.index') }}" >
+                    All
+                  </a>
+                  <a class="dropdown-item" href="{{ route('webmaster.tags.create') }}" >
+                    New
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./form-elements.html" >

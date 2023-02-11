@@ -3,9 +3,12 @@
 namespace App\Observers;
 
 use App\Models\User;
+use App\Models\UserMeta;
+use Webpatser\Uuid\Uuid;
 
 class UserObserver
 {
+
     /**
      * Handle the user "creating" event.
      *
@@ -14,11 +17,12 @@ class UserObserver
      */
     public function creating(User $user)
     {
-        //
+        $user->uuid = (string) Uuid::generate(4);
+        // $user->username = $user->generateUsername();
     }
 
     /**
-     * Handle the user "created" event.
+     * Handle the User "created" event.
      *
      * @param  \App\Models\User  $user
      * @return void
@@ -28,10 +32,15 @@ class UserObserver
         $user->profile()->create([
             'user_id' => $user->id
         ]);
+
+        // UserMeta::create([
+        //     'metaable_id' => $user->id,
+        //     'metaable_type' => get_class($user),
+        // ]);
     }
 
     /**
-     * Handle the user "updated" event.
+     * Handle the User "updated" event.
      *
      * @param  \App\Models\User  $user
      * @return void
@@ -42,7 +51,7 @@ class UserObserver
     }
 
     /**
-     * Handle the user "deleted" event.
+     * Handle the User "deleted" event.
      *
      * @param  \App\Models\User  $user
      * @return void
@@ -53,7 +62,7 @@ class UserObserver
     }
 
     /**
-     * Handle the user "restored" event.
+     * Handle the User "restored" event.
      *
      * @param  \App\Models\User  $user
      * @return void
@@ -64,7 +73,7 @@ class UserObserver
     }
 
     /**
-     * Handle the user "force deleted" event.
+     * Handle the User "force deleted" event.
      *
      * @param  \App\Models\User  $user
      * @return void

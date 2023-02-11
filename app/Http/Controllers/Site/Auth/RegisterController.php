@@ -27,7 +27,7 @@ class RegisterController extends Controller
 
         event(new UserRegistered($user));
 
-        return Response::success('site.index', 'Registered Successfuly.');;
+        return Response::success('site.index', 'Registered Successfully.');;
     }
 
     public function create($request)

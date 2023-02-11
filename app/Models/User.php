@@ -2,25 +2,23 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
-use Laravel\Jetstream\HasTeams;
-use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Cache;
-use Laravel\Jetstream\HasProfilePhoto;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
+use Laravel\Fortify\TwoFactorAuthenticatable;
+use App\Traits\HasUUID;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens,
+    use HasUUID,
+        HasApiTokens,
         HasFactory,
-        HasProfilePhoto,
-        HasTeams,
         Notifiable,
         TwoFactorAuthenticatable,
-        HasUUID;
+        HasRoles;
 
 
     protected $table = 'users';

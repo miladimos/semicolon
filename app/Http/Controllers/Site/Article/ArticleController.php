@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Site\Article;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Article;
+use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 {
@@ -11,8 +12,8 @@ class ArticleController extends Controller
     {
         $articles = Article::latest()->get();
 
-        // $users = Cache::remember('users', 120, function () { 
-        //     return DB::table('users')->get(); 
+        // $users = Cache::remember('users', 120, function () {
+        //     return DB::table('users')->get();
         // });
 
         // Post::select('id', 'title')
@@ -29,12 +30,12 @@ class ArticleController extends Controller
         return view('site.articles.all', compact('articles'));
     }
 
-    public function single(Article $article)
+    public function show(User $user, Article $article)
     {
-        dd($article);
-        // $this->seo()->setTitle("دوره" . $article->title);
+        dd($article, $user);
+        $this->seo()->setTitle($article->title);
         $article->increment('viewCount');
 
-        return view('site.articles.single', compact('article'));
+        return view('site.blog.single', compact('article'));
     }
 }

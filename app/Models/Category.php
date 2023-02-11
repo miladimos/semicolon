@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Traits\HasUUID;
-use App\Scope\ActiveScope;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -40,19 +39,6 @@ class Category extends Model
         return $this->children()->with('childrenRecursive');
     }
 
-    /**
-     * Get all of the articles that are assigned this tag.
-     */
-    public function podcasts()
-    {
-        return $this->morphedByMany(Podcast::class, 'categoriable', 'categoriables');
-    }
-
-    //    public function articles()
-    //    {
-    //        return $this->hasMany(Article::class);
-    //    }
-
     public function path()
     {
         return "/category/" . $this->slug;
@@ -63,12 +49,12 @@ class Category extends Model
      *
      * @return array
      */
-    public function sluggable()
+    public function sluggable(): array
     {
         return [
             'slug' => [
                 'source' => 'name'
-            ]
+            ],
         ];
     }
 }

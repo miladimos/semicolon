@@ -18,7 +18,6 @@ class UserObserver
     public function creating(User $user)
     {
         $user->uuid = (string) Uuid::generate(4);
-        // $user->username = $user->generateUsername();
     }
 
     /**

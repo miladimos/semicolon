@@ -19,7 +19,9 @@ class SiteController extends Controller
 
         $this->seo()->setTitle('Blogging ...');
 
-        return view('site.index');
+        $categories = Category::withCount('articles')->get();
+
+        return view('site.index', compact('categories'));
     }
 
     public function user(User $user)
@@ -63,9 +65,9 @@ class SiteController extends Controller
 
         $query = trim(request()->get('q'));
 
-        $posts = Article::where('title' , 'like', "%$query%")->latest()->paginate(24);
+        $Articles = Article::where('title' , 'like', "%$query%")->latest()->paginate(24);
 
-        return view('site.pages.search', compact('posts'));
+        return view('site.pages.search', compact('Articles'));
     }
 
     public function category(Category $category)

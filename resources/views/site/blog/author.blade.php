@@ -268,7 +268,7 @@
                         </div>
 
                         <div class="widget">
-                            <h2 class="widget-title">Recent Posts</h2>
+                            <h2 class="widget-title">Recent Articles</h2>
                             <div class="blog-list-widget">
                                 <div class="list-group">
                                     <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">

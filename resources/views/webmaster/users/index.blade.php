@@ -16,52 +16,61 @@
                                 <th>Article Count</th>
                                 <th>Role</th>
                                 <th>Registered At</th>
-                                <th class="w-1"></th>
+                                <th class="w-1">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td data-label="Name">
-                                    <div class="d-flex py-1 align-items-center">
-                                        <span class="avatar me-2" style="background-image: url({{ asset('/statics/webmaster/static/avatars/000m.jpg') }})"></span>
-                                        <div class="flex-fill">
-                                            <div class="font-weight-medium">Thatcher Keel</div>
-                                            <div class="text-muted"><a href="#" class="text-reset">tkeelf@blogger.com</a>
+                            @forelse ($users as $item)
+                                <tr>
+                                    <td data-label="Name">
+                                        <div class="d-flex py-1 align-items-center">
+                                            <span class="avatar me-2"
+                                                style="background-image: url({{ asset('/statics/webmaster/static/avatars/000m.jpg') }})"></span>
+                                            <div class="flex-fill">
+                                                <div class="font-weight-medium">{{ $item->username }}</div>
+                                                <div class="text-muted"><a href="#"
+                                                        class="text-reset">{{ $item->email }}</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td data-label="Title">
-                                    <div>VP Sales</div>
-                                    <div class="text-muted">Business Development</div>
-                                </td>
-                                <td class="text-muted" data-label="Role">
-                                    User
-                                </td>
-                                <td class="text-muted" data-label="Role">
-                                    User
-                                </td>
-                                <td>
-                                    <div class="btn-list flex-nowrap">
-                                        <a href="#" class="btn">
-                                            Edit
-                                        </a>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle align-text-top" data-bs-toggle="dropdown">
-                                                Actions
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">
-                                                    Action
-                                                </a>
-                                                <a class="dropdown-item" href="#">
-                                                    Another action
-                                                </a>
+                                    </td>
+                                    <td data-label="Title">
+                                        <div>0</div>
+                                        {{-- <div class="text-muted">Business Development</div> --}}
+                                    </td>
+                                    <td class="text-muted" data-label="Role">
+                                        User
+                                    </td>
+                                    <td class="text-muted" data-label="Role">
+                                        {{ $item->created_at }}
+                                    </td>
+                                    <td>
+                                        <div class="btn-list flex-nowrap">
+                                            {{-- <a href="#" class="btn">
+                                                Edit
+                                            </a> --}}
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle align-text-top"
+                                                    data-bs-toggle="dropdown">
+                                                    Actions
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">
+                                                        Show
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        Edit
+                                                    </a>
+                                                    <a class="dropdown-item" href="#">
+                                                        Delete
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
+                            @empty
+                            @endforelse
                         </tbody>
                     </table>
                 </div>

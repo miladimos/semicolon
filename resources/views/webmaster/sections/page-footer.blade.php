@@ -3,7 +3,6 @@
         <div class="row text-center align-items-center flex-row-reverse">
             <div class="col-lg-auto ms-lg-auto">
                 <ul class="list-inline list-inline-dots mb-0">
-                    <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
                     <li class="list-inline-item"><a href="https://github.com/miladimos/semicolon" target="_blank"
                             class="link-secondary" rel="noopener">Source code</a></li>
                     <li class="list-inline-item">
@@ -17,7 +16,7 @@
                                 <path
                                     d="M19.5 13.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
                             </svg>
-                            Sponsor
+                            Contribute
                         </a>
                     </li>
                 </ul>
@@ -30,7 +29,7 @@
                         All rights reserved.
                     </li>
                     <li class="list-inline-item">
-                        <a href="./changelog.html" class="link-secondary" rel="noopener">Template: Tabler</a>
+                        <a href="https://preview.tabler.io/index.html" class="link-secondary" rel="noopener">Template: Tabler</a>
                     </li>
                 </ul>
             </div>

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                 <div class="widget">
-                    <h2 class="widget-title">Recent Posts</h2>
+                    <h2 class="widget-title">Recent Articles</h2>
                     <div class="blog-list-widget">
                         <div class="list-group">
                             <a href="single.html"
@@ -22,7 +22,7 @@
 
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                 <div class="widget">
-                    <h2 class="widget-title">Popular Posts</h2>
+                    <h2 class="widget-title">Popular Articles</h2>
                     <div class="blog-list-widget">
                         <div class="list-group">
                             <a href="single.html"
@@ -50,7 +50,10 @@
                     <h2 class="widget-title">Popular Categories</h2>
                     <div class="link-widget">
                         <ul>
-                            <li><a href="#">Fahsion <span>(21)</span></a></li>
+                            @foreach ($categories as $item)
+                                <li><a href="{{ route('site.categories.show', $item) }}">{{ $item->name }}
+                                        <span>({{ $item->articles_count }})</span></a></li>
+                            @endforeach
                         </ul>
                     </div><!-- end link-widget -->
                 </div>
@@ -65,19 +68,16 @@
                     <div class="footer-text text-center">
                         <a href="index.html"><img src="{{ asset('/statics/site/images/flogo.png') }}" alt=""
                                 class="img-fluid"></a>
-                        <p>Cloapedia is a personal blog for handcrafted, cameramade photography content, fashion styles
-                            from independent creatives around the world.</p>
+                        <p>Semicolon is a minimal blogging system .</p>
                         <div class="social">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
+                            <a href="{{ conf('site_facebook') }}" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i
                                     class="fa fa-facebook"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
+                            <a href="{{ conf('site_twitter') }}" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
                                     class="fa fa-twitter"></i></a>
-                            <a href="{{ conf('site_instagram') }}" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i
-                                    class="fa fa-instagram"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
+                            <a href="{{ conf('site_instagram') }}" data-toggle="tooltip" data-placement="bottom"
+                                title="Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="{{ conf('site_email') }}" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
                                     class="fa fa-google-plus"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i
-                                    class="fa fa-pinterest"></i></a>
                         </div>
 
                         <hr class="invis">
@@ -98,7 +98,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <br>
-                <div class="copyright">&copy; Semicolon. : <a href="http://html.design">terms</a>. use Cloapedia theme.
+                <div class="copyright">&copy; Semicolon. : <a href="#">terms</a>. use Cloapedia theme.
                 </div>
             </div>
         </div>

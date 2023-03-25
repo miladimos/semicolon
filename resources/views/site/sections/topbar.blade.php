@@ -5,7 +5,7 @@
                 <input type="text" name="q" class="form-control" placeholder="What you are looking for?">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             </form>
-        </div><!-- end newsletter -->
+        </div>Articles
     </div>
 </div><!-- end top-search -->
 

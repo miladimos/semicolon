@@ -26,7 +26,7 @@ class Tag extends Model
         static::addGlobalScope(new ActiveScope());
     }
 
-    public function posts()
+    public function Articles()
     {
         return $this->morphedByMany(Post::class, 'taggable');
     }

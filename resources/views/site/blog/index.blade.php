@@ -98,7 +98,7 @@
 
                         @if ($popularArticles->count() > 0)
                             <div class="widget">
-                                <h2 class="widget-title">Papoular Posts</h2>
+                                <h2 class="widget-title">Papoular Articles</h2>
                                 <div class="blog-list-widget">
                                     @foreach ($popularArticles as $item)
                                         <div class="list-group">

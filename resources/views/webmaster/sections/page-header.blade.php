@@ -15,11 +15,11 @@
             <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
                     <span class="d-none d-sm-inline">
-                        <a href="#" class="btn btn-white">
-                            New view
+                        <a href="" class="btn btn-white">
+                            Setting
                         </a>
                     </span>
-                    <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
+                    <a href="{{ route('webmaster.articles.create') }}" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
                         data-bs-target="#modal-report">
                         <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
@@ -29,7 +29,7 @@
                             <line x1="12" y1="5" x2="12" y2="19" />
                             <line x1="5" y1="12" x2="19" y2="12" />
                         </svg>
-                        Create new report
+                        Create new Article
                     </a>
                     <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal"
                         data-bs-target="#modal-report" aria-label="Create new report">
@@ -48,15 +48,15 @@
                             <span class="avatar avatar-sm"
                                 style="background-image: url({{ asset('/statics/webmaster/static/avatars/000m.jpg') }})"></span>
                             <div class="d-none d-xl-block ps-2">
-                                <div>Paweł Kuna</div>
+                                <div>{{ user()->username }}</div>
                                 <div class="mt-1 small text-muted">UI Designer</div>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <a href="#" class="dropdown-item">Profile & account</a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Logout</a>
+                            <a href="{{ route('webmaster.users.setting') }}" class="dropdown-item">Settings</a>
+                            <a href="{{ route('auth.logout') }}" class="dropdown-item">Logout</a>
                         </div>
                     </div>
                 </div>

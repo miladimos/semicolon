@@ -16,7 +16,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $this->seo()->setTitle('کاربران');
+        $this->seo()->setTitle('Users');
 
         // $date = Carbon::now()->subDays(7);
 

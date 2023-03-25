@@ -25,6 +25,10 @@ Route::group(['as' => 'site.'], function () {
 });
 
 Route::group(['prefix' => 'account', 'middleware' => 'auth', 'as' => 'account.'], function () {
-    //
+    
+    Route::get('/setting', [SiteController::class, 'settingForm'])->name('setting.index');
+    Route::post('/setting', [SiteController::class, 'setting'])->name('setting');
+    Route::get('/articles', [SiteController::class, 'articles'])->name('articles.index');
+
 });
 

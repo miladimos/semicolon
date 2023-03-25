@@ -12,5 +12,7 @@
 <script src="{{ asset('/statics/site/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('/statics/site/js/custom.js') }}"></script>
 
+@livewireScripts
+
 </body>
 </html>

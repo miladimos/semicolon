@@ -28,7 +28,7 @@ class CreateCoursesTable extends Migration
             $table->text('images')->nullable();
             $table->boolean('active')->default(0);
             $table->boolean('pinned')->default(0);
-            $table->unsignedInteger('viewCount')->default(0);
+            $table->unsignedInteger('view_count')->default(0);
             $table->timestamp('last_update')->nullable();
             $table->timestamp('published_at')->nullable();
             $table->float('priority')->nullable();

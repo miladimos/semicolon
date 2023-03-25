@@ -11,7 +11,7 @@
             <blockquote class="blockquote">Please read <a href="#">Licensing & Terms</a> of Use if you are wondering
                 about the license. </strong></blockquote>
         </div>
-    </div><!-- end row -->
+    </div>
 
     <div class="row">
         <div class="col-lg-7 mx-auto">

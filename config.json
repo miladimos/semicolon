@@ -1,17 +1,32 @@
 [
     {
         "id": 1,
-        "key": "instagram_url",
+        "key": "site_instagram",
         "value": "https://instagram.com/semicolon"
     },
     {
-        "id": 1,
-        "key": "gmail",
+        "id": 2,
+        "key": "site_email",
         "value": "info@semicolon.com"
     },
     {
-        "id": 1,
+        "id": 3,
         "key": "admin_email",
+        "value": "miladimos@outlook.com"
+    },
+    {
+        "id": 4,
+        "key": "site_twitter",
+        "value": "miladimos@outlook.com"
+    },
+    {
+        "id": 5,
+        "key": "site_facebook",
+        "value": "miladimos@outlook.com"
+    },
+    {
+        "id": 6,
+        "key": "site_youtube",
         "value": "miladimos@outlook.com"
     }
 ]

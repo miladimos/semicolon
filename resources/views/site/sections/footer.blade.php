@@ -16,9 +16,9 @@
                                 </div>
                             </a>
                         </div>
-                    </div><!-- end blog-list -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                 <div class="widget">
@@ -41,9 +41,9 @@
                                 </div>
                             </a>
                         </div>
-                    </div><!-- end blog-list -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                 <div class="widget">
@@ -53,9 +53,9 @@
                             <li><a href="#">Fahsion <span>(21)</span></a></li>
                         </ul>
                     </div><!-- end link-widget -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
-        </div><!-- end row -->
+                </div>
+            </div>
+        </div>
 
         <hr class="invis1">
 
@@ -72,7 +72,7 @@
                                     class="fa fa-facebook"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i
                                     class="fa fa-twitter"></i></a>
-                            <a href="{{ conf('instagram_url') }}" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i
+                            <a href="{{ conf('site_instagram') }}" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i
                                     class="fa fa-instagram"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i
                                     class="fa fa-google-plus"></i></a>
@@ -92,8 +92,8 @@
                             </form>
                         </div><!-- end newsletter -->
                     </div><!-- end footer-text -->
-                </div><!-- end widget -->
-            </div><!-- end col -->
+                </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -102,5 +102,5 @@
                 </div>
             </div>
         </div>
-    </div><!-- end container -->
+    </div>
 </footer><!-- end footer -->

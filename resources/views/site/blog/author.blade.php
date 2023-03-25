@@ -6,17 +6,17 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <h2><i class="fa fa-user"></i> Author by Jessica <small class="hidden-xs-down hidden-sm-down">Nulla felis eros, varius sit amet volutpat non. </small></h2>
-                </div><!-- end col -->
+                </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Blog</a></li>
                         <li class="breadcrumb-item active">Author by Jessica</li>
                     </ol>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end page-title -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="section wb">
         <div class="container">
@@ -28,7 +28,7 @@
                             <div class="row">
                                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                                     <img src="upload/author.jpg" alt="" class="img-fluid rounded-circle">
-                                </div><!-- end col -->
+                                </div>
 
                                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
                                     <h4><a href="#">Jessica</a></h4>
@@ -43,8 +43,8 @@
                                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Website"><i class="fa fa-link"></i></a>
                                     </div><!-- end social -->
 
-                                </div><!-- end col -->
-                            </div><!-- end row -->
+                                </div>
+                            </div>
                         </div><!-- end author-box -->
 
                         <hr class="invis1">
@@ -58,10 +58,10 @@
                                         <div class="hovereffect">
                                             <span></span>
                                         </div>
-                                        <!-- end hover -->
+
                                     </a>
                                 </div>
-                                <!-- end media -->
+
                                 <div class="blog-meta big-meta text-center">
 
                                     <div class="post-sharing">
@@ -77,8 +77,8 @@
                                     <small><a href="single.html" title="">24 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
                                     <small><a href="blog-author.html" title=""><i class="fa fa-eye"></i> 2291</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
@@ -89,10 +89,10 @@
                                         <div class="hovereffect">
                                             <span></span>
                                         </div>
-                                        <!-- end hover -->
+
                                     </a>
                                 </div>
-                                <!-- end media -->
+
                                 <div class="blog-meta big-meta text-center">
 
                                     <div class="post-sharing">
@@ -108,8 +108,8 @@
                                     <small><a href="single.html" title="">22 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
                                     <small><a href="blog-author.html" title=""><i class="fa fa-eye"></i> 4441</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
@@ -120,10 +120,10 @@
                                         <div class="hovereffect">
                                             <span></span>
                                         </div>
-                                        <!-- end hover -->
+
                                     </a>
                                 </div>
-                                <!-- end media -->
+
                                 <div class="blog-meta big-meta text-center">
 
                                     <div class="post-sharing">
@@ -139,8 +139,8 @@
                                     <small><a href="single.html" title="">21 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
                                     <small><a href="blog-author.html" title=""><i class="fa fa-eye"></i> 1163</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
@@ -151,10 +151,10 @@
                                         <div class="hovereffect">
                                             <span></span>
                                         </div>
-                                        <!-- end hover -->
+
                                     </a>
                                 </div>
-                                <!-- end media -->
+
                                 <div class="blog-meta big-meta text-center">
 
                                     <div class="post-sharing">
@@ -170,8 +170,8 @@
                                     <small><a href="single.html" title="">20 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
                                     <small><a href="blog-author.html" title=""><i class="fa fa-eye"></i> 2011</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
@@ -182,10 +182,10 @@
                                         <div class="hovereffect">
                                             <span></span>
                                         </div>
-                                        <!-- end hover -->
+
                                     </a>
                                 </div>
-                                <!-- end media -->
+
                                 <div class="blog-meta big-meta text-center">
 
                                     <div class="post-sharing">
@@ -201,8 +201,8 @@
                                     <small><a href="single.html" title="">19 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
                                     <small><a href="blog-author.html" title=""><i class="fa fa-eye"></i> 3122</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
@@ -213,10 +213,10 @@
                                         <div class="hovereffect">
                                             <span></span>
                                         </div>
-                                        <!-- end hover -->
+
                                     </a>
                                 </div>
-                                <!-- end media -->
+
                                 <div class="blog-meta big-meta text-center">
 
                                     <div class="post-sharing">
@@ -232,10 +232,10 @@
                                     <small><a href="single.html" title="">18 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
                                     <small><a href="blog-author.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
                         </div><!-- end blog-custom-build -->
-                    </div><!-- end page-wrapper -->
+                    </div>
 
                     <hr class="invis">
 
@@ -251,9 +251,9 @@
                                     </li>
                                 </ul>
                             </nav>
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end col -->
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                     <div class="sidebar">
@@ -265,7 +265,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                             </form>
-                        </div><!-- end widget -->
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Recent Posts</h2>
@@ -295,17 +295,17 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div><!-- end blog-list -->
-                        </div><!-- end widget -->
+                            </div>
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Advertising</h2>
                             <div class="banner-spot clearfix">
                                 <div class="banner-img">
                                     <img src="upload/banner_03.jpg" alt="" class="img-fluid">
-                                </div><!-- end banner-img -->
-                            </div><!-- end banner -->
-                        </div><!-- end widget -->
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Instagram Feed</h2>
@@ -320,7 +320,7 @@
                                 <a href="#"><img src="upload/insta_08.jpeg" alt="" class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_09.jpeg" alt="" class="img-fluid"></a>
                             </div><!-- end Instagram wrapper -->
-                        </div><!-- end widget -->
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Popular Categories</h2>
@@ -335,11 +335,11 @@
                                     <li><a href="#">Food & Drink <span>(87)</span></a></li>
                                 </ul>
                             </div><!-- end link-widget -->
-                        </div><!-- end widget -->
+                        </div>
                     </div><!-- end sidebar -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
+                </div>
+            </div>
+        </div>
     </section>
 
 @endsection

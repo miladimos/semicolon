@@ -33,7 +33,7 @@ class CourseApiController extends Controller
     public function single(Course $course)
     {
         $this->seo()->setTitle(" دوره "  . $course->title);
-        $course->increment('viewCount');
+        $course->increment('view_count');
 
         return view('site.courses.single', compact('course'));
     }

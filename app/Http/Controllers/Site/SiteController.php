@@ -6,6 +6,7 @@ use App\Models\Faq;
 use App\Models\Tag;
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use App\Models\Category;
 
 class SiteController extends Controller
@@ -56,11 +57,22 @@ class SiteController extends Controller
         return view('site.pages.tags', compact('tags'));
     }
 
+    public function search()
+    {
+        $this->seo()->setTitle('search');
+
+        $query = trim(request()->get('q'));
+
+        $posts = Article::where('title' , 'like', "%$query%")->latest()->paginate(24);
+
+        return view('site.pages.search', compact('posts'));
+    }
+
     public function category(Category $category)
     {
         $this->seo()->setTitle('by category' . $category->name);
 
-        return view('site.blog.category', compact('categorys'));
+        return view('site.blog.category', compact('category'));
     }
 
     public function categories()

@@ -16,7 +16,7 @@
                                             life</a></h4>
                                     <small><a href="single.html" title="">24 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
-                                </div><!-- end meta -->
+                                </div>
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
                     </div><!-- end post-media -->
@@ -32,7 +32,7 @@
                                     <h4><a href="single.html" title="">5 places you should see</a></h4>
                                     <small><a href="single.html" title="">24 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
-                                </div><!-- end meta -->
+                                </div>
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
                     </div><!-- end post-media -->
@@ -44,7 +44,7 @@
                                 <div class="blog-meta">
                                     <span class="bg-green"><a href="blog-category-01.html" title="">Travel</a></span>
                                     <h4><a href="single.html" title="">Separate your place with exotic hotels</a></h4>
-                                </div><!-- end meta -->
+                                </div>
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
                     </div><!-- end post-media -->
@@ -56,7 +56,7 @@
                                 <div class="blog-meta">
                                     <span class="bg-green"><a href="blog-category-01.html" title="">Travel</a></span>
                                     <h4><a href="single.html" title="">What you need to know for child health</a></h4>
-                                </div><!-- end meta -->
+                                </div>
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
                     </div><!-- end post-media -->
@@ -73,7 +73,7 @@
                                     <h4><a href="single.html" title="">The rules you need to know for a happy union</a></h4>
                                     <small><a href="single.html" title="">03 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Jessica</a></small>
-                                </div><!-- end meta -->
+                                </div>
                             </div><!-- end shadow-desc -->
                         </div><!-- end shadow -->
                     </div><!-- end post-media -->
@@ -99,9 +99,9 @@
                                             class="img-fluid">
                                         <div class="hovereffect">
                                             <span></span>
-                                        </div><!-- end hover -->
+                                        </div>
                                     </a>
-                                </div><!-- end media -->
+                                </div>
                                 <div class="blog-meta big-meta">
                                     <h4><a href="single.html" title="">The golden rules you need to know for a positive
                                             life</a></h4>
@@ -111,14 +111,14 @@
                                     <small><a href="blog-category-01.html" title="">Lifestyle</a></small>
                                     <small><a href="single.html" title="">24 July, 2017</a></small>
                                     <small><a href="blog-author.html" title="">by Amanda</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end col -->
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="section-title">
@@ -133,19 +133,19 @@
                                             class="img-fluid">
                                         <div class="hovereffect">
                                             <span></span>
-                                        </div><!-- end hover -->
+                                        </div>
                                     </a>
-                                </div><!-- end media -->
+                                </div>
                                 <div class="blog-meta">
                                     <h4><a href="single.html" title="">What is your favorite leather jacket color</a></h4>
                                     <small><a href="blog-category-01.html" title="">Fashion</a></small>
                                     <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
 
-                        </div><!-- end col -->
+                        </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="blog-box">
@@ -155,22 +155,22 @@
                                             class="img-fluid">
                                         <div class="hovereffect">
                                             <span></span>
-                                        </div><!-- end hover -->
+                                        </div>
                                     </a>
-                                </div><!-- end media -->
+                                </div>
                                 <div class="blog-meta">
                                     <h4><a href="single.html" title="">This year's fashionable long beard</a></h4>
                                     <small><a href="blog-category-01.html" title="">Fashion</a>, <a
                                             href="blog-category-01.html" title="">Man</a></small>
                                     <small><a href="blog-category-01.html" title="">08 July, 2017</a></small>
-                                </div><!-- end meta -->
-                            </div><!-- end blog-box -->
+                                </div>
+                            </div>
 
                             <hr class="invis">
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end col -->
-            </div><!-- end row -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <hr class="invis1">
 
@@ -179,10 +179,10 @@
                     <div class="banner-spot clearfix">
                         <div class="banner-img">
                             <img src="{{ asset('/statics/site/upload/banner_01.jpg') }}" alt="" class="img-fluid">
-                        </div><!-- end banner-img -->
-                    </div><!-- end banner -->
-                </div><!-- end col -->
-            </div><!-- end row -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <hr class="invis1">
 
@@ -201,8 +201,8 @@
                                             class="img-fluid">
                                         <div class="hovereffect"></div>
                                     </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
+                                </div>
+                            </div>
 
                             <div class="blog-meta big-meta col-md-8">
                                 <h4><a href="single.html" title="">5 Beautiful buildings you need to visit without dying</a>
@@ -213,11 +213,11 @@
                                 <small><a href="blog-category-01.html" title="">Travel</a></small>
                                 <small><a href="single.html" title="">21 July, 2017</a></small>
                                 <small><a href="blog-author.html" title="">by Boby</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
+                            </div>
+                        </div>
 
                         <hr class="invis">
-                    </div><!-- end blog-list -->
+                    </div>
 
                     <hr class="invis">
 
@@ -234,8 +234,8 @@
                                             class="img-fluid">
                                         <div class="hovereffect"></div>
                                     </a>
-                                </div><!-- end media -->
-                            </div><!-- end col -->
+                                </div>
+                            </div>
 
                             <div class="blog-meta big-meta col-md-8">
                                 <h4><a href="single.html" title="">Banana-chip chocolate cake recipe</a></h4>
@@ -245,13 +245,13 @@
                                 <small><a href="blog-category-01.html" title="">Food</a></small>
                                 <small><a href="single.html" title="">11 July, 2017</a></small>
                                 <small><a href="blog-author.html" title="">by Matilda</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
+                            </div>
+                        </div>
 
                         <hr class="invis">
 
-                    </div><!-- end blog-list -->
-                </div><!-- end col -->
+                    </div>
+                </div>
 
                 <div class="col-lg-3">
                     <div class="section-title">
@@ -265,15 +265,15 @@
                                     class="img-fluid">
                                 <div class="hovereffect">
                                     <span class="videohover"></span>
-                                </div><!-- end hover -->
+                                </div>
                             </a>
-                        </div><!-- end media -->
+                        </div>
                         <div class="blog-meta">
                             <h4><a href="single.html" title="">We are guests of ABC Design Studio - Vlog</a></h4>
                             <small><a href="blog-category-01.html" title="">Videos</a></small>
                             <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
-                        </div><!-- end meta -->
-                    </div><!-- end blog-box -->
+                        </div>
+                    </div>
 
                     <hr class="invis">
 
@@ -288,19 +288,19 @@
                                     class="img-fluid">
                                 <div class="hovereffect">
                                     <span></span>
-                                </div><!-- end hover -->
+                                </div>
                             </a>
-                        </div><!-- end media -->
+                        </div>
                         <div class="blog-meta">
                             <h4><a href="single.html" title="">Opened the doors of the Istanbul spa center</a></h4>
                             <small><a href="blog-category-01.html" title="">Spa</a></small>
                             <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
-                        </div><!-- end meta -->
-                    </div><!-- end blog-box -->
+                        </div>
+                    </div>
 
                     <hr class="invis">
-                </div><!-- end col -->
-            </div><!-- end row -->
+                </div>
+            </div>
 
             <hr class="invis1">
 
@@ -309,10 +309,10 @@
                     <div class="banner-spot clearfix">
                         <div class="banner-img">
                             <img src="{{ asset('/statics/site/upload/banner_02.jpg') }}" alt="" class="img-fluid">
-                        </div><!-- end banner-img -->
-                    </div><!-- end banner -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 @endsection

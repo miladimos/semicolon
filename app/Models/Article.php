@@ -25,7 +25,7 @@ class Article extends Model
     protected $table = 'articles';
 
     // protected $fillable = [
-    //     'title', 'slug', 'description', 'body', 'viewCount',
+    //     'title', 'slug', 'description', 'body', 'view_count',
     //     'category_id', 'image_url', 'uuid', 'active', 'deleted_at'
     // ];
 

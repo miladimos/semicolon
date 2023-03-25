@@ -24,7 +24,7 @@ class CreateArticlesTable extends Migration
             $table->text('bode');
             $table->string('images')->nullable();
             $table->text('thumbnail_path')->nullable();
-            $table->unsignedInteger('viewCount')->default(0);
+            $table->unsignedInteger('view_count')->default(0);
             $table->boolean('isVip')->default(0);
             $table->timestamp('published_at')->nullable();
             $table->integer('status')->default(0);

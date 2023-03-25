@@ -6,17 +6,17 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <h2><i class="fa fa-envelope-o"></i> Contact us</h2>
-                </div><!-- end col -->
+                </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
                         <li class="breadcrumb-item active"><a href="#">Contact</a></li>
                     </ol>
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-    </div><!-- end page-title -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="section">
         <div class="container">
@@ -37,7 +37,7 @@
                             <div class="col-lg-12">
                                 <blockquote class="blockquote">Please read <a href="#">Licensing & Terms</a> of Use if you are wondering about the license. </strong></blockquote>
                             </div>
-                        </div><!-- end row -->
+                        </div>
 
 
                         <div class="row">
@@ -53,8 +53,8 @@
                                 </form>
                             </div>
                         </div>
-                    </div><!-- end page-wrapper -->
-                </div><!-- end col -->
+                    </div>
+                </div>
 
                 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                     <div class="sidebar">
@@ -66,7 +66,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                             </form>
-                        </div><!-- end widget -->
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Recent Posts</h2>
@@ -96,17 +96,17 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div><!-- end blog-list -->
-                        </div><!-- end widget -->
+                            </div>
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Advertising</h2>
                             <div class="banner-spot clearfix">
                                 <div class="banner-img">
                                     <img src="upload/banner_03.jpg" alt="" class="img-fluid">
-                                </div><!-- end banner-img -->
-                            </div><!-- end banner -->
-                        </div><!-- end widget -->
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Instagram Feed</h2>
@@ -121,7 +121,7 @@
                                 <a href="#"><img src="upload/insta_08.jpeg" alt="" class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_09.jpeg" alt="" class="img-fluid"></a>
                             </div><!-- end Instagram wrapper -->
-                        </div><!-- end widget -->
+                        </div>
 
                         <div class="widget">
                             <h2 class="widget-title">Popular Categories</h2>
@@ -136,12 +136,12 @@
                                     <li><a href="#">Food & Drink <span>(87)</span></a></li>
                                 </ul>
                             </div><!-- end link-widget -->
-                        </div><!-- end widget -->
+                        </div>
 
                     </div><!-- end sidebar -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
+                </div>
+            </div>
+        </div>
     </section>
 
 @endsection

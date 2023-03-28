@@ -2,8 +2,8 @@
 
 namespace App\Observers;
 
+use App\Models\Profile;
 use App\Models\User;
-use App\Models\UserMeta;
 use Webpatser\Uuid\Uuid;
 
 class UserObserver
@@ -28,7 +28,7 @@ class UserObserver
      */
     public function created(User $user)
     {
-        $user->profile()->create([
+        Profile::create([
             'user_id' => $user->id
         ]);
 

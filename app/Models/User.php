@@ -2,14 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Article;
+use App\Models\Profile;
+use App\Traits\HasUUID;
+use App\Scope\ActiveScope;
+use App\Models\ActivationCode;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Cache;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Sanctum\HasApiTokens;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use App\Traits\HasUUID;
-use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
@@ -67,12 +71,12 @@ class User extends Authenticatable
 
     public function profile()
     {
-        return $this->hasOne(UserProfile::class, 'user_id', 'id');
+        return $this->hasOne(Profile::class, 'user_id', 'id');
     }
 
     public function articles()
     {
-        return $this->hasMany(Article::class, 'author_id');
+        return $this->hasMany(Article::class, );
     }
 
     public function activationCodes()

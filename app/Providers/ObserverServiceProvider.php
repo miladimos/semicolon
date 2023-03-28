@@ -15,7 +15,7 @@ class ObserverServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        User::observe(UserObserver::class);
+        //
     }
 
     /**
@@ -25,6 +25,6 @@ class ObserverServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        User::observe(UserObserver::class);
     }
 }

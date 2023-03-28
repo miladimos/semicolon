@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Site\User\Account;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -19,27 +21,20 @@ class AccountController extends Controller
         return view('site.account.account', compact('user'));
     }
 
-    public function notifications()
+    public function settingForm()
     {
-        return view('site.account.notifications');
+        return view('site.account.setting');
+    }
+    public function articlesCreate()
+    {
+        $categories = Category::get();
+        $tags = Tag::get();
+        return view('site.account.create-article', compact('categories', 'tags'));
     }
 
-    public function courses()
+    public function articles()
     {
-        $learnings = auth()->user()->learnings;
-        return view('site.account.courses', compact('learnings'));
+        $articles = auth()->user()->articles;
+        return view('site.account.articles', compact('articles'));
     }
-
-    public function referral()
-    {
-        return view('site.account.referral');
-    }
-
-    public function payments()
-    {
-        $payments = auth()->user()->payments;
-        $amount = auth()->user()->wallet->amount;
-        return view('site.account.payments', compact('payments', 'amount'));
-    }
-
 }

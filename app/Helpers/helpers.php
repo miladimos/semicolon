@@ -1,16 +1,16 @@
 <?php
 
+use Faker\Factory;
+use Faker\Generator;
 use Illuminate\Support\Str;
-use Illuminate\Routing\Route;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Http\FormRequest;
-use Faker\Factory;
-use Faker\Generator;
-use Illuminate\Support\HtmlString;
 
 
 // Start Users / Auth Helpers

@@ -4,6 +4,7 @@ use App\Http\Controllers\Site\Article\ArticleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\Newsletters\NewslettersSubscriberController;
 use \App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\Site\User\Account\AccountController;
 
 Route::group(['as' => 'site.'], function () {
     Route::get('/', [SiteController::class, 'index'])->name('index');
@@ -25,10 +26,11 @@ Route::group(['as' => 'site.'], function () {
 });
 
 Route::group(['prefix' => 'account', 'middleware' => 'auth', 'as' => 'account.'], function () {
-
-    Route::get('/setting', [SiteController::class, 'settingForm'])->name('setting.index');
-    Route::post('/setting', [SiteController::class, 'setting'])->name('setting');
-    Route::get('/articles', [SiteController::class, 'articles'])->name('articles.index');
+    Route::get('/', [AccountController::class, 'account'])->name('index');
+    Route::get('/articles/create', [AccountController::class, 'articlesCreate'])->name('articles.create');
+    Route::get('/articles', [AccountController::class, 'articles'])->name('articles.index');
+    Route::get('/setting', [AccountController::class, 'settingForm'])->name('setting.index');
+    Route::post('/setting', [AccountController::class, 'setting'])->name('setting');
 
 });
 

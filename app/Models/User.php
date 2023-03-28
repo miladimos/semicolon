@@ -57,8 +57,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $appends = [
-        'profile_photo_url',
-        'full_name',
+
     ];
 
     // public static function booted()
@@ -68,12 +67,12 @@ class User extends Authenticatable
 
     public function profile()
     {
-        return $this->hasOne(UserProfile::class);
+        return $this->hasOne(UserProfile::class, 'user_id', 'id');
     }
 
     public function articles()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasMany(Article::class, 'author_id');
     }
 
     public function activationCodes()
@@ -121,10 +120,17 @@ class User extends Authenticatable
         return Cache::has('user-is-online-' . $this->id);
     }
 
-    public function getLabelAttribute()
-    {
-        return $this->profile->fname . ' ' . $this->profile->lname . ' - ' . $this->username;
-    }
+    // public function getLabelAttribute()
+    // {
+    //     return $this->profile->fname . ' ' . $this->profile->lname . ' - ' . $this->username;
+    // }
+
+    // public function getFullNameAttribute()
+    // {
+    //     return $this->profile->fname . ' ' . $this->profile->lname;
+    // }
+
+
     public function getAvatarAttribute()
     {
         return isset($this->profile->avatar) ? asset("/public/avatars/default.jpg") : asset($this->profile->avatar);
@@ -147,11 +153,6 @@ class User extends Authenticatable
                 return $username;
             }
         } while ($exist);
-    }
-
-    public function getFullNameAttribute()
-    {
-        return $this->profile->fname . ' ' . $this->profile->lname;
     }
 
     public function path()

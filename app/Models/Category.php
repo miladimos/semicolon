@@ -44,6 +44,11 @@ class Category extends Model
         return "/category/" . $this->slug;
     }
 
+    public function url()
+    {
+        return url($this->path());
+    }
+
     /**
      * Return the sluggable configuration array for this model.
      *

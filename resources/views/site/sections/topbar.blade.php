@@ -24,7 +24,7 @@
                         title="Instagram"><i class="fa fa-instagram"></i></a>
                     <a href="{{ conf('site_email') }}" data-toggle="tooltip" data-placement="bottom" title="Google+"><i
                             class="fa fa-google-plus"></i></a>
-                </div><!-- end social -->
+                </div>
             </div>
 
             <div class="col-lg-4 hidden-md-down">

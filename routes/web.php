@@ -10,10 +10,10 @@ Route::group(['as' => 'site.'], function () {
     Route::get('/categories', [SiteController::class, 'categories'])->name('categories.index');
     Route::get('/categories/{category}', [SiteController::class, 'category'])->name('categories.show');
     Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-    Route::get('@{username}/{article}', [ArticleController::class, 'show'])->name('articles.show');
+    Route::get('@{user:username}/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
     Route::get('/users', [SiteController::class, 'users'])->name('users.index');
     Route::get('/authors', [SiteController::class, 'authors'])->name('authors.index');
-    Route::get('@{username}', [SiteController::class, 'user'])->name('users.show');
+    Route::get('@{user:username}', [SiteController::class, 'user'])->name('users.show');
 
 
     Route::get('/search', [SiteController::class, 'search'])->name('search');
@@ -25,7 +25,7 @@ Route::group(['as' => 'site.'], function () {
 });
 
 Route::group(['prefix' => 'account', 'middleware' => 'auth', 'as' => 'account.'], function () {
-    
+
     Route::get('/setting', [SiteController::class, 'settingForm'])->name('setting.index');
     Route::post('/setting', [SiteController::class, 'setting'])->name('setting');
     Route::get('/articles', [SiteController::class, 'articles'])->name('articles.index');

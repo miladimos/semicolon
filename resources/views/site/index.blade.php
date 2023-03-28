@@ -88,7 +88,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="section-title">
                         <h3 class="color-aqua"><a href="blog-category-01.html" title="">Lifestyle</a></h3>
-                    </div><!-- end title -->
+                    </div>
 
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -123,7 +123,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="section-title">
                         <h3 class="color-pink"><a href="blog-category-01.html" title="">Fashion</a></h3>
-                    </div><!-- end title -->
+                    </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="blog-box">
@@ -191,7 +191,7 @@
                     <div class="blog-list clearfix">
                         <div class="section-title">
                             <h3 class="color-green"><a href="blog-category-01.html" title="">Travel</a></h3>
-                        </div><!-- end title -->
+                        </div>
 
                         <div class="blog-box row">
                             <div class="col-md-4">
@@ -226,7 +226,7 @@
                 <div class="col-lg-3">
                     <div class="section-title">
                         <h3 class="color-yellow"><a href="blog-category-01.html" title="">Vlogs</a></h3>
-                    </div><!-- end title -->
+                    </div>
 
                     <div class="blog-box">
                         <div class="post-media">

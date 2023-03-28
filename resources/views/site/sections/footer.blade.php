@@ -51,11 +51,11 @@
                     <div class="link-widget">
                         <ul>
                             @foreach ($categories as $item)
-                                <li><a href="{{ route('site.categories.show', $item) }}">{{ $item->name }}
+                                <li><a href="{{ $item->url() }}">{{ $item->name }}
                                         <span>({{ $item->articles_count }})</span></a></li>
                             @endforeach
                         </ul>
-                    </div><!-- end link-widget -->
+                    </div>
                 </div>
             </div>
         </div>

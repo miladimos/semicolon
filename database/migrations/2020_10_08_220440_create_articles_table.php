@@ -21,7 +21,7 @@ class CreateArticlesTable extends Migration
             $table->string('title')->unique();
             $table->string('slug')->unique();
             $table->string('description')->nullable();
-            $table->text('bode');
+            $table->text('body');
             $table->string('images')->nullable();
             $table->text('thumbnail_path')->nullable();
             $table->unsignedInteger('view_count')->default(0);
@@ -33,12 +33,6 @@ class CreateArticlesTable extends Migration
             $table->boolean('active')->default(false);
             $table->softDeletes();
             $table->timestamps();
-
-            $table->foreign('author_id')
-                ->on('users')
-                ->references('id')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
         });
     }
 

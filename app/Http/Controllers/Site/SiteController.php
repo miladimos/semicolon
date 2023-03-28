@@ -28,7 +28,10 @@ class SiteController extends Controller
     {
         $this->seo()->setTitle($user->label);
 
-        return view('site.blog.author', compact('user'));
+        $articles = $user->articles()->latest()->paginate(24);
+        $categories = Category::withCount('articles')->get();
+
+        return view('site.blog.author', compact('user','articles', 'categories'));
     }
 
     public function aboutUs()
@@ -57,6 +60,14 @@ class SiteController extends Controller
         $this->seo()->setTitle('tags');
 
         return view('site.pages.tags', compact('tags'));
+    }
+
+    public function authors()
+    {
+        $this->seo()->setTitle('authors');
+
+        $authors = User::latest()->paginate(24);
+        return view('site.pages.authors', compact('authors'));
     }
 
     public function search()

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Traits\HasComment;
 use Miladimos\Toolkit\Traits\HasTags;
 use Miladimos\Toolkit\Traits\HasUUID;
 use Illuminate\Database\Query\Builder;
@@ -17,10 +16,9 @@ class Article extends Model
     use HasFactory,
         Sluggable,
         SoftDeletes,
-        HasUUID,
-        HasComment,
         HasTags,
-        HasAuthor;
+        HasAuthor,
+        HasUUID;
 
     protected $table = 'articles';
 

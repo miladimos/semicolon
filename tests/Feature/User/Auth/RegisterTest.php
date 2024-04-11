@@ -12,35 +12,29 @@ class RegisterTest extends TestCase
     use WithFaker,
         RefreshDatabase;
 
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_user_can_see_register_form()
+
+    public function test_user_can_see_register_form(): void
     {
         $response = $this->get(route('auth.register.form'));
 
         $response->assertStatus(200);
     }
 
-    // /**
-    //  * @return void
-    //  */
-    // public function test_user_can_register()
-    // {
 
-    //     $response = $this->post(route('auth.register'), [
-    //         'username' => 'username',
-    //         'email'    => 'email@gmail.com',
-    //         'password' => '12344321',
-    //         'password_confirmation' => '12344321',
-    //     ]);
+    public function test_user_can_register(): void
+    {
 
-    //     $response->assertRedirect(route('site.index'));
+        $response = $this->post(route('auth.register'), [
+            'username' => 'username',
+            'email'    => 'email@gmail.com',
+            'password' => '12344321',
+            'password_confirmation' => '12344321',
+        ]);
 
-    //     $this->assertCount(1, User::all());
-    // }
+        $response->assertRedirect(route('site.index'));
+
+        $this->assertCount(1, User::all());
+    }
 
     // public function user_must_be_verify_account()
     // {

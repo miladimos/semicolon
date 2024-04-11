@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
 use App\Scope\ActiveScope;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class Tag extends Model
 {
@@ -28,7 +29,7 @@ class Tag extends Model
 
     public function Articles()
     {
-        return $this->morphedByMany(Post::class, 'taggable');
+        return $this->morphedByMany(Article::class, 'taggable');
     }
 
     public function getRouteKeyName()

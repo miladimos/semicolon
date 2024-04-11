@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1\Site;
+namespace App\Http\Controllers\Api\V1\Site;
 
 use App\Models\Article;
 use App\Http\Controllers\Controller;
@@ -21,5 +21,4 @@ class ArticleApiController extends Controller
 
         return response()->json($article);
     }
-
 }

@@ -2,6 +2,7 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Semicolon Blog Engine",
+    "version": "1.0.6",
     "keywords": [
         "framework",
         "laravel",

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class Comment extends Model
 {

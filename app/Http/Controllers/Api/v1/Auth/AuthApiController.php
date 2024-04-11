@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1\Auth;
+namespace App\Http\Controllers\Api\V1\Auth;
 
 use Illuminate\Auth\Events\Registered;
 use App\Models\User;

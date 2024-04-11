@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1\Site;
+namespace App\Http\Controllers\Api\V1\Site;
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
@@ -19,5 +19,4 @@ class UserApiController extends Controller
     {
         return response()->json($user);
     }
-
 }

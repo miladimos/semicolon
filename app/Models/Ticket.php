@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class Ticket extends Model
 {
@@ -55,16 +56,6 @@ class Ticket extends Model
     public function subject()
     {
         return $this->belongsTo(TicketSubject::class, 'subject_id');
-    }
-
-    public function status()
-    {
-        return $this->belongsTo(TicketStatus::class, 'status_id');
-    }
-
-    public function priority()
-    {
-        return $this->belongsTo(TicketPriority::class, 'priority_id');
     }
 
     public function parent()

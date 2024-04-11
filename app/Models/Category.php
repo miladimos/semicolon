@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
+use Miladimos\Toolkit\Traits\HasUUID;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

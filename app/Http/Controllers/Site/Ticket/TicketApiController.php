@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Site\Ticket;
 
-use App\Http\Controllers\Api\v1\ApiBaseController;
-use App\Http\Resources\v1\Webmaster\Ticket\TicketSubjectCollection;
+use App\Http\Controllers\Api\V1\ApiBaseController;
+use App\Http\Resources\V1\Webmaster\Ticket\TicketSubjectCollection;
 use App\Models\TicketPriority;
 use App\Models\TicketStatus;
 use App\Models\TicketSubject;

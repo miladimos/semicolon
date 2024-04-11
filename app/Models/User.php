@@ -4,7 +4,6 @@ namespace App\Models;
 
 use App\Models\Article;
 use App\Models\Profile;
-use App\Traits\HasUUID;
 use App\Scope\ActiveScope;
 use App\Models\ActivationCode;
 use Laravel\Sanctum\HasApiTokens;
@@ -14,15 +13,16 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class User extends Authenticatable
 {
-    use HasUUID,
-        HasApiTokens,
+    use HasApiTokens,
         HasFactory,
         Notifiable,
         TwoFactorAuthenticatable,
-        HasRoles;
+        HasRoles,
+        HasUUID;
 
 
     protected $table = 'users';
@@ -60,9 +60,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $appends = [
-
-    ];
+    protected $appends = [];
 
     // public static function booted()
     // {
@@ -76,7 +74,7 @@ class User extends Authenticatable
 
     public function articles()
     {
-        return $this->hasMany(Article::class, );
+        return $this->hasMany(Article::class,);
     }
 
     public function activationCodes()

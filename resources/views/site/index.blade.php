@@ -88,7 +88,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="section-title">
                         <h3 class="color-aqua"><a href="blog-category-01.html" title="">Lifestyle</a></h3>
-                    </div><!-- end title -->
+                    </div>
 
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -123,7 +123,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="section-title">
                         <h3 class="color-pink"><a href="blog-category-01.html" title="">Fashion</a></h3>
-                    </div><!-- end title -->
+                    </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="blog-box">
@@ -191,7 +191,7 @@
                     <div class="blog-list clearfix">
                         <div class="section-title">
                             <h3 class="color-green"><a href="blog-category-01.html" title="">Travel</a></h3>
-                        </div><!-- end title -->
+                        </div>
 
                         <div class="blog-box row">
                             <div class="col-md-4">
@@ -221,42 +221,12 @@
 
                     <hr class="invis">
 
-                    <div class="blog-list clearfix">
-                        <div class="section-title">
-                            <h3 class="color-red"><a href="blog-category-01.html" title="">Food</a></h3>
-                        </div><!-- end title -->
-
-                        <div class="blog-box row">
-                            <div class="col-md-4">
-                                <div class="post-media">
-                                    <a href="single.html" title="">
-                                        <img src="{{ asset('/statics/site/upload/blog_square_05.jpg') }}" alt=""
-                                            class="img-fluid">
-                                        <div class="hovereffect"></div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="blog-meta big-meta col-md-8">
-                                <h4><a href="single.html" title="">Banana-chip chocolate cake recipe</a></h4>
-                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat elit. Mauris et
-                                    pharetratortor. Suspendissea sodales urna. In at augue elit. Vivamus enim nibh, maximus
-                                    ac felis nec, maximus tempor odio.</p>
-                                <small><a href="blog-category-01.html" title="">Food</a></small>
-                                <small><a href="single.html" title="">11 July, 2017</a></small>
-                                <small><a href="blog-author.html" title="">by Matilda</a></small>
-                            </div>
-                        </div>
-
-                        <hr class="invis">
-
-                    </div>
                 </div>
 
                 <div class="col-lg-3">
                     <div class="section-title">
                         <h3 class="color-yellow"><a href="blog-category-01.html" title="">Vlogs</a></h3>
-                    </div><!-- end title -->
+                    </div>
 
                     <div class="blog-box">
                         <div class="post-media">
@@ -276,30 +246,8 @@
                     </div>
 
                     <hr class="invis">
-
-                    <div class="section-title">
-                        <h3 class="color-grey"><a href="blog-category-01.html" title="">Health</a></h3>
-                    </div><!-- end title -->
-
-                    <div class="blog-box">
-                        <div class="post-media">
-                            <a href="single.html" title="">
-                                <img src="{{ asset('/statics/site/upload/blog_07.jpg') }}" alt=""
-                                    class="img-fluid">
-                                <div class="hovereffect">
-                                    <span></span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="blog-meta">
-                            <h4><a href="single.html" title="">Opened the doors of the Istanbul spa center</a></h4>
-                            <small><a href="blog-category-01.html" title="">Spa</a></small>
-                            <small><a href="blog-category-01.html" title="">21 July, 2017</a></small>
-                        </div>
-                    </div>
-
-                    <hr class="invis">
                 </div>
+
             </div>
 
             <hr class="invis1">

@@ -18750,6 +18750,121 @@
      
 }
 
+    namespace Laravelir\Pwa\Facades { 
+            /**
+     * 
+     *
+     */ 
+        class Pwa {
+                    /**
+         * Run a Closure when the facade has been resolved.
+         *
+         * @param \Closure $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function resolved($callback)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Laravelir\Pwa\Facades\Pwa::resolved($callback);
+        }
+                    /**
+         * Convert the facade into a Mockery spy.
+         *
+         * @return \Mockery\MockInterface 
+         * @static 
+         */ 
+        public static function spy()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Laravelir\Pwa\Facades\Pwa::spy();
+        }
+                    /**
+         * Initiate a partial mock on the facade.
+         *
+         * @return \Mockery\MockInterface 
+         * @static 
+         */ 
+        public static function partialMock()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Laravelir\Pwa\Facades\Pwa::partialMock();
+        }
+                    /**
+         * Initiate a mock expectation on the facade.
+         *
+         * @return \Mockery\Expectation 
+         * @static 
+         */ 
+        public static function shouldReceive()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Laravelir\Pwa\Facades\Pwa::shouldReceive();
+        }
+                    /**
+         * Hotswap the underlying instance behind the facade.
+         *
+         * @param mixed $instance
+         * @return void 
+         * @static 
+         */ 
+        public static function swap($instance)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Laravelir\Pwa\Facades\Pwa::swap($instance);
+        }
+                    /**
+         * Get the root object behind the facade.
+         *
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getFacadeRoot()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Laravelir\Pwa\Facades\Pwa::getFacadeRoot();
+        }
+                    /**
+         * Clear a resolved facade instance.
+         *
+         * @param string $name
+         * @return void 
+         * @static 
+         */ 
+        public static function clearResolvedInstance($name)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Laravelir\Pwa\Facades\Pwa::clearResolvedInstance($name);
+        }
+                    /**
+         * Clear all of the resolved instances.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function clearResolvedInstances()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Laravelir\Pwa\Facades\Pwa::clearResolvedInstances();
+        }
+                    /**
+         * Get the application instance behind the facade.
+         *
+         * @return \Illuminate\Contracts\Foundation\Application 
+         * @static 
+         */ 
+        public static function getFacadeApplication()
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        return \Laravelir\Pwa\Facades\Pwa::getFacadeApplication();
+        }
+                    /**
+         * Set the application instance.
+         *
+         * @param \Illuminate\Contracts\Foundation\Application $app
+         * @return void 
+         * @static 
+         */ 
+        public static function setFacadeApplication($app)
+        {            //Method inherited from \Illuminate\Support\Facades\Facade         
+                        \Laravelir\Pwa\Facades\Pwa::setFacadeApplication($app);
+        }
+         
+    }
+     
+}
+
     namespace Livewire { 
             /**
      * 
@@ -23488,6 +23603,7 @@ namespace  {
             class Image extends \Intervention\Image\Facades\Image {}
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
             class Socialite extends \Laravel\Socialite\Facades\Socialite {}
+            class Pwa extends \Laravelir\Pwa\Facades\Pwa {}
             class Livewire extends \Livewire\Livewire {}
             class LaravelLocalization extends \Mcamara\LaravelLocalization\Facades\LaravelLocalization {}
             class Conf extends \Miladimos\Conf\Facades\ConfFacade {}

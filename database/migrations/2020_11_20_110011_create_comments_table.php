@@ -12,16 +12,19 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->index()->unique();
-            $table->foreignId('user_id');
             $table->foreignId('parent_id')->default(0);
-            $table->text('comment');
+            $table->morphs('commentorable');
             $table->morphs('commentable');
+            $table->text('comment');
             $table->boolean('approved')->default(0);
             $table->timestamp('approved_at')->nullable();
+            $table->unsignedBigInteger('up_vote_count')->default(0);
+            $table->unsignedBigInteger('down_vote_count')->default(0);
+            $table->softDeletes();
             $table->timestamps();
 
-            $table->foreign('user_id')
-                ->references('id')->on('users')
+            $table->foreign('parent_id')
+                ->references('id')->on('comments')
                 ->onUpdate('CASCADE')
                 ->onDelete('CASCADE');
         });

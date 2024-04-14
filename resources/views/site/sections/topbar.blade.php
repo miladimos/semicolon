@@ -5,7 +5,7 @@
                 <input type="text" name="q" class="form-control" placeholder="What you are looking for?">
                 <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             </form>
-        </div><!-- end newsletter -->
+        </div>Articles
     </div>
 </div><!-- end top-search -->
 
@@ -24,7 +24,7 @@
                         title="Instagram"><i class="fa fa-instagram"></i></a>
                     <a href="{{ conf('site_email') }}" data-toggle="tooltip" data-placement="bottom" title="Google+"><i
                             class="fa fa-google-plus"></i></a>
-                </div><!-- end social -->
+                </div>
             </div>
 
             <div class="col-lg-4 hidden-md-down">
@@ -41,8 +41,11 @@
                                     Webmaster</a>
                             </li>
                             <li class="list-inline-item">
-                                <form action="{{ route('auth.logout') }}" method="post" id="frmLogout">@csrf</form>
-                                <a onclick="document.getElementById('frmLogout').submit()"><i class="fa fa-bolt"></i>
+                                <a href="{{ route('account.index') }}"><i class="fa fa-bolt"></i>
+                                    Accouont</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="{{ route('auth.logout') }}"><i class="fa fa-bolt"></i>
                                     Logout</a>
                             </li>
                         @else

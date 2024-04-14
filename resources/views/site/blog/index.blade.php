@@ -5,8 +5,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <h2><i class="fa fa-shopping-bag bg-red"></i> Articles <small class="hidden-xs-down hidden-sm-down">all of
-                            articles. </small></h2>
+                    <h2><i class="fa fa-shopping-bag bg-red"></i>
+                        Articles
+                        <small class="hidden-xs-down hidden-sm-down">
+                            all of
+                            articles.
+                        </small>
+                    </h2>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
                     <ol class="breadcrumb">
@@ -25,24 +30,25 @@
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                     <div class="page-wrapper">
-                        <div class="blog-list clearfix">
+                        <div class="clearfix blog-list">
 
                             @forelse ($articles as $item)
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
                                             <a href="{{ $item->url() }}" title="">
-                                                <img src="{{ $item->thumbnail() }}" alt="" class="img-fluid">
+                                                <img src="{{ $item->thumbnail }}" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
                                         </div>
                                     </div>
 
                                     <div class="blog-meta big-meta col-md-8">
-                                        <h4><a href="single.html" title="">{{ $item->description }}</p>
-                                        <small><a href="{{ $item->category->url() }}" title="">{{ $item->category->name }}</a></small>
-                                        <small><a href="#" title="">{{ $item->created_at }}</a></small>
-                                        <small><a href="{{ $item->author->url() }}" title="">{{ $item->author->username }}</a></small>
+                                        <h4><a href="{{ $item->url() }}" title="">{{ $item->title }}</p>
+                                                {{-- <small><a href="{{ $item->category->url() }}" title="">{{ $item->category->name }}</a></small> --}}
+                                                <small><a href="#" title="">{{ $item->created_at }}</a></small>
+                                                <small><a href="{{ $item->author->url() }}"
+                                                        title="">{{ $item->author->username }}</a></small>
                                     </div>
                                 </div>
 
@@ -52,7 +58,7 @@
 
                             <div class="row">
                                 <div class="col-lg-10 offset-lg-1">
-                                    <div class="banner-spot clearfix">
+                                    <div class="clearfix banner-spot">
                                         <div class="banner-img">
                                             <img src="upload/banner_02.jpg" alt="" class="img-fluid">
                                         </div>
@@ -98,7 +104,7 @@
 
                         @if ($popularArticles->count() > 0)
                             <div class="widget">
-                                <h2 class="widget-title">Papoular Posts</h2>
+                                <h2 class="widget-title">Papoular Articles</h2>
                                 <div class="blog-list-widget">
                                     @foreach ($popularArticles as $item)
                                         <div class="list-group">
@@ -106,7 +112,7 @@
                                                 class="list-group-item list-group-item-action flex-column align-items-start">
                                                 <div class="w-100 justify-content-between">
                                                     <img src="upload/blog_square_01.jpg" alt=""
-                                                        class="img-fluid float-left">
+                                                        class="float-left img-fluid">
                                                     <h5 class="mb-1">5 Beautiful buildings you need to before dying</h5>
                                                     <small>12 Jan, 2016</small>
                                                 </div>
@@ -119,7 +125,7 @@
 
                         <div class="widget">
                             <h2 class="widget-title">Advertising</h2>
-                            <div class="banner-spot clearfix">
+                            <div class="clearfix banner-spot">
                                 <div class="banner-img">
                                     <img src="upload/banner_03.jpg" alt="" class="img-fluid">
                                 </div>
@@ -128,7 +134,7 @@
 
                         <div class="widget">
                             <h2 class="widget-title">Instagram Feed</h2>
-                            <div class="instagram-wrapper clearfix">
+                            <div class="clearfix instagram-wrapper">
                                 <a class="" href="#"><img src="upload/insta_01.jpeg" alt=""
                                         class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_02.jpeg" alt="" class="img-fluid"></a>
@@ -139,7 +145,7 @@
                                 <a href="#"><img src="upload/insta_07.jpeg" alt="" class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_08.jpeg" alt="" class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_09.jpeg" alt="" class="img-fluid"></a>
-                            </div><!-- end Instagram wrapper -->
+                            </div>
                         </div>
 
                         <div class="widget">
@@ -151,9 +157,9 @@
                                                 <span>({{ $item->articles_count }})</span></a></li>
                                     @endforeach
                                 </ul>
-                            </div><!-- end link-widget -->
+                            </div>
                         </div>
-                    </div><!-- end sidebar -->
+                    </div>
                 </div>
             </div>
         </div>

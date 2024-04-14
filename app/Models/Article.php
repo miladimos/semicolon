@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
-use App\Scope\ActiveScope;
-use App\Traits\HasAuthor;
-use App\Traits\HasComment;
-use App\Traits\HasTags;
+use Miladimos\Toolkit\Traits\HasTags;
+use Miladimos\Toolkit\Traits\HasUUID;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Miladimos\Toolkit\Traits\HasAuthor;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,10 +16,9 @@ class Article extends Model
     use HasFactory,
         Sluggable,
         SoftDeletes,
-        HasUUID,
-        HasComment,
         HasTags,
-        HasAuthor;
+        HasAuthor,
+        HasUUID;
 
     protected $table = 'articles';
 
@@ -40,19 +38,36 @@ class Article extends Model
         'deleted_at'
     ];
 
-    public static function booted()
+    public function publication()
     {
-        static::addGlobalScope(new ActiveScope());
+        return $this->belongsTo(Publication::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    // public function path()
+    // {
+    //     // '/blog/@user/$this>slug';
+    //     // '/blog/publication/$this>slug';
+    //     return "/posts/$this->slug";
+    // }
 
     public function path()
     {
-        return "/@$this->user->username/$this->slug";
+        return "/@{$this->author->username}/{$this->slug}";
     }
 
     public function url()
     {
         return url($this->path());
+    }
+
+    public function getThumbnailAttribute()
+    {
+        return isset($this->thumbnail_path) ? asset("/public/avatars/default.jpg") : asset($this->thumbnail_path);
     }
 
     //     {
@@ -129,7 +144,7 @@ class Article extends Model
     public function scopePopular(Builder $query): Builder
     {
         return $query->withCount('likes')
-            ->orderBy('likes_count', 'desc')
+            ->orderBy('view_count', 'desc')
             ->orderBy('submitted_at', 'desc');
     }
 

@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\User;
+use App\Models\Profile;
 use App\Models\UserMeta;
 use Webpatser\Uuid\Uuid;
 
@@ -18,7 +19,6 @@ class UserObserver
     public function creating(User $user)
     {
         $user->uuid = (string) Uuid::generate(4);
-        // $user->username = $user->generateUsername();
     }
 
     /**
@@ -29,14 +29,14 @@ class UserObserver
      */
     public function created(User $user)
     {
-        $user->profile()->create([
+        Profile::create([
             'user_id' => $user->id
         ]);
 
-        // UserMeta::create([
-        //     'metaable_id' => $user->id,
-        //     'metaable_type' => get_class($user),
-        // ]);
+        UserMeta::create([
+            'metaable_id' => $user->id,
+            'metaable_type' => get_class($user),
+        ]);
     }
 
     /**

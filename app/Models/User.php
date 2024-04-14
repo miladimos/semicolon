@@ -2,23 +2,27 @@
 
 namespace App\Models;
 
+use App\Models\Article;
+use App\Models\Profile;
+use App\Scope\ActiveScope;
+use App\Models\ActivationCode;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Cache;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Fortify\TwoFactorAuthenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Sanctum\HasApiTokens;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use App\Traits\HasUUID;
-use Spatie\Permission\Traits\HasRoles;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class User extends Authenticatable
 {
-    use HasUUID,
-        HasApiTokens,
+    use HasApiTokens,
         HasFactory,
         Notifiable,
         TwoFactorAuthenticatable,
-        HasRoles;
+        HasRoles,
+        HasUUID;
 
 
     protected $table = 'users';
@@ -56,29 +60,40 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $appends = [
-        'profile_photo_url',
-        'full_name',
-    ];
+    protected $appends = [];
 
     // public static function booted()
     // {
     //     static::addGlobalScope(new ActiveScope());
     // }
 
+    public function metas()
+    {
+        return $this->morphOne(UserMeta::class, 'metaable');
+    }
+
     public function profile()
     {
-        return $this->hasOne(UserProfile::class);
+        return $this->hasOne(Profile::class, 'user_id', 'id');
     }
 
     public function articles()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasMany(Article::class,);
+    }
+
+    public function publications()
+    {
+        return $this->hasMany(Publication::class, 'author_id');
     }
 
     public function activationCodes()
     {
         return $this->morphMany(ActivationCode::class, 'codeable');
+    }
+    public function commented()
+    {
+        return $this->morphMany(Comment::class, 'commentorable');
     }
 
     // public function emailVerifyToken()
@@ -101,9 +116,28 @@ class User extends Authenticatable
         return false;
     }
 
-    public function isEmailActivated()
+    public function isMobileVerified()
     {
-        return !!$this->email_verified_at;
+        return (bool) $this->metas->mobile_verified_at;
+    }
+
+    public function verifyMobile()
+    {
+        return (bool) $this->metas()->update([
+            'mobile_verified_at' => now(),
+        ]);
+    }
+
+    public function isEmailVerified()
+    {
+        return (bool) $this->metas->email_verified_at;
+    }
+
+    public function verifyEmail()
+    {
+        return (bool) $this->metas()->update([
+            'email_verified_at' => now(),
+        ]);
     }
 
     public function isCurrentPhoneActivated()
@@ -121,10 +155,17 @@ class User extends Authenticatable
         return Cache::has('user-is-online-' . $this->id);
     }
 
-    public function getLabelAttribute()
-    {
-        return $this->profile->fname . ' ' . $this->profile->lname . ' - ' . $this->username;
-    }
+    // public function getLabelAttribute()
+    // {
+    //     return $this->profile->fname . ' ' . $this->profile->lname . ' - ' . $this->username;
+    // }
+
+    // public function getFullNameAttribute()
+    // {
+    //     return $this->profile->fname . ' ' . $this->profile->lname;
+    // }
+
+
     public function getAvatarAttribute()
     {
         return isset($this->profile->avatar) ? asset("/public/avatars/default.jpg") : asset($this->profile->avatar);
@@ -147,11 +188,6 @@ class User extends Authenticatable
                 return $username;
             }
         } while ($exist);
-    }
-
-    public function getFullNameAttribute()
-    {
-        return $this->profile->fname . ' ' . $this->profile->lname;
     }
 
     public function path()

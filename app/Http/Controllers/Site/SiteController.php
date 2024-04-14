@@ -19,14 +19,19 @@ class SiteController extends Controller
 
         $this->seo()->setTitle('Blogging ...');
 
-        return view('site.index');
+        $categories = Category::withCount('articles')->get();
+
+        return view('site.index', compact('categories'));
     }
 
     public function user(User $user)
     {
         $this->seo()->setTitle($user->label);
 
-        return view('site.blog.author', compact('user'));
+        $articles = $user->articles()->latest()->paginate(24);
+        $categories = Category::withCount('articles')->get();
+
+        return view('site.blog.author', compact('user','articles', 'categories'));
     }
 
     public function aboutUs()
@@ -57,15 +62,23 @@ class SiteController extends Controller
         return view('site.pages.tags', compact('tags'));
     }
 
+    public function authors()
+    {
+        $this->seo()->setTitle('authors');
+
+        $authors = User::latest()->paginate(24);
+        return view('site.pages.authors', compact('authors'));
+    }
+
     public function search()
     {
         $this->seo()->setTitle('search');
 
         $query = trim(request()->get('q'));
 
-        $posts = Article::where('title' , 'like', "%$query%")->latest()->paginate(24);
+        $Articles = Article::where('title' , 'like', "%$query%")->latest()->paginate(24);
 
-        return view('site.pages.search', compact('posts'));
+        return view('site.pages.search', compact('Articles'));
     }
 
     public function category(Category $category)

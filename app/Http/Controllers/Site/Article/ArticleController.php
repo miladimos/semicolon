@@ -14,7 +14,7 @@ class ArticleController extends Controller
         $categories = Category::withCount('articles')->get();
         $articles = Article::latest()->get();
 
-        $popularArticles = Article::orderBy('viewCount')->latest()->get();
+        $popularArticles = Article::orderBy('view_count')->latest()->get();
         // $users = Cache::remember('users', 120, function () {
         //     return DB::table('users')->get();
         // });
@@ -35,10 +35,12 @@ class ArticleController extends Controller
 
     public function show(User $user, Article $article)
     {
-        dd($article, $user);
         $this->seo()->setTitle($article->title);
         $article->increment('view_count');
+        $nextArticle = [];
+        $prevPrev = [];
+        $sameArticles = [];
 
-        return view('site.blog.single', compact('article'));
+        return view('site.blog.single', compact('article', 'sameArticles'));
     }
 }

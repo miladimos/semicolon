@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
+use Miladimos\Toolkit\Traits\HasUUID;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -42,6 +43,11 @@ class Category extends Model
     public function path()
     {
         return "/category/" . $this->slug;
+    }
+
+    public function url()
+    {
+        return url($this->path());
     }
 
     /**

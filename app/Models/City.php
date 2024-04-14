@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
+use Miladimos\Toolkit\Traits\HasUUID;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,11 +14,11 @@ class City extends Model
 
     protected $table = 'cities';
 
-    protected $fillable = ['title', 'slug','province_id', 'uuid'];
+    protected $fillable = ['title', 'slug', 'province_id', 'uuid'];
 
 
 
-        /**
+    /**
      * Return the sluggable configuration array for this model.
      *
      * @return array
@@ -30,5 +31,4 @@ class City extends Model
             ]
         ];
     }
-
 }

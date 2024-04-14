@@ -2,16 +2,17 @@
 
 namespace App\Models;
 
-use App\Traits\HasUUID;
+
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class TicketSubject extends Model
 {
     use Sluggable,
-        HasUUID,
-        SoftDeletes;
+        SoftDeletes,
+        HasUUID;
 
     protected $table = 'ticket_subjects';
 

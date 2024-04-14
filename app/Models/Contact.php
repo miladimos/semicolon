@@ -3,16 +3,17 @@
 namespace App\Models;
 
 use App\Models\ContactSubject;
-use App\Traits\HasUUID;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Miladimos\Toolkit\Traits\HasUUID;
 
 class Contact extends Model
 {
     use HasFactory,
-        HasUUID,
-        SoftDeletes;
+        SoftDeletes,
+        HasUUID;
 
     protected $table = 'contacts';
 

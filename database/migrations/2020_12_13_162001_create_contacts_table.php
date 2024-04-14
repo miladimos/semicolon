@@ -12,9 +12,9 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
+            $table->foreignId('subject_id');
             $table->string('name');
             $table->string('call');
-            $table->string('subject', 80);
             $table->text('body');
             $table->softDeletes();
             $table->timestamps();

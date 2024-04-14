@@ -201,7 +201,7 @@
                         </div>
 
                         <div class="widget">
-                            <h2 class="widget-title">Recent Posts</h2>
+                            <h2 class="widget-title">Recent Articles</h2>
                             <div class="blog-list-widget">
                                 <div class="list-group">
                                     <a href="single.html" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -252,7 +252,7 @@
                                 <a href="#"><img src="upload/insta_07.jpeg" alt="" class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_08.jpeg" alt="" class="img-fluid"></a>
                                 <a href="#"><img src="upload/insta_09.jpeg" alt="" class="img-fluid"></a>
-                            </div><!-- end Instagram wrapper -->
+                            </div>
                         </div>
 
                         <div class="widget">
@@ -267,9 +267,9 @@
                                     <li><a href="#">Entertaintment <span>(11)</span></a></li>
                                     <li><a href="#">Food & Drink <span>(87)</span></a></li>
                                 </ul>
-                            </div><!-- end link-widget -->
+                            </div>
                         </div>
-                    </div><!-- end sidebar -->
+                    </div>
                 </div>
             </div>
         </div>

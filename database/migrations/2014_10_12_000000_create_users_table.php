@@ -31,6 +31,8 @@ class CreateUsersTable extends Migration
             $table->boolean('active')->default(0);
             $table->timestamp('activated_at')->nullable();
             $table->string('password');
+            $table->text('two_factor_secret')->nullable();
+            $table->text('two_factor_recovery_codes')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

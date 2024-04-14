@@ -3,6 +3,6 @@
 
     @yield('content')
 
-    @include('site.sections.footer')
+    {{-- @include('site.sections.footer') --}}
 
 @include('site.layouts.footer')

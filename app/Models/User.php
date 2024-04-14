@@ -67,6 +67,11 @@ class User extends Authenticatable
     //     static::addGlobalScope(new ActiveScope());
     // }
 
+    public function metas()
+    {
+        return $this->morphOne(UserMeta::class, 'metaable');
+    }
+
     public function profile()
     {
         return $this->hasOne(Profile::class, 'user_id', 'id');
@@ -77,9 +82,18 @@ class User extends Authenticatable
         return $this->hasMany(Article::class,);
     }
 
+    public function publications()
+    {
+        return $this->hasMany(Publication::class, 'author_id');
+    }
+
     public function activationCodes()
     {
         return $this->morphMany(ActivationCode::class, 'codeable');
+    }
+    public function commented()
+    {
+        return $this->morphMany(Comment::class, 'commentorable');
     }
 
     // public function emailVerifyToken()
@@ -102,9 +116,28 @@ class User extends Authenticatable
         return false;
     }
 
-    public function isEmailActivated()
+    public function isMobileVerified()
     {
-        return !!$this->email_verified_at;
+        return (bool) $this->metas->mobile_verified_at;
+    }
+
+    public function verifyMobile()
+    {
+        return (bool) $this->metas()->update([
+            'mobile_verified_at' => now(),
+        ]);
+    }
+
+    public function isEmailVerified()
+    {
+        return (bool) $this->metas->email_verified_at;
+    }
+
+    public function verifyEmail()
+    {
+        return (bool) $this->metas()->update([
+            'email_verified_at' => now(),
+        ]);
     }
 
     public function isCurrentPhoneActivated()

@@ -38,6 +38,23 @@ class Article extends Model
         'deleted_at'
     ];
 
+    public function publication()
+    {
+        return $this->belongsTo(Publication::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    // public function path()
+    // {
+    //     // '/blog/@user/$this>slug';
+    //     // '/blog/publication/$this>slug';
+    //     return "/posts/$this->slug";
+    // }
+
     public function path()
     {
         return "/@{$this->author->username}/{$this->slug}";

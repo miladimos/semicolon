@@ -2,8 +2,9 @@
 
 namespace App\Observers;
 
-use App\Models\Profile;
 use App\Models\User;
+use App\Models\Profile;
+use App\Models\UserMeta;
 use Webpatser\Uuid\Uuid;
 
 class UserObserver
@@ -32,10 +33,10 @@ class UserObserver
             'user_id' => $user->id
         ]);
 
-        // UserMeta::create([
-        //     'metaable_id' => $user->id,
-        //     'metaable_type' => get_class($user),
-        // ]);
+        UserMeta::create([
+            'metaable_id' => $user->id,
+            'metaable_type' => get_class($user),
+        ]);
     }
 
     /**

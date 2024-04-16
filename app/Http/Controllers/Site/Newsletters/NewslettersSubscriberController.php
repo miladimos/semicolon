@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Site\Newsletters;
 
 use Illuminate\Http\Request;
 use App\Models\NewsletterSubscriber;
-use App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\SiteController;
 
 class NewslettersSubscriberController extends SiteController
 {

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Listeners\Site\Auth;
+namespace App\Listeners\Auth;
 
-use App\Events\Site\Auth\UserLoggedin;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Events\Auth\UserRegistered;
+use App\Notifications\Auth\SendEmailVerificationNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
-class UserLoggedinListener implements ShouldQueue
+class UserRegisteredListener implements ShouldQueue
 {
     use InteractsWithQueue;
 
@@ -23,10 +24,10 @@ class UserLoggedinListener implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param  UserLoggedin  $event
+     * @param  UserRegistered  $event
      * @return void
      */
-    public function handle(UserLoggedin $event)
+    public function handle(UserRegistered $event)
     {
         // $event->user->notify(new SendEmailVerificationNotification());
     }

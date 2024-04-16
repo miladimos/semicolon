@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Team;
+use App\Models\Article;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class TeamPolicy
+class ArticlePolicy
 {
     use HandlesAuthorization;
 
@@ -25,12 +25,12 @@ class TeamPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Article  $article
      * @return mixed
      */
-    public function view(User $user, Team $team)
+    public function view(User $user, Article $article)
     {
-        return $user->belongsToTeam($team);
+        return $user->belongsToArticle($article);
     }
 
     /**
@@ -48,59 +48,59 @@ class TeamPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Article  $article
      * @return mixed
      */
-    public function update(User $user, Team $team)
+    public function update(User $user, Article $article)
     {
-        return $user->ownsTeam($team);
+        return $user->ownsArticle($article);
     }
 
     /**
-     * Determine whether the user can add team members.
+     * Determine whether the user can add article members.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Article  $article
      * @return mixed
      */
-    public function addTeamMember(User $user, Team $team)
+    public function addArticleMember(User $user, Article $article)
     {
-        return $user->ownsTeam($team);
+        return $user->ownsArticle($article);
     }
 
     /**
-     * Determine whether the user can update team member permissions.
+     * Determine whether the user can update article member permissions.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Article  $article
      * @return mixed
      */
-    public function updateTeamMember(User $user, Team $team)
+    public function updateArticleMember(User $user, Article $article)
     {
-        return $user->ownsTeam($team);
+        return $user->ownsArticle($article);
     }
 
     /**
-     * Determine whether the user can remove team members.
+     * Determine whether the user can remove article members.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Article  $article
      * @return mixed
      */
-    public function removeTeamMember(User $user, Team $team)
+    public function removeArticleMember(User $user, Article $article)
     {
-        return $user->ownsTeam($team);
+        return $user->ownsArticle($article);
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Team  $team
+     * @param  \App\Models\Article  $article
      * @return mixed
      */
-    public function delete(User $user, Team $team)
+    public function delete(User $user, Article $article)
     {
-        return $user->ownsTeam($team);
+        return $user->ownsArticle($article);
     }
 }

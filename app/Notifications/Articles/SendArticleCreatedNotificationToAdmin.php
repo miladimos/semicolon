@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Notifications\Site\Article;
+namespace App\Notifications\Articles;
 
 use App\Models\Article;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use App\Mail\Site\Article\ArticleCreatedMale;
+use App\Mail\Articles\ArticleCreatedMale;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 
-class SendArticleCreatedNotificationToUser extends Notification implements ShouldQueue
+class SendArticleCreatedNotificationToAdmin extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -44,7 +43,9 @@ class SendArticleCreatedNotificationToUser extends Notification implements Shoul
      */
     public function toMail($notifiable)
     {
-        return (new ArticleCreatedMale($this->article))->to($notifiable->email);
+        $admin_emale = conf('admin_email');
+
+        return (new ArticleCreatedMale($this->article))->to($admin_emale);
     }
 
     /**

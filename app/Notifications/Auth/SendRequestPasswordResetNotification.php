@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Notifications\Site\Auth;
+namespace App\Notifications\Auth;
 
-use App\Mail\Site\Auth\ResetPasswordRequestMail;
+use App\Mail\Auth\ResetPasswordRequestMail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events\Site\Auth;
+namespace App\Events\Auth;
 
 use App\Models\User;
 use Illuminate\Broadcasting\Channel;
@@ -12,7 +12,7 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class UserLoggedin implements ShouldQueue
+class UserRegistered implements ShouldQueue
 {
     use Dispatchable,
         InteractsWithSockets,

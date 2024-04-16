@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Profile;
 use App\Models\UserMeta;
 use Webpatser\Uuid\Uuid;
+use Illuminate\Support\Facades\Cache;
 
 class UserObserver
 {
@@ -37,6 +38,8 @@ class UserObserver
             'metaable_id' => $user->id,
             'metaable_type' => get_class($user),
         ]);
+
+        Cache::forget('users');
     }
 
     /**
@@ -58,7 +61,7 @@ class UserObserver
      */
     public function deleted(User $user)
     {
-        //
+        Cache::forget('users');
     }
 
     /**
@@ -69,7 +72,7 @@ class UserObserver
      */
     public function restored(User $user)
     {
-        //
+        Cache::forget('users');
     }
 
     /**
@@ -80,6 +83,6 @@ class UserObserver
      */
     public function forceDeleted(User $user)
     {
-        //
+        Cache::forget('users');
     }
 }

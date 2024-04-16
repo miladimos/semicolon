@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Listeners\Site\Article;
+namespace App\Listeners\Articles;
 
-use App\Notifications\Site\Article\SendArticleCreatedNotificationToAdmin;
-use App\Notifications\Site\Article\SendArticleCreatedNotificationToUser;
+use App\Notifications\Article\SendArticleCreatedNotificationToAdmin;
+use App\Notifications\Article\SendArticleCreatedNotificationToUser;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Notification;

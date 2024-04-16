@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Auth\Events\PasswordReset;
 
 use App\Http\Controllers\Controller;
-use App\Notifications\Site\Auth\SendRequestPasswordResetNotification;
+use App\Notifications\Auth\SendRequestPasswordResetNotification;
 
 class ForgotPasswordController extends Controller
 {

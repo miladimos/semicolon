@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Mail\Site\Auth;
+namespace App\Mail\Auth;
 
 use App\Models\UserVerify;
 use Illuminate\Support\Str;
@@ -33,15 +33,15 @@ class EmailVerificationMale extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        $token = UserVerify::create([
-            'user_id' => $this->user->id,
-            'type' => 'email',
-            'token' => Crypt::encrypt(Str::random(5))
-        ]);
+        // $token = UserVerify::create([
+        //     'user_id' => $this->user->id,
+        //     'type' => 'email',
+        //     'token' => Crypt::encrypt(Str::random(5))
+        // ]);
 
-        $url = url(route('auth.email.verify', $token->token));
-        return $this->view('emails.site.auth.email-verification')->with([
-            'url' => $url,
-        ]);
+        // $url = url(route('auth.email.verify', $token->token));
+        // return $this->view('emails.site.auth.email-verification')->with([
+        //     'url' => $url,
+        // ]);
     }
 }

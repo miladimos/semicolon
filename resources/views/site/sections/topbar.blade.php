@@ -36,13 +36,10 @@
                         </li>
 
                         @auth
-                            <li class="list-inline-item">
-                                <a href="{{ route('webmaster.index') }}"><i class="fa fa-bolt"></i>
-                                    Webmaster</a>
-                            </li>
+
                             <li class="list-inline-item">
                                 <a href="{{ route('account.index') }}"><i class="fa fa-bolt"></i>
-                                    Accouont</a>
+                                    Account</a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="{{ route('auth.logout') }}"><i class="fa fa-bolt"></i>

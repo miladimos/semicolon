@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Events\Site\Auth\UserLoggedin;
-use App\Events\Site\Auth\UserRegistered;
-use App\Listeners\Site\Auth\UserLoggedinListener;
-use App\Listeners\Site\Auth\UserRegisteredListener;
+use App\Events\Auth\UserLoggedin;
+use App\Events\Auth\UserRegistered;
+use App\Listeners\Auth\UserLoggedinListener;
+use App\Listeners\Auth\UserRegisteredListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Site\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Notifications\Site\Auth\SendEmailVerificationNotification;
+use App\Notifications\Auth\SendEmailVerificationNotification;
 use App\Traits\EmailVerifiy;
 
 class EmailVerficationController extends Controller

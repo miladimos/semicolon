@@ -4,14 +4,15 @@ namespace App\Http\Controllers\Site\Auth;
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
-use App\Events\Site\Auth\UserRegistered;
-use App\Http\Requests\Site\Auth\RegisterRequest;
+use App\Events\Auth\UserRegistered;
+use App\Http\Requests\Auth\RegisterRequest;
 use Response;
 
 class RegisterController extends Controller
 {
     public function showRegisterForm()
     {
+        $this->seo()->setTitle('Register');
         return view('site.auth.register');
     }
 

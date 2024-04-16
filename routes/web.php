@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Site\Article\ArticleController;
+use App\Http\Controllers\Article\ArticleController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Site\Newsletters\NewslettersSubscriberController;
+use App\Http\Controllers\Newsletters\NewslettersSubscriberController;
 use \App\Http\Controllers\Site\SiteController;
 use App\Http\Controllers\Site\User\Account\AccountController;
 
@@ -31,6 +31,4 @@ Route::group(['prefix' => 'account', 'middleware' => 'auth', 'as' => 'account.']
     Route::get('/articles', [AccountController::class, 'articles'])->name('articles.index');
     Route::get('/setting', [AccountController::class, 'settingForm'])->name('setting.index');
     Route::post('/setting', [AccountController::class, 'setting'])->name('setting');
-
 });
-

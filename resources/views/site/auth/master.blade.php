@@ -11,7 +11,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('site.index') }}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">auth</a></li>
+                    <li class="breadcrumb-item"><a href="#">Authentication</a></li>
                     <li class="breadcrumb-item active"><a href="#">@yield('auth-title')</a></li>
                 </ol>
             </div>

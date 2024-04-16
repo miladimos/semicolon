@@ -3,6 +3,7 @@
 namespace App\Observers;
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Cache;
 
 class ArticleObserver
 {
@@ -26,7 +27,7 @@ class ArticleObserver
      */
     public function created(Article $article)
     {
-        //
+        Cache::forget('articles');
     }
 
     /**
@@ -37,7 +38,7 @@ class ArticleObserver
      */
     public function updated(Article $article)
     {
-        //
+        Cache::forget('articles');
     }
 
     /**
@@ -48,7 +49,7 @@ class ArticleObserver
      */
     public function deleted(Article $article)
     {
-        //
+        Cache::forget('articles');
     }
 
     /**
@@ -59,7 +60,7 @@ class ArticleObserver
      */
     public function restored(Article $article)
     {
-        //
+        Cache::forget('articles');
     }
 
     /**
@@ -70,6 +71,6 @@ class ArticleObserver
      */
     public function forceDeleted(Article $article)
     {
-        //
+        Cache::forget('articles');
     }
 }

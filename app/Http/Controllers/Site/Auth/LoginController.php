@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Site\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Events\Site\Auth\UserLoggedin;
+use App\Events\Auth\UserLoggedin;
 use Illuminate\Support\Facades\Response;
-use App\Http\Requests\Site\Auth\LoginRequest;
+use App\Http\Requests\Auth\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -17,7 +17,6 @@ class LoginController extends Controller
     {
         $this->username = $this->findUsername();
     }
-
 
     public function showLoginForm()
     {

@@ -1,27 +1,25 @@
 <?php
 
-namespace App\Notifications\Site\Article;
+namespace App\Notifications\Auth;
 
-use App\Models\Article;
+use App\Mail\Auth\EmailVerificationMale;
 use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
-use App\Mail\Site\Article\ArticleCreatedMale;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Notification;
 
-class SendArticleCreatedNotificationToAdmin extends Notification implements ShouldQueue
+class SendEmailVerificationNotification extends Notification implements ShouldQueue
 {
     use Queueable;
-
-    public $article;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(Article $article)
+    public function __construct()
     {
-        $this->article = $article;
+        //
     }
 
     /**
@@ -43,9 +41,7 @@ class SendArticleCreatedNotificationToAdmin extends Notification implements Shou
      */
     public function toMail($notifiable)
     {
-        $admin_emale = conf('admin_email');
-
-        return (new ArticleCreatedMale($this->article))->to($admin_emale);
+        return (new EmailVerificationMale($notifiable))->to($notifiable->email);
     }
 
     /**

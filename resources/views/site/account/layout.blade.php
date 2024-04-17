@@ -5,12 +5,13 @@
 @endsection
 
 @section('auth-content')
-    <div class="row">
+
+    {{-- <div class="row">
         <div class="col-lg-7 mx-auto">
             <blockquote class="blockquote">Please read <a href="#">Licensing & Terms</a> of Use if you are wondering
                 about the license. </strong></blockquote>
         </div>
-    </div>
+    </div> --}}
 
     <div class="row">
         <div class="col-3">

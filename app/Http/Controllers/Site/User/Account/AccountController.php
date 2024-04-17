@@ -25,16 +25,4 @@ class AccountController extends Controller
     {
         return view('site.account.setting');
     }
-    public function articlesCreate()
-    {
-        $categories = Category::get();
-        $tags = Tag::get();
-        return view('site.account.create-article', compact('categories', 'tags'));
-    }
-
-    public function articles()
-    {
-        $articles = auth()->user()->articles;
-        return view('site.account.articles', compact('articles'));
-    }
 }

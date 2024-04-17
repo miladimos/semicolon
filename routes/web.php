@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\Article\ArticleController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Newsletters\NewslettersSubscriberController;
 use \App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\Site\Article\ArticleController;
+use App\Http\Controllers\Site\User\Account\AccountArticleController;
 use App\Http\Controllers\Site\User\Account\AccountController;
+use App\Http\Controllers\Site\Newsletters\NewslettersSubscriberController;
 
 Route::group(['as' => 'site.'], function () {
     Route::get('/', [SiteController::class, 'index'])->name('index');
@@ -20,15 +21,19 @@ Route::group(['as' => 'site.'], function () {
     Route::get('/search', [SiteController::class, 'search'])->name('search');
 
 
-
     Route::post('newsletters/subscibe', [NewslettersSubscriberController::class, 'subscribe'])->name('newsletters.subscribe');
     Route::post('newsletters/unsubscibe', [NewslettersSubscriberController::class, 'unsubscibe'])->name('newsletters.unsubscibe');
 });
 
 Route::group(['prefix' => 'account', 'middleware' => 'auth', 'as' => 'account.'], function () {
     Route::get('/', [AccountController::class, 'account'])->name('index');
-    Route::get('/articles/create', [AccountController::class, 'articlesCreate'])->name('articles.create');
-    Route::get('/articles', [AccountController::class, 'articles'])->name('articles.index');
+
+    // Route::get('/articles/create', [AccountController::class, 'articlesCreate'])->name('articles.create');
+    // Route::get('/articles', [AccountController::class, 'articles'])->name('articles.index');
+
+    Route::resource('articles', AccountArticleController::class);
+
+
     Route::get('/setting', [AccountController::class, 'settingForm'])->name('setting.index');
     Route::post('/setting', [AccountController::class, 'setting'])->name('setting');
 });

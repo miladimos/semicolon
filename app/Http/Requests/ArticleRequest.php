@@ -28,8 +28,7 @@ class ArticleRequest extends FormRequest
             'description'    => 'required',
             'body'           => 'required',
             'thumbnail_path' => 'required',
-            'status'         => 'required',
-            'pinned'         => 'required',
+            'category_id'         => 'required',
         ];
     }
 }

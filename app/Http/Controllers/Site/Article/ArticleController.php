@@ -37,6 +37,7 @@ class ArticleController extends Controller
     {
         $this->seo()->setTitle($article->title);
         $article->increment('view_count');
+        
         $nextArticle = [];
         $prevPrev = [];
         $sameArticles = [];

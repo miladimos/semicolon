@@ -48,6 +48,23 @@ class AccountArticleController extends Controller
     {
         $article = auth()->user()->articles()->create($request->all());
 
-        return redirect()->route('site.article')->with('success', 'پیام شما ثبت شد و در صورت نیاز با شما تماس گرفته می شود');
+        return redirect()->route('site.index')->with('success', 'article created.');
+    }
+
+    public function update(ArticleRequest $request, Article $article)
+    {
+        $article->update($request->all());
+
+        return redirect()->route('site.article')->with('success', 'article created.');
+    }
+
+    public function edit(Article $article)
+    {
+        return view('site.account.edit-article', compact('article'));
+    }
+
+    public function destroy()
+    {
+        //
     }
 }

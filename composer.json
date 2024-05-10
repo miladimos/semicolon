@@ -30,11 +30,12 @@
         "morilog/jalali": "3.*",
         "predis/predis": "^1.1",
         "realrashid/sweet-alert": "^7.1",
+        "rebing/graphql-laravel": "^9.5",
         "webpatser/laravel-uuid": "^4.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
-        "imanghafoori/laravel-microscope": "*",
+        "imanghafoori/laravel-microscope": "^1.0",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.0",
@@ -44,13 +45,6 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": [
-                "barryvdh/laravel-ide-helper"
-            ]
-        }
     },
     "autoload": {
         "psr-4": {
@@ -81,9 +75,7 @@
             "@php artisan key:generate --ansi"
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "@php artisan ide-helper:generate",
-            "@php artisan ide-helper:meta"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ]
     }
 }
